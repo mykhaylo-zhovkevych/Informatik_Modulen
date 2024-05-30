@@ -41,6 +41,7 @@
     display: flex;
     flex-direction: column;
     padding: 5rem 0 0 0;
+    margin: 5rem 0 0 0;
     backdrop-filter: blur(100px);
     width: 100vw;
     border-radius: 30px;
@@ -71,6 +72,7 @@
     display: flex;
     flex: 0 0 250px;
     padding: 5rem 0 0 0;
+    margin: 5rem 0 0 0;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -85,13 +87,14 @@
     min-height: 100vh;
     width: auto;
     backdrop-filter: blur(100px);
+    border-radius: 30px;
     
 }
 
 .content-box01 {
     backdrop-filter: blur(100px);
     flex: 1;
-    margin: 2.5rem;
+    margin: 5.5rem 1.25rem 2.5rem 2.5rem;
     padding: 2.5rem;
     border-radius: 30px;
 }
@@ -99,7 +102,7 @@
 .content-box02 {
     backdrop-filter: blur(100px);
     flex: 1;
-    margin: 2.5rem;
+    margin: 5.5rem 2.5rem 2.5rem 1.25rem;
     padding: 2.5rem;
     border-radius: 30px;
 }
@@ -127,11 +130,3 @@
         height: auto; /* Allow height to adjust based on content */
     }
 }
-
-
-
-
-
-
-
-
