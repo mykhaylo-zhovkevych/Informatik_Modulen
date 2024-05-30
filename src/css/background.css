@@ -7,7 +7,7 @@
     z-index: -1;
 }
 
-.blobs_glass {
+.blobs-glass {
     position: fixed;
     left: 0;
     top: 0;
@@ -18,7 +18,7 @@
     z-index: 3;
 }
 
-.blobs_items {
+.blobs-items {
     z-index: 1;
 }
 

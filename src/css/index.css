@@ -2,15 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
+
 :root {
     --black-color: #000000;
 }
 
 body {
-    background: #0000008a;
-    
+    background: #313131;
+    color: #dbdbdb;
 }
 
 .container-header {
@@ -18,7 +18,7 @@ body {
     flex-wrap: nowrap;
     margin: auto;
     min-height: 50vh;
-    backdrop-filter: blur(100px); /* ???? */
+    backdrop-filter: blur(100px);
     border-radius: 30px;
     font-size: 1.5em;
 }
@@ -27,23 +27,23 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    backdrop-filter: blur(100px); 
+    backdrop-filter: blur(100px);
     border-radius: 30px;
     height: 45vh;
 }
 
 .links-header a {
-    color: #000000;
+    color: #dbdbdb;;
     text-decoration: none;
-    padding: 1rem;
+    padding: 4rem;
     margin: 0.5rem 0;
     width: 100%;
     text-align: center;
     border-radius: 5px;
-
 }
 
 .links-header a:hover {
+    background-color: #dbdbdb31;
 }
 
 .header-box01 {
@@ -81,16 +81,19 @@ body {
 .header-box02 {
     display: flex;
     flex: 0 0 250px;
-    padding: 5rem 0 0 0;
+    padding: 5rem 2.5rem 0 2.5rem;
     margin: 5rem 0 0 0;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     backdrop-filter: blur(100px);
     border-radius: 30px;
-
 }
 
+.header-box02 a {
+    font-size: 1.5em;
+    font-weight: bolder;
+}
 
 .container-main {
     display: flex;
@@ -99,7 +102,6 @@ body {
     backdrop-filter: blur(100px);
     border-radius: 30px;
     font-size: 1.5em;
-    
 }
 
 .content-box01 {
@@ -118,21 +120,19 @@ body {
     border-radius: 30px;
 }
 
-
-
 @media (max-width: 768px) {
     .container-header {
-        flex-direction: column; /* Stack boxes vertically on small screens */
-        height: auto; /* Allow height to adjust based on content */
+        flex-direction: column;
+        height: auto;
     }
 
     .header-box01, .header-box02 {
-        flex: 1 0 auto; /* Allow boxes to adjust their size */
-        width: 100%; /* Ensure full width */
+        flex: 1 0 auto;
+        width: 100%;
     }
 
     .header-box02 {
-        flex: none; /* Prevent flex growth/shrink */
-        height: auto; /* Allow height to adjust based on content */
+        flex: none;
+        height: auto;
     }
 }

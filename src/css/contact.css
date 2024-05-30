@@ -1,3 +1,7 @@
+:root {
+    --black-color: #000000;
+}
+
 #section-footer {
     display: flex;
     min-height: 50vh;
@@ -26,19 +30,29 @@
 }
 
 .contact-container {
+    display: flex;
+    flex-direction: row;
     backdrop-filter: blur(100px);
     border-radius: 30px;
-    padding: 5rem 5rem 5rem 50rem;
-}
-
-
-
-.section-footer form {
-    width: 900px;
-    text-align: center;
-    height: 700px;
+    width: 100%;
+    padding: 5rem;
+    
     
 }
+
+.contact-container-02 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+}
+.contact-container-01 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex: 1;
+}
+
 
 form .input-box {
     display: flex;
@@ -55,11 +69,11 @@ form .input-box {
     width: 100%;
     padding: 18px;
     background-color: transparent;
-    border: 1.5px solid #000000;
+    border: 1.5px solid #dbdbdb;;
     outline: none;
     border-radius: 30px;
     font-size: 2em;
-    color: #000000;
+    color: #dbdbdb;;
     margin: 12px 0;
     font-family: "PP Supply Sans", Arial;
 }
@@ -86,11 +100,11 @@ form .textarea-field .item {
 form button {
     padding: 12px 32px;
     background: #ffffff00;
-    border: 1px solid #000000;
+    border: 1px solid #dbdbdb;;
     outline: none;
     border-radius: 30px;
     font-size: 2em;
-    color: #000000;
+    color: #dbdbdb;;
     letter-spacing: 1px;
     font-weight: 600;
     cursor: pointer;
@@ -100,7 +114,7 @@ form button {
 }
 
 form button:hover {
-    box-shadow:0.3rem 0.3rem 0rem #000;
+    box-shadow:0.3rem 0.3rem 0rem #dbdbdb;;
 
 }
 
