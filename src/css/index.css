@@ -111,6 +111,9 @@ body {
     padding: 2.5rem;
     border-radius: 30px;
 }
+.content-box01 p {
+    padding-top: 1em;
+}
 
 .content-box02 {
     flex: 1;
@@ -118,6 +121,10 @@ body {
     padding: 2.5rem;
     backdrop-filter: blur(100px);
     border-radius: 30px;
+}
+
+.content-box02 p {
+    padding-top: 1em;
 }
 
 @media (max-width: 768px) {

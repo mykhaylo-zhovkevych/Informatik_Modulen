@@ -44,12 +44,12 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    flex: 1;
+    flex: 1.5;
 }
 .contact-container-01 {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     flex: 1;
 }
 
