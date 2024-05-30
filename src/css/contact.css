@@ -1,0 +1,118 @@
+#section-footer {
+    display: flex;
+    min-height: 50vh;
+    width: auto;
+    backdrop-filter: blur(100px);
+    border-radius: 30px;
+    padding: 2.5rem;
+}
+
+.container-footer {
+    display: flex;
+    
+}
+.contact-announcement {
+    backdrop-filter: blur(100px);
+    border-radius: 30px;
+    padding: 2rem;
+    height: 10rem;
+    font-size: 2em;
+}
+#copyright {
+    padding: 10rem 1rem 1rem 2rem;
+    backdrop-filter: blur(100px);
+    border-radius: 30px;
+    font-size: 1em;
+}
+
+.contact-container {
+    backdrop-filter: blur(100px);
+    border-radius: 30px;
+    padding: 5rem 5rem 5rem 50rem;
+}
+
+
+
+.section-footer form {
+    width: 900px;
+    text-align: center;
+    height: 700px;
+    
+}
+
+form .input-box {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.input-box .input-field {
+    width: 48.5%;
+    
+}
+
+.field .item {
+    width: 100%;
+    padding: 18px;
+    background-color: transparent;
+    border: 1.5px solid #000000;
+    outline: none;
+    border-radius: 30px;
+    font-size: 2em;
+    color: #000000;
+    margin: 12px 0;
+    font-family: "PP Supply Sans", Arial;
+}
+
+.field.error .item {
+    border-color: #ff0000;
+}
+
+.field.error .error-txt {
+    display: block;
+}
+
+.field .item::placeholder {
+    color: #ffffff;
+   
+}
+
+form .textarea-field .item {
+    resize: none;
+    
+
+}
+
+form button {
+    padding: 12px 32px;
+    background: #ffffff00;
+    border: 1px solid #000000;
+    outline: none;
+    border-radius: 30px;
+    font-size: 2em;
+    color: #000000;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.5s;
+    font-family: "PP Supply Sans", Arial;
+}
+
+form button:hover {
+    box-shadow:0.3rem 0.3rem 0rem #000;
+
+}
+
+.field .error-txt {
+    font-size: 13.5px;
+    color: red;
+    text-align: left;
+    margin: -5px 0 10px;
+    display: none;
+}
+
+form .textarea-field .error-txt {
+    margin-top: -10px;
+
+}

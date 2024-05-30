@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modulenjournal</title>
+    <title>Modulenjournalen</title>
 </head>
 <body>
 
@@ -20,7 +20,7 @@
 
 <header class="container-header">
     <div class="header-box01">
-    <h1>Die Zusammenfassung von IT Modullne für Informatiker EFZ Applikationentwicklung</h1>
+    <h1>Die Zusammenfassung der Informatikmodule für Informatiker EFZ Anwendungsentwicklung</h1>
         <div id="header-content">
             <h2>erstellt von Mykhaylo Zhovkevych</h2>
                 <p>Lorem1111111111111111111111111111</p>
@@ -28,9 +28,16 @@
     </div>
     <div class="header-box02">
     <nav class="links-header">
-        <a href="#">Login</a>
-        <a href="#">About</a>
-        <a href="#">Request Registration</a>
+        <h3>
+            <a href="#">Login</a>
+        </h3>
+        <h3>
+            <a href="#">About</a>
+        </h3>
+        <h3>
+            <a href="#">Request login</a>
+        </h3>
+
     </nav>
     </div>
 </header>
@@ -44,7 +51,7 @@
                     <p>This is the home page.</p>
                 </div>
                 <div class="content-box02">
-                    <h2>Rulles</h2>
+                    <h2>Rules</h2>
                     <p>This is the home page.</p>
                 </div>
             </div>
@@ -53,12 +60,44 @@
 </main>
 
 <footer>
-    <div class="container-footer">
-        <p>&copy; 2023 My Website</p>
-    </div>
+    <section id="section-footer">
+        <div class="container-footer">
+            <form action="#">
+              <h2 class="contact-announcement">Wenn du irgendwelche Fehler gefunden hast, bitte <span>melde dich /lass mich wissen /Gib mir Rückmeldung./ Erzähl mir davon./ Benachrichtige mich./ let me know / Informiere mich bitte.</span></h2>
+                <div class="contact-container">
+                    <div class="input-box">
+                        <div class="input-field field">
+                            <input type="text" placeholder="Name" id="name" class="item" autocomplete="off">
+                            <div class="error-txt">Name kann nicht leer sein</div>
+                        </div>
+                        <div class="input-field field">
+                            <input type="email" placeholder="E-Mail Adresse" id="email" class="item" autocomplete="off">
+                            <div class="error-txt email">E-Mail Adresse kann nicht leer sein</div>
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <div class="input-field field">
+                            <input type="text" placeholder="Telefonnummer" id="phone" class="item" autocomplete="off">
+                            <div class="error-txt">Telefonnummer kann nicht leer sein</div>
+                        </div>
+                        <div class="input-field field">
+                            <input type="text" placeholder="Thema" id="subject" class="item" autocomplete="off">
+                            <div class="error-txt">Thema kann nicht leer sein</div>
+                        </div>
+                    </div>
+                    <div class="textarea-field field">
+                        <textarea name="" id="message" cols="30" rows="5" placeholder="Ihre Nachricht" class="item" autocomplete="off"></textarea>
+                        <div class="error-txt">Nachricht kann nicht leer sein</div>
+                    </div>
+                    <button type="submit" class="button-with-sound" data-sound="info">Send Message</button>
+                </div>
+              <p id="copyright">Copyright &copy; 2024 Mykhaylo Zhovkevych - All rights reserved</p>
+            </form>
+        </div>
+    </section>
 </footer>
 
 
-<script src="./js/main.js"></script>
+<!-- <script src="./js/main.js"></script> -->
 </body>
 </html>

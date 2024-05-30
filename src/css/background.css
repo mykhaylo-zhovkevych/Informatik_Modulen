@@ -1,6 +1,3 @@
-
-
-
 .blobs {
     position: fixed;
     left: 0;
@@ -16,8 +13,8 @@
     top: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(140px);
-    -webkit-backdrop-filter: blur(140px);
+    backdrop-filter: blur(160px);
+    -webkit-backdrop-filter: blur(160px);
     z-index: 3;
 }
 

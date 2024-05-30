@@ -8,6 +8,11 @@
     --black-color: #000000;
 }
 
+body {
+    background: #0000008a;
+    
+}
+
 .container-header {
     display: flex;
     flex-wrap: nowrap;
@@ -15,13 +20,16 @@
     min-height: 50vh;
     backdrop-filter: blur(100px); /* ???? */
     border-radius: 30px;
+    font-size: 1.5em;
 }
 
 .links-header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    backdrop-filter: blur(100px); 
+    border-radius: 30px;
+    height: 45vh;
 }
 
 .links-header a {
@@ -32,6 +40,7 @@
     width: 100%;
     text-align: center;
     border-radius: 5px;
+
 }
 
 .links-header a:hover {
@@ -54,7 +63,7 @@
     align-items: center;
     align-content: center;
     padding: 0rem 5rem 0 5rem;
-    margin: 0rem 5rem 0 5rem;
+    margin: 0rem 2.5rem 0rem 2.5rem;
     border-radius: 30px;
 }
 
@@ -62,10 +71,11 @@
     display: flex;
     padding: 2rem 5rem 0 5rem;
     flex-direction: column;
-    margin: 0rem 5rem 5rem 5rem;
+    margin: 0rem 2.5rem 5rem 2.5rem;
     backdrop-filter: blur(100px);
     height: 35vh;
     border-radius: 30px;
+    font-size: 0.8em;
 }
 
 .header-box02 {
@@ -88,6 +98,7 @@
     width: auto;
     backdrop-filter: blur(100px);
     border-radius: 30px;
+    font-size: 1.5em;
     
 }
 
@@ -100,17 +111,12 @@
 }
 
 .content-box02 {
-    backdrop-filter: blur(100px);
     flex: 1;
     margin: 5.5rem 2.5rem 2.5rem 1.25rem;
     padding: 2.5rem;
+    backdrop-filter: blur(100px);
     border-radius: 30px;
 }
-
-
-
-
-
 
 
 

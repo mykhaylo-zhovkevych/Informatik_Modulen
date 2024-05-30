@@ -1,7 +1,7 @@
 // Import the CSS file
 import '../css/index.css';
 import '../css/background.css';
-
+import '../css/contact.css';
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log('JavaScript is working!');
