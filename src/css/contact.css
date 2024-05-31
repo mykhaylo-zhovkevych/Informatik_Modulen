@@ -75,7 +75,7 @@ form .input-box {
     outline: none;
     border-radius: 30px;
     font-size: 2em;
-    color: #dbdbdb;;
+    color: #a39fa1;;
     margin: 12px 0;
     font-family: "PP Supply Sans", Arial;
 }
@@ -89,7 +89,7 @@ form .input-box {
 }
 
 .field .item::placeholder {
-    color: #ffffff;
+    color: #a39fa1;
    
 }
 
@@ -106,7 +106,7 @@ form button {
     outline: none;
     border-radius: 30px;
     font-size: 2em;
-    color: #dbdbdb;;
+    color: #a39fa1;;
     letter-spacing: 1px;
     font-weight: 600;
     cursor: pointer;
@@ -116,7 +116,7 @@ form button {
 }
 
 form button:hover {
-    box-shadow:0.3rem 0.3rem 0rem #dbdbdb;;
+    box-shadow:0.4rem 0.4rem 0rem #a39fa1;;
 
 }
 

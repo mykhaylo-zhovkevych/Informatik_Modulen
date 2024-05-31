@@ -8,16 +8,53 @@
     --black-color: #000000;
 }
 
+@font-face {
+    font-family: 'PP Supply Sans';
+    src: url('/src/fonts/PPSupplySans-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PP Supply Mono';
+    src: url('/src/fonts/PPSupplyMono-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PP Supply Mono Ultralight';
+    src: url('/src/fonts/PPSupplyMono-Ultralight.otf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PP Supply Sans Ultralight';
+    src: url('/src/fonts/PPSupplySans-Ultralight.otf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'header';
+    src: url('/src/fonts/AbyssalHorrorsItalic-L37l4.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 body {
     background: #313131;
     color: #dbdbdb;
+    font-family: 'PP Supply Mono';
 }
 
 .container-header {
     display: flex;
     flex-wrap: nowrap;
     margin: auto;
-    min-height: 50vh;
+    min-height: 85vh;
     backdrop-filter: blur(100px);
     border-radius: 30px;
     font-size: 1.5em;
@@ -70,9 +107,9 @@ body {
 
 #header-content {
     display: flex;
-    padding: 2rem 5rem  5rem  5rem;
+    padding: 2rem 5rem 20rem  5rem;
     flex-direction: column;
-    margin: 0rem 2.5rem 5rem 2.5rem;
+    margin: 0rem 2.5rem 2.5rem 2.5rem;
     backdrop-filter: blur(100px);
     
     min-height: 35vh;
@@ -93,11 +130,132 @@ body {
     border-radius: 30px;
 }
 
+.content-box02::before {
+    content: '';
+    position: absolute;
+    top: 30%;
+    bottom: 5%;
+    left: 50%;
+    width: 1px;
+    background-color: #dbdbdb;
+}
 .header-box02 a {
     font-size: 1.5em;
     font-weight: bolder;
 }
 
+.contaienr-sides {
+    display: flex;
+    flex-direction: row;
+
+}
+.left-side, .right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+.button-coding-right {
+    padding: 5rem 0 5rem 2.5rem;
+}
+
+.button-coding-left {
+    padding: 5rem 2.5rem 5rem 0rem;
+}
+.contaienr-sides button {
+    padding: 12px 32px;
+    background: #ffffff00;
+    border: 1px solid #dbdbdb;
+    outline: none;
+    border-radius: 30px;
+    font-size: 1.5em;
+    color: #dbdbdb;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.5s;
+    font-family: "PP Supply Sans", Arial;
+}
+.contaienr-sides a {
+    color: #dbdbdb;
+    text-decoration: none;
+}
+.container-sides a:hover, .container-sides a:focus, .container-sides a:active {
+    text-decoration: none;
+    color: #dbdbdb;
+}
+
+.contaienr-sides button:hover {
+    box-shadow: 0.4rem 0.4rem 0rem #dbdbdb;
+  }
+/* button {
+    font-size: 2rem;
+    padding: 15px 40px;
+    border: none;
+    outline: none;
+    color: #dbdbdb;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+    border-radius: 30px;
+  }
+  button::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000000b9;
+    filter: blur(5px);
+    left: 0;
+    top: 0;
+    border-radius: 30px;
+  }
+
+  button::before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #FF0000, #FF7300, #FFFB00, #48FF00,
+      #00FFD5, #002BFF, #FF00C8, #FF0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height:  calc(100% + 4px);
+    filter: blur(20px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+  }
+  
+  @keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+  }
+  
+
+  button:hover::before {
+    opacity: 1;
+  }
+  
+  button:active:after {
+    background: transparent;
+  }
+  
+  button:active {
+    color: #000;
+    font-weight: bold;
+  }
+ */
 .container-main {
     display: flex;
     min-height: 100vh;
@@ -113,17 +271,18 @@ body {
     
     flex: 1;
     margin: 5.5rem 1.25rem 2.5rem 2.5rem;
-    padding: 2.5rem;
+    padding: 5.5rem 2.5rem  2.5rem  2.5rem;
     border-radius: 30px;
 }
 .content-box01 p {
     padding-top: 1em;
+   /*  letter-spacing: 2px; */
 }
 
 .content-box02 {
     flex: 1;
     margin: 5.5rem 2.5rem 2.5rem 1.25rem;
-    padding: 2.5rem;
+    padding:  5.5rem 2.5rem  2.5rem  2.5rem;
     backdrop-filter: blur(100px);
     
     border-radius: 30px;
@@ -131,4 +290,6 @@ body {
 
 .content-box02 p {
     padding-top: 1em;
+    /* letter-spacing: 2px; */
 }
+
