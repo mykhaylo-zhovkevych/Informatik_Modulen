@@ -23,7 +23,7 @@
 }
 
 .blob {
-    width: 800px;
+    width: 400px;
     aspect-ratio: 1;
     position: absolute;
     top: 0;
@@ -50,7 +50,7 @@
 
 }
 .blob--white {
-    background: rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
     width: 600px;
     z-index: 2;
 }

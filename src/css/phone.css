@@ -1,0 +1,17 @@
+/*von index.css*/
+@media (max-width: 768px) {
+    .container-header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .header-box01, .header-box02 {
+        flex: 1 0 auto;
+        width: 100%;
+    }
+
+    .header-box02 {
+        flex: none;
+        height: auto;
+    }
+}

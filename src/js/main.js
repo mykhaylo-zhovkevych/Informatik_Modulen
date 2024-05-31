@@ -2,6 +2,7 @@
 import '../css/index.css';
 import '../css/background.css';
 import '../css/contact.css';
+import '../css/phone.css';
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log('JavaScript is working!');
