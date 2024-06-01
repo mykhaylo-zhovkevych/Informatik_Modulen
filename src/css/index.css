@@ -25,14 +25,14 @@
 @font-face {
     font-family: 'PP Supply Mono Ultralight';
     src: url('/src/fonts/PPSupplyMono-Ultralight.otf') format('truetype');
-    font-weight: lighter;
+    font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'PP Supply Sans Ultralight';
     src: url('/src/fonts/PPSupplySans-Ultralight.otf') format('truetype');
-    font-weight: lighter;
+    font-weight: normal;
     font-style: normal;
 }
 
@@ -293,3 +293,82 @@ body {
     /* letter-spacing: 2px; */
 }
 
+.hidden-content {
+    display: none;
+}
+
+.shown-content {
+    display: flex;
+}
+
+
+span.one {
+
+    position: absolute;
+    width: 100px;
+    height: 7px;
+    border-radius: 30px;
+    background: #dbdbdb;
+ 
+}
+
+span.two {
+
+    position: absolute;
+    width: 100px;
+    height: 7px;
+    border-radius: 30px;
+    background: #dbdbdb;
+    margin-top: 30px;
+
+}
+
+.toggle-btn {
+
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  width: 10vw;
+  height: 100vh;
+  right: 0;
+  padding: 5rem 2rem 0rem 2rem;
+}
+
+
+
+.hidden-window {
+
+    z-index: -2;
+    position: absolute;
+    background: #000000;
+    height: 100vh;
+    width: 100%;
+    top: -100%;
+
+   
+}
+.hidden-window.visible {
+    z-index: 1000;
+   
+}
+
+
+.data {
+    padding: 8em 0 0 2em;
+    text-align: left;
+}
+
+
+ul {
+    list-style: none;
+}
+li:first-child {
+    color: grey;
+    font-family: Poppins;
+    font-size: 24px;
+}
+
+li:not(:first-child) {
+    color: #fff;
+    font-size: 42px;
+}

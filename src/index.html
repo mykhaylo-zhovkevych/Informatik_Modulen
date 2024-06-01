@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modulenjournalen</title>
     <link rel="stylesheet" href="css/index.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 </head>
 <body>
 
@@ -36,7 +43,11 @@
     </div>
     <div class="header-box02">
         <nav class="links-header">
-            <a href="#">Einloggen</a>
+            <a href="#">Einloggen 
+                <div class="toggle-btn">
+                   
+                </div>
+            </a>
             <a href="#">Konto anfragen</a>
             <a href="#">Besucher</a>
         </nav>
@@ -83,6 +94,42 @@
         </section>
     </article>
 </main>
+
+<div class="hidden-window">
+    <div class="toggle-btn">
+        <span class="one"></span>  
+        <span class="two"></span>              
+    </div>
+    <div class="page-login hidden-content">
+        <style>
+            .content-main-login {
+                width: 90%;
+                height: 100vh;
+            }
+        </style>
+        <div class="content-main-login">
+            <h2>LOGIN</h2>
+        </div>
+    </div>
+    <div class="page-request-login hidden-content">
+        <ul>
+             <li>Navigation FOR THE PAGE REWUST </li>
+             <li><a href="#">Home</a></li>
+             <li><a href="#">Our Story</a></li>
+             <li><a href="#">Services</a></li>
+             <li><a href="#">Contact</a></li>
+        </ul>
+   </div>
+   <div class="page-visitor hidden-content">
+    <ul>
+         <li>Navigation FOR THE PAGE BESUCHER</li>
+         <li><a href="#">Home</a></li>
+         <li><a href="#">Our Story</a></li>
+         <li><a href="#">Services</a></li>
+         <li><a href="#">Contact</a></li>
+    </ul>
+</div>
+</div>
 
 <footer>
     <section id="section-footer">
