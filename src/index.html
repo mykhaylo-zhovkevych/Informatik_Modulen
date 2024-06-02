@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/index.css">
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-
+    <!-- <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script> -->
 
 </head>
 <body>
@@ -100,7 +100,7 @@
         <span class="two"></span>              
     </div>
     <div class="page-login hidden-content">
-       
+       <div class="main-wrapper">
             <div class="wrapper">
                 <form action="" class="form-login">
                     <h1>Login</h1>
@@ -110,8 +110,9 @@
                         <i class='bx bxs-user'></i>
                     </div>
                     <div class="input-box">
-                        <input type="password" placeholder="Password" 
-                        required>
+                        <input type="password" id="password" placeholder="Password" 
+                            required>
+                            <span id="togglePassword" class="toggle-password">👁️</span>
                         <i class='bx bxs-lock-alt' ></i>
                     </div>
                     <div class="remember-forgot">
@@ -122,16 +123,41 @@
         
                 </form>
             </div>
-
+        </div>
     </div>
     <div class="page-request-login hidden-content">
-        <ul>
-             <li>Navigation FOR THE PAGE REWUST </li>
-             <li><a href="#">Home</a></li>
-             <li><a href="#">Our Story</a></li>
-             <li><a href="#">Services</a></li>
-             <li><a href="#">Contact</a></li>
-        </ul>
+        <div class="main-wrapper">
+            <div class="wrapper">
+                <form action="" class="form-login">
+                    <h1>Konto anfordern</h1>
+                    <div class="input-box">
+                        <input type="text" placeholder="Ihr Name" 
+                        required>
+                        <i class='bx bxs-user'></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" placeholder="E-Mail" 
+                        required>
+                        <i class='bx bxs-lock-alt' ></i>
+                    </div>
+                    <textarea class="input-textarea" name=""  cols="30" rows="5" placeholder="Der Grund, warum Sie ein Konto benötigen" class="item" autocomplete="off"></textarea>
+                    <div class="input-box-two-in-one"> 
+                        <div class="input-box01">
+                            <input type="text" placeholder="Benutzer Name" 
+                            required>
+                            <i class='bx bxs-lock-alt' ></i>
+                        </div>
+                        <div class="input-box02">
+                            <input type="password" id="password" placeholder="Password" 
+                            required>
+                            <span id="togglePassword" class="toggle-password">👁️</span>
+                            <i class='bx bxs-lock-alt' ></i>
+                        </div>
+                    </div>    
+                    <button type="submit" class="bth">Konto anfordern</button>
+                </form>
+            </div>
+        </div>
    </div>
  <!--  <div class="page-visitor hidden-content">
 
@@ -181,5 +207,20 @@
         </div>
     </section>
 </footer>
+<script>
+    // Select all toggle-password elements
+    document.querySelectorAll('.toggle-password').forEach(item => {
+        item.addEventListener('click', function() {
+            const passwordInput = this.previousElementSibling;
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                this.textContent = '🙈'; 
+            } else {
+                passwordInput.type = 'password';
+                this.textContent = '👁️'; 
+            }
+        });
+    });
+</script>
 </body>
 </html>
