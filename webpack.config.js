@@ -3,10 +3,16 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'development', // Set mode to 'development'
-    entry: './src/js/main.js',
+    entry: {
+        main: './src/js/main.js',
+        togglerCloseOpen: './src/js/togglerCloseOpen.js', // Additional entry point
+        preloader: './src/js/preloader.js' // Example additional JS file
+
+    },
     output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        filename: '[name].bundle.js', // Use [name] to dynamically name the output files
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: '/' // Ensure proper path resolution
     },
     module: {
         rules: [
@@ -28,14 +34,21 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.html'
-        })
+            template: './src/index.html',
+            filename: 'index.html' // Output file name
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/content.html',
+            filename: 'html/content.html' // Output file name for content.html
+        }),
+
     ],
     devServer: {
         static: {
             directory: path.join(__dirname, 'dist')
         },
         compress: true,
-        port: 9000
+        port: 9000,
+        historyApiFallback: true // Ensure proper handling of client-side routing
     }
 };

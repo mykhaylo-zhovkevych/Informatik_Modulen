@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+            integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+</head>
+
+<body class="body-content">
+<div class="container">
+    <p>Welcome</p>
+</div>
+
+
+
+
+<div class="loading-page">
+    <div class="letters-load">
+        <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M22.7 33.4c13.5-4.1 28.1 1.1 35.9 12.9L224 294.3 389.4 46.2c7.8-11.7 22.4-17 35.9-12.9S448 49.9 448 64V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V169.7L250.6 369.8c-5.9 8.9-15.9 14.2-26.6 14.2s-20.7-5.3-26.6-14.2L64 169.7V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V64C0 49.9 9.2 37.5 22.7 33.4z"/></svg>
+        <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 64C0 46.3 14.3 32 32 32H352c12.4 0 23.7 7.2 29 18.4s3.6 24.5-4.4 34.1L100.3 416H352c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-12.4 0-23.7-7.2-29-18.4s-3.6-24.5 4.4-34.1L283.7 96H32C14.3 96 0 81.7 0 64z"/></svg>
+    </div>
+    <div class="loading">
+        <label class="percent">100%</label>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+    </div>
+</div>
+</body>
+
+<script>
+    gsap.fromTo(
+        ".loading-page",
+        { opacity: 1 },
+        {
+            opacity: 0,
+            display: "none",
+            duration: 1.5,
+            delay: 3.5,
+        }
+    );
+
+    gsap.fromTo(
+        ".logo-name",
+        {
+            y: 50,
+            opacity: 0,
+        },
+        {
+            y: 0,
+            opacity: 1,
+            duration: 2,
+            delay: 0.5,
+        }
+    );
+
+    var text = document.querySelector('.text');
+    var percent = document.querySelector('.percent');
+    var progress = document.querySelector('.progress');
+    var count = 4;
+    var per = 16;
+    var loading = setInterval(animate, 20);
+
+    function animate(){
+
+        if(count == 100 && per == 400){
+            /* text.textContent = "Completed";
+            text.style.fontSize = "70px";
+            text.classList.add("add"); */
+            clearInterval(loading);
+
+        } else {
+
+            per = per + 4;
+            count = count + 1;
+            progress.style.width = per + 'px';
+            percent.textContent = count + '%';
+        }
+    }
+</script>
+</html>

@@ -3,6 +3,9 @@ import '../css/index.css';
 import '../css/background.css';
 import '../css/contact.css';
 import '../css/phone.css';
+import '../css/login.css';
+import '../css/content.css'
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -89,26 +92,17 @@ var t1 = new TimelineMax({paused: true});
 
 
 
-t1.to(".one", 0.3, {
-
+t1.to(".one", 0.5, {
     y: 5,
-
     rotation: 45,
-
-    ease: Expo.easeInOut
-
+    ease: Power1.easeInOut // Smoother easing function
 });
 
-t1.to(".two", 0.3, {
-
+t1.to(".two", 0.5, {
     y: -25,
-
     rotation: -45,
-
-    ease: Expo.easeInOut,
-
-    delay: -0.3
-
+    ease: Power1.easeInOut, // Smoother easing function
+    delay: -0.5
 });
 
 
@@ -122,11 +116,11 @@ t1.to(".hidden-window", 2, {
 
 
 
-t1.staggerFrom(".hidden-window ul li", 1, {
+/* t1.staggerFrom(".hidden-window ul li", 1, {
     x: -200, opacity: 0, 
     ease:Expo.easeOut
 }, 
-0.2);
+0.2); */
 
 
 
@@ -146,7 +140,7 @@ $(document).on("click", ".toggle-btn", function() {
     }
 });
 
-$(document).on("click", ".links-header a", function() {
+$(document).on("click", ".links-header-active a", function() {
     var hiddenWindow = $(".hidden-window");
     var targetClass;
 
@@ -178,3 +172,5 @@ $(document).on("click", ".links-header a", function() {
         });
     }
 });
+
+

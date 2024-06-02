@@ -78,6 +78,7 @@ form .input-box {
     color: #a39fa1;;
     margin: 12px 0;
     font-family: "PP Supply Sans", Arial;
+    height: auto;
 }
 
 .field.error .item {
