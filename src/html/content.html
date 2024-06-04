@@ -11,12 +11,193 @@
             integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
             crossorigin="anonymous" referrerpolicy="no-referrer">
     </script>
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+
+    <style>
+        .sidebar-list-item {
+            cursor: pointer;
+            list-style: none;
+            padding: 10px;
+            color: #fff;
+        }
+        .subclass-list {
+            display: none;
+            padding-left: 20px;
+            list-style: none;
+            padding: 1rem;
+        }
+        .subclass-li {
+            padding: 1rem;
+        }    
+    </style>
+
+    
 </head>
 
-<body class="body-content">
-<div class="container">
-    <p>Welcome</p>
+<div class="blobs">
+    <div class="blobs-glass"></div>
+    <div class="blobs-items">
+        <div class="blob blob--blue"></div>
+        <div class="blob blob--yellow"></div>
+        <div class="blob blob--green"></div>
+        <div class="blob blob--purple"></div>
+        <div class="blob blob--white"></div>
+    </div>
 </div>
+
+<div class="grid-container">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="menu-icon" onclick="openSidebar()">
+        <span class="material-icons-outlined">shopping_cart</span>
+      </div>
+      <div  >
+       
+        <lord-icon
+    src="https://cdn.lordicon.com/unukghxb.json"
+    trigger="hover"
+    stroke="bold"
+    colors="primary:#ffffff,secondary:#e4e4e4"
+    style="width:35px;height:35px">
+</lord-icon>
+      </div>
+      <div class="header-right">
+       <!--  <span class="material-icons-outlined">notifications</span> -->
+        <lord-icon
+    src="https://cdn.lordicon.com/bgebyztw.json"
+    trigger="hover"
+    stroke="bold"
+    state="hover-looking-around"
+    colors="primary:#ffffff,secondary:#ffffff"
+    style="width:35px;height:35px">
+</lord-icon>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="sidebar-title">
+        <div class="sidebar-brand">
+           IT-Modulen
+        </div>
+        <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+      </div>
+
+      <ul class="sidebar-list">
+        <li class="sidebar-list-item" data-target="dashboard-subclasses">
+            <span class="material-icons-outlined">dashboard</span> Dashboard
+            <ul id="dashboard-subclasses" class="subclass-list">
+              
+                    <a href="#" class="subclass-li"><li>something..</li></a>
+                
+                    <a href="#" class="subclass-li"><li>something..</li></a>
+                    <a href="#" class="subclass-li"><li>something..</li></a>
+                    <a href="#" class="subclass-li"><li>something..</li></a>
+               
+            </ul>
+        </li>
+        <li class="sidebar-list-item" data-target="customers-subclasses">
+            <span class="material-icons-outlined">groups</span> Customers
+            <ul id="customers-subclasses" class="subclass-list">
+                <li>All Customers</li>
+                <li>Active Customers</li>
+                <li>Inactive Customers</li>
+            </ul>
+        </li>
+        <li class="sidebar-list-item" data-target="inventory-subclasses">
+            <span class="material-icons-outlined">fact_check</span> Inventory
+            <ul id="inventory-subclasses" class="subclass-list">
+                <li>Stock</li>
+                <li>Orders</li>
+                <li>Suppliers</li>
+            </ul>
+        </li>
+        <li class="sidebar-list-item" data-target="reports-subclasses">
+            <span class="material-icons-outlined">poll</span> Reports
+            <ul id="reports-subclasses" class="subclass-list">
+                <li>Sales Reports</li>
+                <li>Inventory Reports</li>
+                <li>Customer Reports</li>
+            </ul>
+        </li>
+        <li class="sidebar-list-item" data-target="settings-subclasses">
+            <span class="material-icons-outlined">settings</span> Settings
+            <ul id="settings-subclasses" class="subclass-list">
+                <li>General Settings</li>
+                <li>Security Settings</li>
+                <li>Notification Settings</li>
+            </ul>
+        </li>
+    </ul>
+    </aside>
+    <!-- End Sidebar -->
+
+    <!-- Main -->
+    <main class="main-container">
+      <div class="main-title">
+        <h2>DASHBOARD</h2>
+      </div>
+
+      <div class="main-cards">
+
+        <div class="card">
+          <div class="card-inner">
+            <h3>PRODUCTS</h3>
+            <span class="material-icons-outlined">inventory_2</span>
+          </div>
+          <h1>249</h1>
+        </div>
+
+        <div class="card">
+          <div class="card-inner">
+            <h3>CATEGORIES</h3>
+            <span class="material-icons-outlined">category</span>
+          </div>
+          <h1>25</h1>
+        </div>
+
+        <div class="card">
+          <div class="card-inner">
+            <h3>CUSTOMERS</h3>
+            <span class="material-icons-outlined">groups</span>
+          </div>
+          <h1>1500</h1>
+        </div>
+
+        <div class="card">
+          <div class="card-inner">
+            <h3>ALERTS</h3>
+            <span class="material-icons-outlined">notification_important</span>
+          </div>
+          <h1>56</h1>
+        </div>
+
+      </div>
+
+      <div class="charts">
+
+        <div class="charts-card">
+          <h2 class="chart-title">Top 5 Products</h2>
+          <div id="bar-chart"></div>
+        </div>
+
+        <div class="charts-card">
+          <h2 class="chart-title">Purchase and Sales Orders</h2>
+          <div id="area-chart"></div>
+        </div>
+
+      </div>
+    </main>
+    <!-- End Main -->
+
+  </div>
 
 
 
@@ -33,56 +214,38 @@
             </div>
     </div>
 </div>
-</body>
+
 
 <script>
-    gsap.fromTo(
-        ".loading-page",
-        { opacity: 1 },
-        {
-            opacity: 0,
-            display: "none",
-            duration: 1.5,
-            delay: 3.5,
-        }
-    );
+    document.querySelectorAll('.sidebar-list-item').forEach(item => {
+        item.addEventListener('click', function(event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('data-target');
+            const targetSubClasses = document.getElementById(targetId);
 
-    gsap.fromTo(
-        ".logo-name",
-        {
-            y: 50,
-            opacity: 0,
-        },
-        {
-            y: 0,
-            opacity: 1,
-            duration: 2,
-            delay: 0.5,
-        }
-    );
+            // Hide all sub-class lists
+            document.querySelectorAll('.subclass-list').forEach(subclass => {
+                if (subclass !== targetSubClasses) {
+                    subclass.style.display = 'none';
+                }
+            });
 
-    var text = document.querySelector('.text');
-    var percent = document.querySelector('.percent');
-    var progress = document.querySelector('.progress');
-    var count = 4;
-    var per = 16;
-    var loading = setInterval(animate, 20);
+            // Toggle the visibility of the clicked sub-class list
+            if (targetSubClasses.style.display === 'block') {
+                targetSubClasses.style.display = 'none';
+            } else {
+                targetSubClasses.style.display = 'block';
+            }
+        });
+    });
 
-    function animate(){
+    function closeSidebar() {
+        document.getElementById('sidebar').style.display = 'none';
+    }
 
-        if(count == 100 && per == 400){
-            /* text.textContent = "Completed";
-            text.style.fontSize = "70px";
-            text.classList.add("add"); */
-            clearInterval(loading);
-
-        } else {
-
-            per = per + 4;
-            count = count + 1;
-            progress.style.width = per + 'px';
-            percent.textContent = count + '%';
-        }
+    function openSidebar() {
+        document.getElementById('sidebar').style.display = 'block';
     }
 </script>
+</body>
 </html>

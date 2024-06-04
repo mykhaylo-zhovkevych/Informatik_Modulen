@@ -4,8 +4,8 @@ import '../css/background.css';
 import '../css/contact.css';
 import '../css/phone.css';
 import '../css/login.css';
-import '../css/content.css'
 
+import '../css/content.css'
 
 
 document.addEventListener('DOMContentLoaded', () => {
