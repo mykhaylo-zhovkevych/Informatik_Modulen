@@ -89,30 +89,63 @@
         </div>
         <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
       </div>
-
+      <style>
+        .p-aside {
+        letter-spacing: 0.1rem;
+        display: flex;
+        align-items: end;
+}
+      </style>
       <ul class="sidebar-list">
-        <li class="sidebar-list-item" data-target="dashboard-subclasses">
-            <span class="material-icons-outlined">dashboard</span> Dashboard
-            <ul id="dashboard-subclasses" class="subclass-list">
-              
-                    <a href="#" class="subclass-li"><li>something..</li></a>
-                
-                    <a href="#" class="subclass-li"><li>something..</li></a>
-                    <a href="#" class="subclass-li"><li>something..</li></a>
-                    <a href="#" class="subclass-li"><li>something..</li></a>
-               
-            </ul>
+        <li class="sidebar-list-item-noncklickable">
+            <p class="p-aside"><lord-icon
+                src="https://cdn.lordicon.com/abwrkdvl.json"
+                trigger="hover"
+                state="hover-diversified"
+                colors="primary:#ffffff,secondary:#e4e4e4"
+                style="width:40px;height:45px">
+              </lord-icon> Dashboard </p>
+            <a href="#"></a>
         </li>
         <li class="sidebar-list-item" data-target="customers-subclasses">
-            <span class="material-icons-outlined">groups</span> Customers
+            <p class="p-aside"><lord-icon
+                src="https://cdn.lordicon.com/gkgkfbzm.json"
+                trigger="hover"
+                colors="primary:#ffffff,secondary:#e4e4e4"
+                style="width:40px;height:40px">
+              </lord-icon>IT-Modulen</p> 
             <ul id="customers-subclasses" class="subclass-list">
-                <li>All Customers</li>
-                <li>Active Customers</li>
-                <li>Inactive Customers</li>
+                <a href="#" class="subclass-li"><li>something..</li></a>
+                    <li>Skripting</li>
+                    <a href="#" class="subclass-li"><li>M320</li></a>
+                    <a href="#" class="subclass-li"><li>M306</li></a>
+                    <a href="#" class="subclass-li"><li>M293</li></a>
+                    <li>Netzwerk</li>
+                    <a href="#" class="subclass-li"><li>M169-347</li></a>
+                    <a href="#" class="subclass-li"><li>M254</li></a>
+                    <a href="#" class="subclass-li"><li>M114</li></a>
+                    <a href="#" class="subclass-li"><li>M164</li></a>
+                    <li>ICT</li>
+                    <a href="#" class="subclass-li"><li>M117</li></a>
+                    <a href="#" class="subclass-li"><li>M106</li></a>
+                    <li>Databanken</li>
+                    <a href="#" class="subclass-li"><li>M231</li></a>
+                    <a href="#" class="subclass-li"><li>M162</li></a>
+                    <li>Programmierung</li>
+                    <a href="#" class="subclass-li"><li>M319</li></a>
+                    <a href="#" class="subclass-li"><li>M122</li></a>
+                    <a href="#" class="subclass-li"><li>M187</li></a>
+                    <a href="#" class="subclass-li"><li>M431</li></a>
             </ul>
         </li>
         <li class="sidebar-list-item" data-target="inventory-subclasses">
-            <span class="material-icons-outlined">fact_check</span> Inventory
+          <p class="p-aside"><lord-icon
+                  src="https://cdn.lordicon.com/wyqtxzeh.json"
+                  trigger="hover"
+                  state="hover-spending"
+                  colors="primary:#ffffff,secondary:#e4e4e4"
+                  style="width:40px;height:40px">
+               </lord-icon>Crypto</p>
             <ul id="inventory-subclasses" class="subclass-list">
                 <li>Stock</li>
                 <li>Orders</li>
@@ -120,21 +153,19 @@
             </ul>
         </li>
         <li class="sidebar-list-item" data-target="reports-subclasses">
-            <span class="material-icons-outlined">poll</span> Reports
+          <p class="p-aside"><lord-icon
+                src="https://cdn.lordicon.com/lenjvibx.json"
+                trigger="hover"
+                colors="primary:#ffffff,secondary:#e4e4e4"
+                style="width:40px;height:40px">
+              </lord-icon>Mein Notizen</p>
             <ul id="reports-subclasses" class="subclass-list">
                 <li>Sales Reports</li>
                 <li>Inventory Reports</li>
                 <li>Customer Reports</li>
             </ul>
         </li>
-        <li class="sidebar-list-item" data-target="settings-subclasses">
-            <span class="material-icons-outlined">settings</span> Settings
-            <ul id="settings-subclasses" class="subclass-list">
-                <li>General Settings</li>
-                <li>Security Settings</li>
-                <li>Notification Settings</li>
-            </ul>
-        </li>
+        
     </ul>
     </aside>
     <!-- End Sidebar -->
@@ -149,7 +180,7 @@
 
         <div class="card">
           <div class="card-inner">
-            <h3>PRODUCTS</h3>
+            <h3>Modulen</h3>
             <span class="material-icons-outlined">inventory_2</span>
           </div>
           <h1>249</h1>
@@ -157,7 +188,7 @@
 
         <div class="card">
           <div class="card-inner">
-            <h3>CATEGORIES</h3>
+            <h3>Katagorien</h3>
             <span class="material-icons-outlined">category</span>
           </div>
           <h1>25</h1>
@@ -165,7 +196,7 @@
 
         <div class="card">
           <div class="card-inner">
-            <h3>CUSTOMERS</h3>
+            <h3>Artiklen</h3>
             <span class="material-icons-outlined">groups</span>
           </div>
           <h1>1500</h1>
@@ -173,7 +204,7 @@
 
         <div class="card">
           <div class="card-inner">
-            <h3>ALERTS</h3>
+            <h3>Updates</h3>
             <span class="material-icons-outlined">notification_important</span>
           </div>
           <h1>56</h1>
@@ -184,12 +215,12 @@
       <div class="charts">
 
         <div class="charts-card">
-          <h2 class="chart-title">Top 5 Products</h2>
+          <h2 class="chart-title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, sint.</h2>
           <div id="bar-chart"></div>
         </div>
 
         <div class="charts-card">
-          <h2 class="chart-title">Purchase and Sales Orders</h2>
+          <h2 class="chart-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, possimus. Nihil minus a eaque quod.</h2>
           <div id="area-chart"></div>
         </div>
 
