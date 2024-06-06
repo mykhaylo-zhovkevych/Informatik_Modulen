@@ -19,21 +19,12 @@ t1.to(".two", 0.5, {
 
 
 
-t1.to(".hidden-window", 2, {
+t1.to(".hidden-window", 1.2, {
 
     top: "0%",
-    ease: Expo.easeInOut,
-    delay: -2.5
+    ease: Power1.easeInOut,
+    delay: -0
 });
-
-
-
-/* t1.staggerFrom(".hidden-window ul li", 1, {
-    x: -200, opacity: 0,
-    ease:Expo.easeOut
-},
-0.2); */
-
 
 
 t1.reverse();

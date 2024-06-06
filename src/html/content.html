@@ -34,11 +34,16 @@
         .subclass-li {
             padding: 1rem;
         }    
+        #open-icon {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
     </style>
 
     
 </head>
-
+<body>
 <div class="blobs">
     <div class="blobs-glass"></div>
     <div class="blobs-items">
@@ -54,40 +59,58 @@
 
     <!-- Header -->
     <header class="header">
-      <div class="menu-icon" onclick="openSidebar()">
-        <span class="material-icons-outlined">shopping_cart</span>
+      <div class="icon-left">
+        <div class="menu-icon" onclick="openSidebar()" class="open-sidebar">
+          <lord-icon
+            src="https://cdn.lordicon.com/zrkkrrpl.json"
+            trigger="hover"
+            stroke="bold"
+            state="hover-swirl"
+            colors="primary:#ffffff,secondary:#e4e4e4"
+            style="width:35px;height:35px">
+          </lord-icon>
+        </div>
       </div>
-      <div  >
-       
+    
+      <div class="icons">
         <lord-icon
-    src="https://cdn.lordicon.com/unukghxb.json"
-    trigger="hover"
-    stroke="bold"
-    colors="primary:#ffffff,secondary:#e4e4e4"
-    style="width:35px;height:35px">
-</lord-icon>
-      </div>
-      <div class="header-right">
-       <!--  <span class="material-icons-outlined">notifications</span> -->
+          src="https://cdn.lordicon.com/unukghxb.json"
+          trigger="hover"
+          stroke="bold"
+          colors="primary:#ffffff,secondary:#e4e4e4"
+          style="width:35px;height:35px">
+        </lord-icon>
+      
         <lord-icon
-    src="https://cdn.lordicon.com/bgebyztw.json"
-    trigger="hover"
-    stroke="bold"
-    state="hover-looking-around"
-    colors="primary:#ffffff,secondary:#ffffff"
-    style="width:35px;height:35px">
-</lord-icon>
-      </div>
+          src="https://cdn.lordicon.com/bgebyztw.json"
+          trigger="hover"
+          stroke="bold"
+          state="hover-looking-around"
+          colors="primary:#ffffff,secondary:#ffffff"
+          style="width:35px;height:35px">
+        </lord-icon>
+    </div>
+
     </header>
     <!-- End Header -->
+
 
     <!-- Sidebar -->
     <aside id="sidebar">
       <div class="sidebar-title">
         <div class="sidebar-brand">
            IT-Modulen
-        </div>
-        <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+    
+          </div>
+        <lord-icon onclick="closeSidebar()" class="close-sidebar"
+          src="https://cdn.lordicon.com/dykoqszm.json"
+          trigger="hover"
+          stroke="bold"
+          state="hover-swirl"
+          colors="primary:#ffffff,secondary:#e4e4e4"
+          style="width:45px;height:45px">
+        </lord-icon>
+
       </div>
       <style>
         .p-aside {
@@ -96,8 +119,9 @@
         align-items: end;
 }
       </style>
+
       <ul class="sidebar-list">
-        <li class="sidebar-list-item-noncklickable">
+        <li class="sidebar-list-item-noncklickable sidebar-list-item">
             <p class="p-aside"><lord-icon
                 src="https://cdn.lordicon.com/abwrkdvl.json"
                 trigger="hover"
@@ -105,7 +129,7 @@
                 colors="primary:#ffffff,secondary:#e4e4e4"
                 style="width:40px;height:45px">
               </lord-icon> Dashboard </p>
-            <a href="#"></a>
+            <a href=""></a>
         </li>
         <li class="sidebar-list-item" data-target="customers-subclasses">
             <p class="p-aside"><lord-icon
@@ -181,7 +205,7 @@
         <div class="card">
           <div class="card-inner">
             <h3>Modulen</h3>
-            <span class="material-icons-outlined">inventory_2</span>
+            
           </div>
           <h1>249</h1>
         </div>
@@ -189,7 +213,7 @@
         <div class="card">
           <div class="card-inner">
             <h3>Katagorien</h3>
-            <span class="material-icons-outlined">category</span>
+            
           </div>
           <h1>25</h1>
         </div>
@@ -197,7 +221,7 @@
         <div class="card">
           <div class="card-inner">
             <h3>Artiklen</h3>
-            <span class="material-icons-outlined">groups</span>
+            
           </div>
           <h1>1500</h1>
         </div>
@@ -205,7 +229,7 @@
         <div class="card">
           <div class="card-inner">
             <h3>Updates</h3>
-            <span class="material-icons-outlined">notification_important</span>
+            
           </div>
           <h1>56</h1>
         </div>
@@ -246,6 +270,67 @@
     </div>
 </div>
 
+<div class="hidden-window">
+  <div class="toggle-btn">
+      <span class="one"></span>  
+      <span class="two"></span>              
+  </div>
+  <div class="page-login hidden-content">
+     <div class="main-wrapper">
+          <div class="wrapper">
+              <form action="" class="form-login">
+                  <h1>Login</h1>
+                  <div class="input-box">
+                      <input type="text" placeholder="User Name" 
+                      required> 
+                  </div>
+                  <div class="input-box">
+                      <input type="password" id="password" placeholder="Password" 
+                          required>
+                          <span id="togglePassword" class="toggle-password">👁️</span>
+                  </div>
+                  <div class="remember-forgot">
+                      <label > <input type="checkbox">Remember me</label>
+                      <a href="#">Forgot password?</a>
+                  </div>
+                  <button type="submit" class="bth">Login</button>
+              </form>
+          </div>
+      </div>
+  </div>
+  <div class="page-request-login hidden-content">
+      <div class="main-wrapper">
+          <div class="wrapper">
+              <form action="" class="form-login">
+                  <h1>Konto anfordern</h1>
+                  <div class="input-box">
+                      <input type="text" placeholder="Ihr Name" 
+                      required>
+                  </div>
+                  <div class="input-box">
+                      <input type="text" placeholder="E-Mail" 
+                      required>
+                  </div>
+                  <textarea class="input-textarea" name=""  cols="30" rows="5" placeholder="Der Grund, warum Sie ein Konto benötigen" class="item" autocomplete="off"></textarea>
+                  <div class="input-box-two-in-one"> 
+                      <div class="input-box01">
+                          <input type="text" placeholder="Benutzer Name" 
+                          required>
+                      </div>
+                      <div class="input-box02">
+                          <input type="password" id="password" placeholder="Password" 
+                          required>
+                          <span id="togglePassword" class="toggle-password">👁️</span>
+                      </div>
+                  </div>    
+                  <button type="submit" class="bth">Konto anfordern</button>
+              </form>
+          </div>
+      </div>
+ </div>
+</div>
+
+
 
 <script>
     document.querySelectorAll('.sidebar-list-item').forEach(item => {
@@ -262,20 +347,29 @@
             });
 
             // Toggle the visibility of the clicked sub-class list
-            if (targetSubClasses.style.display === 'block') {
+            if (targetSubClasses.style.display === 'grid') {
                 targetSubClasses.style.display = 'none';
             } else {
-                targetSubClasses.style.display = 'block';
+                targetSubClasses.style.display = 'grid';
             }
         });
     });
 
-    function closeSidebar() {
-        document.getElementById('sidebar').style.display = 'none';
-    }
-
+    let sidebarOpen = false;
+    const sidebar = document.getElementById('sidebar');
+    
     function openSidebar() {
-        document.getElementById('sidebar').style.display = 'block';
+      if (!sidebarOpen) {
+        sidebar.classList.add('sidebar-responsive');
+        sidebarOpen = true;
+      }
+    }
+    
+    function closeSidebar() {
+      if (sidebarOpen) {
+        sidebar.classList.remove('sidebar-responsive');
+        sidebarOpen = false;
+      }
     }
 </script>
 </body>

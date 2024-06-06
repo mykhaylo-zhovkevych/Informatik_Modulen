@@ -48,7 +48,7 @@ module.exports = {
             directory: path.join(__dirname, 'dist')
         },
         compress: true,
-        port: 9000,
+        port: 9001,
         historyApiFallback: true // Ensure proper handling of client-side routing
     }
 };

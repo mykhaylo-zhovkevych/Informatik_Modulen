@@ -6,17 +6,6 @@
 }
 
 
-/* .container {
-    background-color: black;
-    color: #fff;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
- */
 .loading-page {
     position: absolute;
     top: 0;
@@ -178,6 +167,8 @@
       'sidebar header header header'
       'sidebar main main main';
     height: 100vh;
+    width: 100vw;
+    overflow: hidden;
   }
   
   /* ---------- HEADER ---------- */
@@ -200,18 +191,30 @@
   /* ---------- SIDEBAR ---------- */
   
   #sidebar {
+ 
     grid-area: sidebar;
-    height: 95vh;
+    height: 97vh;
     background-color: #00000010;
     backdrop-filter: blur(100px);
     overflow-y: auto;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
     font-size: 0.4em;
     border-radius: 30px;
     margin: 1rem;
+    
+  }
+  .sidebar-responsive {
+    display: inline !important;
+    position: absolute;
+    z-index: 12 !important;
   }
   
+  .close-sidebar {
+    display: none;
+  }
+  lord-icon {
+    cursor: pointer;
+  }
+
   .sidebar-title {
     display: flex;
     justify-content: space-between;
@@ -219,7 +222,7 @@
     padding: 30px 30px 60px 30px
 
   }
-  
+
   .sidebar-title > span {
     display: none;
   }
@@ -228,6 +231,7 @@
     margin-top: 15px;
     font-size: 20px;
     font-weight: 700;
+    padding-right: 0.5rem;
   }
   
   .sidebar-list {
@@ -252,18 +256,7 @@
     color: #9e9ea4;
   }
   
-  .sidebar-responsive {
-    display: inline !important;
-    position: absolute;
-    /*
-      the z-index of the ApexCharts is 11
-      we want the z-index of the sidebar higher so that
-      the charts are not showing over the sidebar 
-      on small screens
-    */
-    z-index: 12 !important;
-  }
-  
+
   /* ---------- MAIN ---------- */
   
   .main-container {
@@ -362,11 +355,20 @@
         'header'
         'main';
     }
+    .sidebar-title:hover {
+      background-color: rgba(255, 255, 255, 0.103);
+      cursor: auto;
+      padding: 30px 30px 30px 30px;
+      border-radius: 30px;
+    }
+    
   
     #sidebar {
       display: none;
     }
-  
+    .close-sidebar {
+      display: block;
+    }
     .menu-icon {
       display: inline;
     }

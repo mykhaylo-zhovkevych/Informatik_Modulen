@@ -3,7 +3,7 @@
 }
 
 #section-footer {
-    display: flex;
+    /* display: flex; */
     min-height: 50vh;
     width: auto;
     backdrop-filter: blur(100px);
@@ -13,7 +13,7 @@
 }
 
 .container-footer {
-    display: flex;
+
     
 }
 .contact-announcement {
