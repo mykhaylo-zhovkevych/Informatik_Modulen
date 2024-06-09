@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,6 +19,7 @@
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
   <!--   <script src="/src/js/jsonManager.js" defer></script> -->
     <script src="/dist/jsonManager.bundle.js" defer></script>
+
     <style>
         .sidebar-list-item {
             cursor: pointer;
@@ -32,8 +33,21 @@
             list-style: none;
             padding: 1rem;
         }
-        .subclass-li {
-            padding: 1rem;
+        li .subclass-li {
+          margin: 1rem 0 0rem 0rem;
+          padding: 1rem 1rem 1rem 0rem;
+          border-radius: 30px;
+          background-color: #00000020;
+            
+        }
+        .subclass-li a {
+          color: white;
+          text-align: center;
+          display: block;
+          outline: none;
+        }
+        .text-li {
+          margin-top: 1rem;
         }    
         #open-icon {
           display: flex;
@@ -73,30 +87,33 @@
         </div>
       </div>
     
-      <div class="icons ">
-        <lord-icon
-          src="https://cdn.lordicon.com/unukghxb.json"
-          trigger="hover"
-          stroke="bold"
-          colors="primary:#ffffff,secondary:#e4e4e4"
-          style="width:35px;height:35px">
-        </lord-icon>
-      
-        <lord-icon
-          src="https://cdn.lordicon.com/bgebyztw.json"
-          trigger="hover"
-          stroke="bold"
-          state="hover-looking-around"
-          colors="primary:#ffffff,secondary:#ffffff"
-          style="width:35px;height:35px">
-        </lord-icon>
-    </div>
+    <div class="icons " style="display: flex;">
+        
+          <lord-icon id="search-icon" style="margin-right: 1rem;"
+            src="https://cdn.lordicon.com/unukghxb.json"
+            trigger="hover"
+            stroke="bold"
+            colors="primary:#ffffff,secondary:#e4e4e4"
+            style="width:35px;height:35px">
+          </lord-icon>
 
+        <div class="links-header-active">
+        <a href="#" ><p style="display: none;">Einstellungen</p>
+          <lord-icon
+            src="https://cdn.lordicon.com/bgebyztw.json"
+            trigger="hover"
+            stroke="bold"
+            state="hover-looking-around"
+            colors="primary:#ffffff,secondary:#ffffff"
+            style="width:35px;height:35px">
+          </lord-icon>
+        </a>
+        </div>
+    </div> 
     </header>
     <!-- End Header -->
 
-
-    <!-- Sidebar -->
+    <!-- Sidebar -->    
     <aside id="sidebar">
       <div class="sidebar-title">
         <div class="sidebar-brand">
@@ -138,29 +155,31 @@
                 colors="primary:#ffffff,secondary:#e4e4e4"
                 style="width:40px;height:40px">
               </lord-icon>IT-Modulen</p> 
-            <ul id="customers-subclasses" class="subclass-list">
-                <a href="#" class="subclass-li"><li>something..</li></a>
-                    <li>Skripting</li>
-                    <li><a href="#" class="subclass-li" onclick="loadPage('320')">M320</a></li>
-                    <a href="#" class="subclass-li"><li>M306</li></a>
-                    <a href="#" class="subclass-li"><li>M293</li></a>
-                    <li>Netzwerk</li>
-                    <a href="#" class="subclass-li"><li>M169-347</li></a>
-                    <a href="#" class="subclass-li"><li>M254</li></a>
-                    <a href="#" class="subclass-li"><li>M114</li></a>
-                    <a href="#" class="subclass-li"><li>M164</li></a>
-                    <li>ICT</li>
-                    <a href="#" class="subclass-li"><li>M117</li></a>
-                    <a href="#" class="subclass-li"><li>M106</li></a>
-                    <li>Databanken</li>
-                    <a href="#" class="subclass-li"><li>M231</li></a>
-                    <a href="#" class="subclass-li"><li>M162</li></a>
-                    <li>Programmierung</li>
-                    <a href="#" class="subclass-li"><li>M319</li></a>
-                    <a href="#" class="subclass-li"><li>M122</li></a>
-                    <a href="#" class="subclass-li"><li>M187</li></a>
-                    <a href="#" class="subclass-li"><li>M431</li></a>
-            </ul>
+                <ul id="customers-subclasses" class="subclass-list">
+                    <li class="text-li">Skripting</li>
+                    <li class="subclass-li"><a href="#"  onclick="loadPage('320')">M320</a></li>
+                    <li class="subclass-li"><a href="#"  onclick="loadPage('306')">M306</a></li>
+                    <li class="subclass-li"><a href="#" >M293</a></li>
+                    <li class="text-li" >Netzwerk</li>
+                    <li class="subclass-li"><a href="#" onclick="loadPage('306')">M169-347</a></li>
+                    <li class="subclass-li"><a href="#" onclick="loadPage('306')">M254</a></li>
+                    <li class="subclass-li"><a href="#" onclick="loadPage('306')">M114</a></li>
+                    <li class="subclass-li"><a href="#" onclick="loadPage('306')">M164</a></li>
+                    <li class="subclass-li"><a href="#" onclick="loadPage('306')">M117</a></li>
+                    <li class="subclass-li"><a href="#" onclick="loadPage('306')">M106</a></li>
+                    <li class="subclass-li"><a href="#" onclick="loadPage('306')">M231</a></li>
+                    <li class="subclass-li"><a href="#" onclick="loadPage('306')">M162</a></li>
+                    <li class="subclass-li"><a href="#" onclick="loadPage('306')">M319</a></li>
+                    <li class="subclass-li"><a href="#" onclick="loadPage('306')">M122</a></li>
+                    <li class="subclass-li"><a href="#" onclick="loadPage('306')">M187</a></li>
+                    <li class="subclass-li"><a href="#" onclick="loadPage('306')">M431</a></li>
+                 
+                    <li class="text-li">ICT</li>
+                  
+                    <li class="text-li">Databanken</li>
+                 
+                    <li class="text-li">Programmierung</li>
+                </ul>
         </li>
         <li class="sidebar-list-item" data-target="inventory-subclasses">
           <p class="p-aside"><lord-icon
@@ -271,7 +290,6 @@
             </div>
     </div>
 </div>
-
 <div class="hidden-window">
   <div class="toggle-btn">
       <span class="one"></span>  
@@ -330,8 +348,18 @@
           </div>
       </div>
  </div>
+ <!-- user window -->
+ <div class="page-settings hidden-content">
+  <div class="main-wrapper">
+      <div class="wrapper">
+          
+          <h1>haaaaaaaaaaaaaaaaaaaaaa</h1>
+      </div>
+  </div>
 </div>
+<!-- Ende user window -->
 
+</div>
 
 
 <script>

@@ -54,14 +54,14 @@ $(document).on("click", ".links-header-active a", function() {
         case "Konto anfragen":
             targetClass = ".page-request-login";
             break;
-        case "Besucher":
-            targetClass = ".page-visitor";
+        case "Einstellungen":
+            targetClass = ".page-settings";
             break;
         default:
             targetClass = ".page-login";
     }
 
-    $(".page-login, .page-request-login, .page-visitor").removeClass("shown-content").addClass("hidden-content"); // Hide all
+    $(".page-login, .page-request-login, .page-settings").removeClass("shown-content").addClass("hidden-content"); // Hide all
     $(targetClass).removeClass("hidden-content").addClass("shown-content"); // Show the target section
 
     if (t1.reversed()) {
