@@ -6,6 +6,7 @@ import '../css/phone.css';
 import '../css/login.css';
 
 import '../css/content.css'
+import '../css/user.css';
 
 
 document.addEventListener('DOMContentLoaded', () => {

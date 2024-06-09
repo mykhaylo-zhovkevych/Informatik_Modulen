@@ -1,0 +1,18 @@
+.wrapper-user {
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(100px);
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+  color: #dbdbdb;
+  border-radius: 30px;
+  height: 50vh;
+  width: 90%;
+  max-width: 1000px;
+  padding: 25rem 0rem 25rem 0rem;
+
+  display: block;
+
+}
+
+.user-data {
+
+}
