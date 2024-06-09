@@ -3,27 +3,27 @@ import '../css/content.css'
 var t1 = new TimelineMax({paused: true});
 
 
-
-t1.to(".one", 0.5, {
+t1.to(".one", 1.2, {
     y: 5,
     rotation: 45,
-    ease: Power1.easeInOut // Smoother easing function
+    ease: Power1.easeInOut 
+    
 });
 
-t1.to(".two", 0.5, {
+t1.to(".two", 1.2, {
     y: -25,
     rotation: -45,
-    ease: Power1.easeInOut, // Smoother easing function
-    delay: -0.5
+    ease: Power1.easeInOut, 
+    delay: -1.5
 });
 
 
 
-t1.to(".hidden-window", 1.2, {
+t1.to(".hidden-window", 0.5, {
 
     top: "0%",
     ease: Power1.easeInOut,
-    delay: -0
+    delay: -1.35
 });
 
 
