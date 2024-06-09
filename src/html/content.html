@@ -116,7 +116,6 @@
       <div class="sidebar-title">
         <div class="sidebar-brand">
            IT-Modulen
-    
           </div>
         <lord-icon onclick="closeSidebar()" class="close-sidebar"
           src="https://cdn.lordicon.com/dykoqszm.json"
@@ -136,7 +135,8 @@
         }
       </style>
       <ul class="sidebar-list">
-        <li class="sidebar-list-item-noncklickable sidebar-list-item">
+        <li class="sidebar-list-item-noncklickable" >
+          <a href="http://localhost:9001/html/content.html">
             <p class="p-aside"><lord-icon
                 src="https://cdn.lordicon.com/abwrkdvl.json"
                 trigger="hover"
@@ -144,7 +144,7 @@
                 colors="primary:#ffffff,secondary:#e4e4e4"
                 style="width:40px;height:45px">
               </lord-icon> Dashboard </p>
-            <a href=""></a>
+            </a>
         </li>
         <li class="sidebar-list-item" data-target="customers-subclasses">
             <p class="p-aside"><lord-icon
@@ -215,60 +215,43 @@
       <div class="main-title">
         <h2>DASHBOARD</h2>
       </div>
-
       <div class="main-cards">
-
         <div class="card">
           <div class="card-inner">
             <h3>Modulen</h3>
-            
           </div>
           <h1>249</h1>
         </div>
-
         <div class="card">
           <div class="card-inner">
-            <h3>Katagorien</h3>
-            
+            <h3>Katagorien</h3>          
           </div>
           <h1>25</h1>
         </div>
-
         <div class="card">
           <div class="card-inner">
-            <h3>Artiklen</h3>
-            
+            <h3>Artiklen</h3>       
           </div>
           <h1>1500</h1>
         </div>
-
         <div class="card">
           <div class="card-inner">
-            <h3>Updates</h3>
-            
+            <h3>Updates</h3>  
           </div>
           <h1>56</h1>
         </div>
-
       </div>
-
       <div class="charts">
-
-        <div id="content"></div>
-
         <div class="charts-card">
           <h2 class="chart-title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, sint.</h2>
-          <div id="bar-chart"></div>
         </div>
-
-
         <div class="charts-card">
           <h2 class="chart-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, possimus. Nihil minus a eaque quod.</h2>
-          <div id="area-chart"></div>
         </div>
-
       </div>
+      <div class="main-text-content"></div>
     </main>
+    <div id="content"></div>
     <!-- End Main -->
 
   </div>
@@ -356,7 +339,6 @@
   </div>
 </div>
 <!-- Ende user window -->
-
 </div>
 
 

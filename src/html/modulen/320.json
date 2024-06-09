@@ -1,20 +1,24 @@
 {
-    "title": "About Us",
-
-    "elements": [
+    "title": "M320",
+    "mainTitle": "M320 => Objektorientiert Programmieren",
+    "cards": [
+        { "title": "Thems", "value": 5 },
+        { "title": "Sections", "value": 5 },
+        { "title": "Codes", "value": 11 }
+    ],
+    "charts": [
+        { "title": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, sint." }
+       
+    ],
+    "mainTextContent": [
         {
-            "tag": "h1",
-            "content": "Welcome ",
-            "id": "",
-            "class": "title-class"
+            "type": "text",
+            "content": "This is a full-width text element added via JSON."
         },
         {
-            "tag": "p",
-            "content": "The content.",
-            "id": "home-content",
-            "class": "content-class"
+            "type": "image",
+            "src": "path/to/image.jpg",
+            "alt": "Descriptive Alt Text"
         }
-        
     ]
-   
 }

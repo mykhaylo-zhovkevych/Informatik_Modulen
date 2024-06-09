@@ -243,6 +243,7 @@
   .sidebar-list-item, .sidebar-list-item-noncklickable {
     padding: 40px 20px 40px 20px ;
     font-size: 18px; 
+    
   }
   
   .sidebar-list-item:hover {
@@ -251,7 +252,7 @@
     border-radius: 30px;
   }
   
-  .sidebar-list-item > a {
+  .sidebar-list-item, .sidebar-list-item-noncklickable > a {
     text-decoration: none;
     color: #9e9ea4;
   }
@@ -329,7 +330,7 @@
     background-color: #00000020;
     margin-bottom: 20px;
     padding: 25px;
-    height: 100vh;
+    height: 60vh;
     box-sizing: border-box;
     -webkit-column-break-inside: avoid;
     border-radius: 30px;
@@ -401,3 +402,31 @@
     }
   }
   
+
+  .main-text-content {
+    display: block;
+    margin-top: 2rem;
+  }
+  .full-width-element {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: #d0d0d0;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: #333;
+}
+.text {
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+  color: #999;
+  margin: 125px;
+  backdrop-filter: blur(100px);
+  padding: 120px;
+  border-radius: 30px;
+}
+
+li > a {
+  text-decoration: none;
+}
