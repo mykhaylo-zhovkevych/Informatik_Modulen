@@ -7,6 +7,7 @@ import '../css/login.css';
 import '../css/search.css';
 import '../css/content.css'
 import '../css/user.css';
+import '../css/320.css';
 
 
 document.addEventListener('DOMContentLoaded', () => {

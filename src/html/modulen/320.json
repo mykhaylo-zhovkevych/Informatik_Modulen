@@ -3,21 +3,74 @@
     "mainTitle": "M320 => Objektorientiert Programmieren",
     "cards": [
         { "title": "Thems", "value": 5 },
-        { "title": "Sections", "value": 5 },
-        { "title": "Codes", "value": 11 }
+        { "title": "Sections", "value": 11 },
+        { "title": "Codes", "value": 20 }
     ],
     "charts": [
-        { "title": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, sint." }
-       
+        {   "type": "verzeichnis",
+            "title": "Verzeichnis",
+            "items": [
+                { "label": "1. Einleitung", "id": "section1" },
+                { "label": "2. Grundlagen", "id": "section2" },
+                { "label": "3. Module01", "id": "section3" },
+                { "label": "4. Module02", "id": "section4" },
+                { "label": "5. Module03", "id": "section5" },
+                { "label": "6. Module04", "id": "section6" },
+                { "label": "7. Module05", "id": "section6" },
+                { "label": "8. Module06", "id": "section7" },
+                { "label": "9. Module07", "id": "section8" },
+                { "label": "10. Module08", "id": "section9" },
+                { "label": "11. Module09", "id": "section10" },
+                { "label": "12. Module10", "id": "section11" },
+                { "label": "13. Module11", "id": "section12" },
+                { "label": "14. Ende", "id": "section13" }
+            ] 
+        }
     ],
     "mainTextContent": [
         {
             "type": "text",
-            "content": "This is a full-width text element added via JSON."
+            "content": "Einleitung",
+            "id": "section1"
+        },
+        {
+            "type": "text",
+            "content": "Grundlagen",
+            "id": "section2"
+        },
+        {
+            "type": "sub-layout",
+            "subContent": [
+                {
+                    "type": "sub-text",
+                    "content": "Vertiefung."
+                },
+                {
+                    "type": "sub-text",
+                    "content": "Vertiefung."
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "content": "Beispiele."
+        },
+        {
+            "type": "sub-layout",
+            "subContent": [
+                {
+                    "type": "sub-text",
+                    "content": "This is a sub-text element inside sub-layout."
+                },
+                {
+                    "type": "sub-text",
+                    "content": "This is a sub-text element inside sub-layout."
+                }
+            ]
         },
         {
             "type": "image",
-            "src": "path/to/image.jpg",
+            "src": "src/html/modulen/diana-silvers-bulgari-campaign-2020-0-496556552.jpg",
             "alt": "Descriptive Alt Text"
         }
     ]

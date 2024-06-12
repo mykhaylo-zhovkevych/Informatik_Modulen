@@ -1,33 +1,3 @@
-/* export function loadPage(page) {
-    fetch(`../html/modulen/${page}.json`)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            document.title = data.title;
-            const contentDiv = document.getElementById('content');
-            contentDiv.innerHTML = ''; // Clear previous content
-
-            data.elements.forEach(element => {
-                const el = document.createElement(element.tag);
-                if (element.content) el.innerHTML = element.content;
-                if (element.src) el.src = element.src;
-                if (element.alt) el.alt = element.alt;
-                if (element.id) el.id = element.id;
-                if (element.class) el.className = element.class;
-                contentDiv.appendChild(el);
-            });
-        })
-        .catch(error => console.error('Error loading page:', error));
-}
-
-// Make the function globally accessible
-window.loadPage = loadPage;
-
- */
 export function loadPage(page) {
     fetch(`../html/modulen/${page}.json`)
         .then(response => {
@@ -42,7 +12,7 @@ export function loadPage(page) {
             // Update main title
             document.querySelector('.main-title h2').textContent = data.mainTitle;
 
-            // Clear existing cards, charts, and additional content
+            // Clear existing content
             const cardsContainer = document.querySelector('.main-cards');
             const chartsContainer = document.querySelector('.charts');
             const additionalContentContainer = document.querySelector('.main-text-content');
@@ -76,19 +46,39 @@ export function loadPage(page) {
                 chartCard.className = 'charts-card';
 
                 const chartTitle = document.createElement('h2');
-                chartTitle.className = 'chart-title';
+                chartTitle.className = 'verzeichnis';
                 chartTitle.textContent = chartData.title;
 
                 chartCard.appendChild(chartTitle);
+
+                 // Add links for each item in the verzeichnis
+                 const list = document.createElement('ul');
+                 chartData.items.forEach(item => {
+                     const listItem = document.createElement('li');
+                     const link = document.createElement('a');
+                     link.href = `#${item.id}`;
+                     link.textContent = item.label;
+                     listItem.appendChild(link);
+                     list.appendChild(listItem);
+                 });
+                chartCard.appendChild(list);
+
                 chartsContainer.appendChild(chartCard);
             });
 
-            // Add additional content
-            data.mainTextContent.forEach(content => {
+            // Function to create elements
+            const createElement = (content) => {
                 let element;
                 if (content.type === 'text') {
                     element = document.createElement('div');
                     element.className = 'text';
+                    if (content.id) {
+                        element.id = content.id;  // Set the ID for the section
+                    }
+                    element.textContent = content.content;
+                } else if (content.type === 'sub-text') {
+                    element = document.createElement('div');
+                    element.className = 'sub-text';
                     element.textContent = content.content;
                 } else if (content.type === 'image') {
                     element = document.createElement('img');
@@ -96,9 +86,41 @@ export function loadPage(page) {
                     element.alt = content.alt;
                     element.className = 'full-width-image';
                 }
-                additionalContentContainer.appendChild(element);
-                console.log("Added element:", element); // Log the added element for debugging
+                else if (content.type === 'sub-layout') {
+                    element = document.createElement('div');
+                    element.className = 'sub-layout';
+                    element.textContent = content.content;
+        
+
+                    // Append sub-content
+                    content.subContent.forEach(subContent => {
+                        element.appendChild(createElement(subContent));
+                    });
+                } else if (content.type === 'chart') {
+                    element = document.createElement('div');
+                    element.className = 'charts-card';
+
+                    const chartTitle = document.createElement('h2');
+                    chartTitle.className = 'chart-title';
+                    chartTitle.textContent = content.title;
+
+                    element.appendChild(chartTitle);
+                }
+                return element;
+            };
+
+            // Add main text content
+            data.mainTextContent.forEach(content => {
+                additionalContentContainer.appendChild(createElement(content));
+                console.log("Added element:", content); // Log the added element for debugging
             });
+
+            // Add additional charts if any
+            /* if (data.additionalCharts) {
+                data.additionalCharts.forEach(chartData => {
+                    chartsContainer.appendChild(createElement({ type: 'chart', title: chartData.title }));
+                });
+            } */
 
         })
         .catch(error => console.error('Error loading page:', error));
