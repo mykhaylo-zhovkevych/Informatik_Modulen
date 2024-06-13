@@ -7,7 +7,8 @@
         { "title": "Codes", "value": 20 }
     ],
     "charts": [
-        {   "type": "verzeichnis",
+        {
+            "type": "verzeichnis",
             "title": "Verzeichnis",
             "items": [
                 { "label": "1. Einleitung", "id": "section1" },
@@ -16,22 +17,28 @@
                 { "label": "4. Module02", "id": "section4" },
                 { "label": "5. Module03", "id": "section5" },
                 { "label": "6. Module04", "id": "section6" },
-                { "label": "7. Module05", "id": "section6" },
-                { "label": "8. Module06", "id": "section7" },
-                { "label": "9. Module07", "id": "section8" },
-                { "label": "10. Module08", "id": "section9" },
-                { "label": "11. Module09", "id": "section10" },
-                { "label": "12. Module10", "id": "section11" },
-                { "label": "13. Module11", "id": "section12" },
-                { "label": "14. Ende", "id": "section13" }
-            ] 
+                { "label": "7. Module05", "id": "section7" },
+                { "label": "8. Module06", "id": "section8" },
+                { "label": "9. Module07", "id": "section9" },
+                { "label": "10. Module08", "id": "section10" },
+                { "label": "11. Module09", "id": "section11" },
+                { "label": "12. Module10", "id": "section12" },
+                { "label": "13. Module11", "id": "section13" },
+                { "label": "14. Ende", "id": "section14" }
+            ]
         }
     ],
     "mainTextContent": [
         {
             "type": "text",
             "content": "Einleitung",
-            "id": "section1"
+            "id": "section1",
+            "subContent": [
+                {
+                    "type": "sub-text",
+                    "content": "This is a sub-text element inside sub-layout."
+                }
+            ]
         },
         {
             "type": "text",
@@ -40,6 +47,7 @@
         },
         {
             "type": "sub-layout",
+            "id": "section3",
             "subContent": [
                 {
                     "type": "sub-text",
@@ -53,10 +61,12 @@
         },
         {
             "type": "text",
-            "content": "Beispiele."
+            "content": "Beispiele.",
+            "id": "section4"
         },
         {
             "type": "sub-layout",
+            "id": "section5",
             "subContent": [
                 {
                     "type": "sub-text",
@@ -71,7 +81,8 @@
         {
             "type": "image",
             "src": "src/html/modulen/diana-silvers-bulgari-campaign-2020-0-496556552.jpg",
-            "alt": "Descriptive Alt Text"
+            "alt": "Descriptive Alt Text",
+            "id": "section6"
         }
     ]
 }

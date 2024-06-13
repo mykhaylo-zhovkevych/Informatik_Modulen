@@ -76,6 +76,14 @@ export function loadPage(page) {
                         element.id = content.id;  // Set the ID for the section
                     }
                     element.textContent = content.content;
+
+                // Append sub-content if any
+                if (content.subContent) {
+                    content.subContent.forEach(subContent => {
+                        element.appendChild(createElement(subContent));
+                    });
+                }
+
                 } else if (content.type === 'sub-text') {
                     element = document.createElement('div');
                     element.className = 'sub-text';

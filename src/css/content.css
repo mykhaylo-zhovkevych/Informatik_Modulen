@@ -63,20 +63,6 @@
 
 }
 
-.text{
-
-    font-size: 80px;
-
-    font-weight: 400;
-
-    text-align: center;
-
-    color: #999;
-
-    margin-bottom: 25px;
-
-}
-
 .add{
 
     animation: animate .7s ease-in-out .1s;
@@ -328,7 +314,7 @@
   
   .charts-card {
     background-color: #00000020;
-    margin-bottom: 20px;
+    margin-bottom: 3em;
     padding: 25px;
     height: 60vh;
     box-sizing: border-box;
