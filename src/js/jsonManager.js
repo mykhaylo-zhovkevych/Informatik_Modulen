@@ -88,7 +88,21 @@ export function loadPage(page) {
                     element = document.createElement('div');
                     element.className = 'sub-text';
                     element.textContent = content.content;
-                } else if (content.type === 'image') {
+                } 
+                
+                else if (content.type === 'sub-container') {
+                    element = document.createElement('div');
+                    element.className = 'sub-container';
+                    element.textContent = content.content;
+                } 
+
+                else if (content.type === 'sub-container-code') {
+                    element = document.createElement('div');
+                    element.className = 'sub-container-code';
+                    element.textContent = content.content;
+                } 
+
+                else if (content.type === 'image') {
                     element = document.createElement('img');
                     element.src = content.src;
                     element.alt = content.alt;

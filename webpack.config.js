@@ -30,6 +30,19 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader']
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg|webp)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[hash].[ext]',
+                            outputPath: 'images',
+                            publicPath: 'images'
+                        }
+                    }
+                ]
             }
         ]
     },
@@ -53,7 +66,7 @@ module.exports = {
             directory: path.join(__dirname, 'dist')
         },
         compress: true,
-        port: 9001,
+        port: 9002,
         historyApiFallback: true
     }
 };

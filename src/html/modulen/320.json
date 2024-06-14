@@ -35,15 +35,45 @@
             "id": "section1",
             "subContent": [
                 {
-                    "type": "sub-text",
+                    "type": "sub-container",
                     "content": "This is a sub-text element inside sub-layout."
+                },
+                {
+                    "type": "image",
+                    "src": "/html/modulen/gettyimages-1146649674-1024x1024.webp",
+                    "alt": "Descriptive Alt Text",
+                    "id": "section6"
+                },
+                {
+                    "type": "sub-container-code",
+                    "content": "This is a "
                 }
             ]
         },
         {
             "type": "text",
             "content": "Grundlagen",
-            "id": "section2"
+            "id": "section2",
+            "subContent": [
+                {
+                    "type": "sub-text",
+                    "content": "eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus ."
+                },
+                {
+                    "type": "sub-text",
+                    "content": "eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus vvvveue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus ."
+                },
+                {
+                    "type": "sub-container-code",
+                    "content": "This is a "
+                },
+                {
+                    "type": "sub-text",
+                    "content": "eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus ."
+                    
+                }
+            ]
+            
         },
         {
             "type": "sub-layout",
@@ -77,12 +107,7 @@
                     "content": "This is a sub-text element inside sub-layout."
                 }
             ]
-        },
-        {
-            "type": "image",
-            "src": "src/html/modulen/diana-silvers-bulgari-campaign-2020-0-496556552.jpg",
-            "alt": "Descriptive Alt Text",
-            "id": "section6"
         }
+
     ]
 }
