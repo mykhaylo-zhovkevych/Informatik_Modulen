@@ -35,8 +35,13 @@
             "id": "section1",
             "subContent": [
                 {
-                    "type": "sub-container",
-                    "content": "This is a sub-text element inside sub-layout."
+                    "type": "HandlungsZiele",
+                    "ziel": "Analysiert Anwendungsprobleme zur Erstellung von objektorientierten Programmen. [g4.1, g4.4]",
+                    "HandlungsnotwendigeKenntnisse": [
+                        "Kennt den objektorientierten Ansatz mit den Grundkonzepten Kapselung, Vererbung und Polymorphie.",
+                        "Kennt Vorgehensprinzipien zur Klassenfindung (z.B. Spezialisierung und Generalisierung, Domänenmodell und –Events, BoundedContext, DRY, SRP).",
+                        "Kennt Abstraktionskonzepte wie Assoziationen, Klassen, Attribute und Methoden, Schnittstellen und abstrakte Klassen und Datentypen (ADT, Collections, Generics)."
+                    ]
                 },
                 {
                     "type": "image",
@@ -46,6 +51,7 @@
                 }
                  
             ]
+            
         },
         {
             "type": "text",
@@ -62,6 +68,7 @@
                 },
                 {
                     "type": "sub-container-code",
+                    "_comment": "This way of displaying code will be useful only for short programs",
                     "content": [
                         "int nums02[] = {1, 2, 3, 4, 3, 5};",
                         "int size02 = nums02.length;",
@@ -112,7 +119,6 @@
         },
         {
             "type": "sub-layout",
-            "id": "section3",
             "subContent": [
                 {
                     "type": "sub-text",
@@ -126,22 +132,103 @@
         },
         {
             "type": "text",
-            "content": "Beispiele.",
-            "id": "section4"
-        },
-        {
-            "type": "sub-layout",
-            "id": "section5",
+            "content": "Module01.",
+            "id": "section3",
             "subContent": [
                 {
-                    "type": "sub-text",
-                    "content": "This is a sub-text element inside sub-layout."
+                    "type": "sub-container",
+                    "content": "Themen: "
                 },
                 {
                     "type": "sub-text",
-                    "content": "This is a sub-text element inside sub-layout."
+                    "content": "eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus ."
+                }
+                
+            ]
+        },
+        
+
+        {
+            "type": "sub-layout",
+            
+            "subContent": [
+                {
+                    "type": "sub-text",
+                    "content": "Vertiefung."
+                },
+                {
+                    "type": "sub-text",
+                    "content": "Vertiefung."
+                }
+            ]
+        },
+
+
+        {
+            "type": "text",
+            "content": "Module02.",
+            "id": "section4",
+            "subContent": [
+                {
+                    "type": "sub-container",
+                    "content": "Themen: "
+                },
+                {
+                    "type": "sub-text",
+                    "content": "eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus ."
+                }
+                
+            ]
+        },
+
+        {
+            "type": "text",
+            "content": "Module03.",
+            "id": "section5",
+            "subContent": [
+                {
+                    "type": "sub-container",
+                    "content": "Themen: "
+                },
+                {
+                    "type": "sub-text",
+                    "content": "eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus ."
+                }
+                
+            ]
+        },
+
+        {
+            "type": "text",
+            "content": "Module04.",
+            "id": "section6",
+            "subContent": [
+                {
+                    "type": "sub-container",
+                    "content": "Themen: "
+                },
+                {
+                    "type": "sub-text",
+                    "content": "eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus ."
+                }
+                
+            ]
+        },
+
+        {
+            "type": "sub-layout",
+            
+            "subContent": [
+                {
+                    "type": "sub-text",
+                    "content": "Vertiefung."
+                },
+                {
+                    "type": "sub-text",
+                    "content": "Vertiefung."
                 }
             ]
         }
+
     ]
 }

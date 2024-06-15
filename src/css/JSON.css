@@ -106,3 +106,27 @@ ul > li > a {
   margin: 1em 0em 2em 0em;
   background-color: #00000020;
 }
+
+
+.handlungsziel-container {
+  margin-top: 20px;
+  padding: 15px;
+
+  border-radius: 5px;
+
+  font-size: 10px;
+}
+
+.handlungsziel-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.knowledge-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.knowledge-item {
+  margin-bottom: 5px;
+}

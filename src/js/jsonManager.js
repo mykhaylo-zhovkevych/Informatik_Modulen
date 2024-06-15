@@ -120,6 +120,12 @@ export function loadPage(page) {
                     content.subContent.forEach(subContent => {
                         element.appendChild(createElement(subContent));
                     });
+
+
+                } else if (content.type === 'HandlungsZiele') {
+                        element = handleHandlungsZiele(content); 
+
+
                 } else if (content.type === 'chart') {
                     element = document.createElement('div');
                     element.className = 'charts-card';
@@ -133,21 +139,44 @@ export function loadPage(page) {
                 return element;
             };
 
+                // Process HandlungsZiele
+                const handleHandlungsZiele = (HandlungsZieleData) => {
+                const handlungszielContainer = document.createElement('div');
+                handlungszielContainer.className = 'handlungsziel-container';
+
+                const handlungszielTitle = document.createElement('h2');
+                handlungszielTitle.className = 'handlungsziel-title';
+                handlungszielTitle.textContent = HandlungsZieleData.ziel;
+                handlungszielContainer.appendChild(handlungszielTitle);
+
+                const knowledgeList = document.createElement('ul');
+                knowledgeList.className = 'knowledge-list';
+
+                HandlungsZieleData.HandlungsnotwendigeKenntnisse.forEach(knowledgeItem => {
+                    const listItem = document.createElement('li');
+                    listItem.className = 'knowledge-item';
+                    listItem.textContent = knowledgeItem;
+                    knowledgeList.appendChild(listItem);
+                });
+
+                handlungszielContainer.appendChild(knowledgeList);
+                return handlungszielContainer;
+            };
+
+
+
+
             // Add main text content
             data.mainTextContent.forEach(content => {
                 additionalContentContainer.appendChild(createElement(content));
                 console.log("Added element:", content); // Log the added element for debugging
             });
 
-            // Add additional charts if any
-            /* if (data.additionalCharts) {
-                data.additionalCharts.forEach(chartData => {
-                    chartsContainer.appendChild(createElement({ type: 'chart', title: chartData.title }));
-                });
-            } */
-                document.querySelectorAll('pre code').forEach((block) => {
-                    hljs.highlightBlock(block);
-                });
+            // Highlight code blocks
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+
         })
         .catch(error => console.error('Error loading page:', error));
 }
