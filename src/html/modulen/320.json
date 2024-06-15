@@ -43,11 +43,8 @@
                     "src": "/html/modulen/gettyimages-1146649674-1024x1024.webp",
                     "alt": "Descriptive Alt Text",
                     "id": "section6"
-                },
-                {
-                    "type": "sub-container-code",
-                    "content": "This is a "
                 }
+                 
             ]
         },
         {
@@ -65,7 +62,45 @@
                 },
                 {
                     "type": "sub-container-code",
-                    "content": "This is a "
+                    "content": [
+                        "int nums02[] = {1, 2, 3, 4, 3, 5};",
+                        "int size02 = nums02.length;",
+                        "int temp02 = 0;",
+                        "",
+                        "System.out.println(\"before sorting\");",
+                        "for(int num02 : nums02) {",
+                        "    System.out.print(num02 + \" \");",
+                        "}",
+                        "",
+                        "for (int a02 = 0; a02 < size02 - 1; a02++) {",
+                        "    boolean swapped = false;",
+                        "",
+                        "    for (int b02 = 0; b02 < size02 - 1 - a02; b02++) {",
+                        "        if (nums02[b02] > nums02[b02 + 1]) {",
+                        "            // Swap",
+                        "            temp02 = nums02[b02];",
+                        "            nums02[b02] = nums02[b02 + 1];",
+                        "            nums02[b02 + 1] = temp02;",
+                        "            swapped = true; // Set flag to true indicating a swap occurred",
+                        "        }",
+                        "    }",
+                        "",
+                        "    // If no elements were swapped, array is sorted",
+                        "    if (!swapped) break;",
+                        "}",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        
+                        "",
+                        "System.out.println();",
+                        "System.out.println(\"after sorting\");",
+                        "for(int num02 : nums02) {",
+                        "    System.out.print(num02 + \" \");",
+                        "}"
+                    ]
                 },
                 {
                     "type": "sub-text",
@@ -108,6 +143,5 @@
                 }
             ]
         }
-
     ]
 }

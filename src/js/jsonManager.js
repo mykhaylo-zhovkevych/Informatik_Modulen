@@ -97,9 +97,11 @@ export function loadPage(page) {
                 } 
 
                 else if (content.type === 'sub-container-code') {
-                    element = document.createElement('div');
-                    element.className = 'sub-container-code';
-                    element.textContent = content.content;
+                    element = document.createElement('pre');
+                    const codeElement = document.createElement('code');
+             
+                    codeElement.textContent = content.content.join('\n');
+                    element.appendChild(codeElement);
                 } 
 
                 else if (content.type === 'image') {
@@ -143,7 +145,9 @@ export function loadPage(page) {
                     chartsContainer.appendChild(createElement({ type: 'chart', title: chartData.title }));
                 });
             } */
-
+                document.querySelectorAll('pre code').forEach((block) => {
+                    hljs.highlightBlock(block);
+                });
         })
         .catch(error => console.error('Error loading page:', error));
 }

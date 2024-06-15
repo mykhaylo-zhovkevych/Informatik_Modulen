@@ -17,6 +17,10 @@
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
 
     <script src="/dist/jsonManager.bundle.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/atelier-seaside.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+
 
     <style>
         .sidebar-list-item {
@@ -52,9 +56,26 @@
           align-items: center;
           justify-content: space-between;
         }
+        pre {
+          font-size: 20px;
+          width: 60%;
+          padding: 25px;
+          border-radius: 30px;
+          backdrop-filter: blur(100px);
+          margin: 1em 0em 2em 0em;
+          background-color: #00000020;
+        }
+        pre code.hljs {
+          border-radius: 30px;
+        }
+
     </style>
 
-    
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+          hljs.highlightAll();
+      });
+  </script>
 </head>
 <body>
 <div class="blobs">
@@ -197,9 +218,25 @@
                   style="width:40px;height:40px">
                </lord-icon>Crypto</p>
             <ul id="inventory-subclasses" class="subclass-list">
-                <li>Stock</li>
-                <li>Orders</li>
-                <li>Suppliers</li>
+              <li class="text-li">Einführung</li>
+              <li class="subclass-li"><a href="#" onclick="loadPage('320')">Teil01 Blockchain</a></li>
+              <li class="subclass-li"><a href="#" onclick="loadPage('319')">Teil02 Blockchain</a></li>
+              <li class="subclass-li"><a href="#" onclick="loadPage('319')">...</a></li>
+
+              <li class="text-li">Mining Farm</li>
+              <li class="subclass-li"><a href="#" onclick="loadPage('122')">Theory</a></li>
+              <li class="subclass-li"><a href="#" onclick="loadPage('187')">Vorbereiting</a></li>
+
+              <li class="text-li">Technology</li>
+              <li class="subclass-li"><a href="#" onclick="loadPage('117')">M117</a></li>
+              <li class="subclass-li"><a href="#" onclick="loadPage('123')">M123</a></li>
+              
+              <li class="text-li">Traiding Theory</li>
+              <li class="subclass-li"><a href="#" onclick="loadPage('106')">M106</a></li>
+              <li class="subclass-li"><a href="#" onclick="loadPage('164')">M164</a></li>
+              <li class="subclass-li"><a href="#" onclick="loadPage('162')">M162</a></li>
+
+             
             </ul>
         </li>
         <li class="sidebar-list-item" data-target="reports-subclasses">
@@ -252,7 +289,7 @@
       </div>
       <div class="charts">
         <div class="charts-card">
-          <h2 class="chart-title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, sint.</h2>
+          <h2 class="chart-title">TODO List</h2> <ul> <li>1.<p>Die Daten für Modulen Vorbereiten und JS anpassedn für bessere JSON-PAGE Konstruktor</p></li> <li>2.</li></ul>
         </div>
         <div class="charts-card">
           <h2 class="chart-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, possimus. Nihil minus a eaque quod.</h2>
