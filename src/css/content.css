@@ -261,6 +261,7 @@
     display: flex;
     justify-content: space-between;
     padding-top: 2em;
+    color: whitesmoke;
   }
   
   .main-cards {
@@ -277,6 +278,7 @@
     padding: 25px;
     border-radius: 30px;
     backdrop-filter: blur(100px);
+    color: whitesmoke;
 
   }
   
@@ -323,6 +325,7 @@
     border-radius: 30px;
     box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(100px);
+    color: whitesmoke;
   }
   
   .chart-title {
@@ -348,6 +351,7 @@
       cursor: auto;
       padding: 30px 30px 30px 30px;
       border-radius: 30px;
+      color: whitesmoke;
     }
     
   

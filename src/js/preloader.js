@@ -4,12 +4,12 @@ gsap.fromTo(
     {
         opacity: 0,
         display: "none",
-        duration: 1.5,
+        duration: 0.7,
         delay: 3.5,
     }
 );
 
-gsap.fromTo(
+/* gsap.fromTo(
     ".logo-name",
     {
         y: 50,
@@ -21,7 +21,7 @@ gsap.fromTo(
         duration: 2,
         delay: 0.5,
     }
-);
+); */
 
 var text = document.querySelector('.text');
 var percent = document.querySelector('.percent');
