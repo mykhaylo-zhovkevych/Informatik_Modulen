@@ -2,14 +2,14 @@
     position: relative;
     top: 0%;
     left: 0%;
-    transform: translate(-0%,-20%);
+    transform: translate(-0%, -10%);
     transition: all 1s;
     width: 50px;
-    height: 50px;
+    height: 40px;
     background: transparent;
     box-sizing: border-box;
     border-radius: 25px;
-    border: 1px solid #d0d0d0;
+    border: 2px solid #d0d0d0;
     padding: 8px;
 }
 
