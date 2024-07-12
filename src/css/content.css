@@ -56,85 +56,53 @@
 
 
 .loading{
-
     position: relative;
-
-
-
 }
 
 .add{
-
     animation: animate .7s ease-in-out .1s;
-
 }
 
 @keyframes animate {
 
     0%{
-
         opacity: 1;
-
     }
-
+    
     50%{
-
         opacity: 0.2;
-
     }
 
     100%{
 
         opacity: 1;
-
     }
-
 }
 
 .progress-bar{
-
     width: 406px;
-
     height: 22px;
-
     background: #111;
-
     border-radius: 13px;
-
     padding: 3px;
-
     box-sizing: border-box;
-
 }
 
 .progress{
-
     width: 203px;
-
     height: 16px;
-
     background: #dbdbdb;
-
     border-radius: 13px;
-
 }
 
 .percent{
-
     position: absolute;
-
     left: 45%;
-
     color: #000000;
-
     font-size: 15px;
-
     font-weight: bold;
-
     letter-spacing: 1px;
-
     line-height: 23px;
-
 }
 
 
@@ -205,7 +173,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 30px 60px 30px
+    padding: 30px 30px 30px 30px
 
   }
 
@@ -319,7 +287,7 @@
     background-color: #00000020;
     margin-bottom: 3em;
     padding: 25px;
-    height: 60vh;
+    height: fit-content;
     box-sizing: border-box;
     -webkit-column-break-inside: avoid;
     border-radius: 30px;
@@ -349,7 +317,7 @@
     .sidebar-title:hover {
       background-color: rgba(255, 255, 255, 0.103);
       cursor: auto;
-      padding: 30px 30px 30px 30px;
+      
       border-radius: 30px;
       color: whitesmoke;
     }
@@ -368,6 +336,14 @@
     .sidebar-title > span {
       display: inline;
     }
+
+    /* 
+    .full-width-image {
+
+      height: 300px;
+      width: auto;
+    } */
+
   }
   
   /* Small <= 768px */
@@ -383,6 +359,11 @@
       grid-template-columns: 1fr;
       margin-top: 30px;
     }
+
+    /* .full-width-image {
+      height: 700px;
+    } */
+
   }
   
   /* Extra Small <= 576px */

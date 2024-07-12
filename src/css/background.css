@@ -30,7 +30,6 @@
     left: 0;
     border-radius: 50%;
     z-index: 1;
-
 }
 
 .blob--blue {
@@ -39,16 +38,16 @@
 }
 .blob--yellow {
     background: rgb(212, 255, 0);
-
 }
+
 .blob--green {
     background: rgb(0, 255, 47);
-
 }
+
 .blob--purple {
     background: rgb(195, 0, 255);
-
 }
+
 .blob--white {
     background: rgb(0, 0, 0);
     width: 600px;
