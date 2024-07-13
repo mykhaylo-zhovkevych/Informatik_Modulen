@@ -116,7 +116,7 @@ body {
 
 #header-content {
     display: flex;
-    padding: 2rem 5rem 20rem  5rem;
+    padding: 2rem 5rem 20rem 5rem;
     flex-direction: column;
     margin: 0rem 2.5rem 2.5rem 2.5rem;
     backdrop-filter: blur(100px);

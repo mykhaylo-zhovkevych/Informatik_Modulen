@@ -3,7 +3,8 @@
     display: block;
     margin-top: 2rem;
   }
-  .full-width-element {
+
+/* .full-width-element {
     width: 100%;
     padding: 1rem;
     margin-top: 1rem;
@@ -12,6 +13,8 @@
     font-size: 1.2rem;
     color: #333;
 }
+ */
+
 .text {
   font-size: 30px;
   font-weight: 400;
@@ -24,10 +27,6 @@
   min-height: 80vh;
   margin-bottom: 3em;
 
-}
-
-li > a {
-  text-decoration: none;
 }
 
 .sub-text {
@@ -81,10 +80,13 @@ ul > li > a {
     text-decoration: none;
 }
 
+li > a {
+  text-decoration: none;
+}
+
 /* es bracuht eine query wegen overflow */
 
 .sub-container {
- 
   width: 50%;
   padding: 25px;
   border-radius: 30px;
@@ -116,7 +118,6 @@ ul > li > a {
   height: auto;
   object-fit: cover; /* Ensures the image scales correctly */
 }
-
 
 .handlungsziel-container {
   margin: 2em 0 4em 0;

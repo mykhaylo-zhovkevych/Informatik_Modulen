@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+/* ---------- Part01 ---------- */
 
 .loading-page {
     position: absolute;
@@ -105,14 +106,14 @@
     line-height: 23px;
 }
 
-
-
 .material-icons-outlined {
-    vertical-align: middle;
-    line-height: 1px;
-    font-size: 35px;
-  }
+  vertical-align: middle;
+  line-height: 1px;
+  font-size: 35px;
+}
   
+/* ---------- Part02 ---------- */
+
   .grid-container {
     display: grid;
     grid-template-columns: 260px 1fr 1fr 1fr;
@@ -302,6 +303,9 @@
     justify-content: center;
   }
   
+
+
+
   /* ---------- MEDIA QUERIES ---------- */
   
   /* Medium <= 992px */
