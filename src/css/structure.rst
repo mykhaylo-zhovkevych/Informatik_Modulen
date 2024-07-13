@@ -42,6 +42,8 @@ This file defines the layout for two sliding windows and all their elements.
 phone.css
 -------------------------
 This file is responsible for modifying the main structure for mobile phones. However, there are some segments in other files, such as content.css and search.css.
+
+
 search.css
 -------------------------
 Sets the layout for the search input element.
