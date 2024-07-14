@@ -8,7 +8,7 @@
 } 
 
 .wrapper {
-    border: 2px solid rgba(0, 0, 0, 0.2);
+    border: 5px solid rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(100px);
     box-shadow: 0 0 100px rgb(0, 0, 0);
     color: whitesmoke;
@@ -52,7 +52,7 @@
     background: transparent;
     border: none;
     outline: none;
-    border: 2px solid rgba(0, 0, 0, 0.2);
+    border: 5px solid rgba(0, 0, 0, 0.2);
     border-radius: 40px;
     font-size: 16px;
     color: whitesmoke;
@@ -118,7 +118,7 @@
     border-radius: 30px;
     padding: 1.5em;
     font-size: 16px;
-    border: 2px solid rgba(0, 0, 0, 0.2);
+    border: 5px solid rgba(0, 0, 0, 0.2);
     resize: none;
     outline: none;
 }
@@ -148,7 +148,7 @@
     background: transparent;
     border: none;
     outline: none;
-    border: 2px solid rgba(0, 0, 0, 0.2);
+    border: 5px solid rgba(0, 0, 0, 0.2);
     border-radius: 40px;
     font-size: 16px;
     color: whitesmoke;
@@ -161,7 +161,7 @@
     background: transparent;
     border: none;
     outline: none;
-    border: 2px solid rgba(0, 0, 0, 0.2);
+    border: 5px solid rgba(0, 0, 0, 0.2);
     border-radius: 40px;
     font-size: 16px;
     color: whitesmoke;
