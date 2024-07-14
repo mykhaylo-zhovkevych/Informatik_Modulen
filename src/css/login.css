@@ -10,7 +10,7 @@
 .wrapper {
     border: 2px solid rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(100px);
-    box-shadow: 0 0 10px rgb(0, 0, 0);
+    box-shadow: 0 0 100px rgb(0, 0, 0);
     color: whitesmoke;
     border-radius: 30px;
     height: 50vh;

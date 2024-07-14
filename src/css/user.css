@@ -1,15 +1,121 @@
 .wrapper-user {
   border: 2px solid rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(100px);
-  box-shadow: 0 0 10px rgb(0, 0, 0);
+  box-shadow: 0 0 100px rgb(0, 0, 0);
   color: #dbdbdb;
   border-radius: 30px;
   height: 95vh;
   width: 90%;
   max-width: 1000px;
-  padding: 2rem 1rem 2rem 1em;
+  padding: 7rem 1rem 2rem 1em;
   display: block;
 }
 
 
+.user-division {
+  display: flex;
+  justify-content: space-between;
+  height: 97%;
+}
 
+.part02-user {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 48%;
+
+  backdrop-filter: blur(100px);
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-top: 2rem;
+  border-radius: 30px;
+}
+
+.part01-user {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 48%;
+
+  backdrop-filter: blur(100px);
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-top: 2rem;
+  border-radius: 30px;
+
+}
+/* ---------Sections----------- */
+.tech-info {
+  display: flex;
+ 
+  justify-content: center;
+
+  height: 40vh;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  padding: 20px;
+
+}
+.support-author  {
+  display: flex;
+ 
+  justify-content: center;
+
+  height: 30vh;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  padding: 20px;
+
+}
+.img-user {
+  display: flex;
+ 
+  justify-content: center;
+
+  height: 15vh;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  padding: 20px;
+}
+.data-user {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  height: 55vh;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  padding: 20px;
+
+ 
+}
+/* ---------Sections----------- */
+
+
+.form-data-user {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 10px;
+}
+
+form #user-name, #user-pass, #user-email, #user-bio  {
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+#button-delete-account {
+  padding: 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#button-delete-account:hover {
+  background-color: #d32f2f;
+}

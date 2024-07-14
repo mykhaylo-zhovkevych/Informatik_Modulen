@@ -1,7 +1,13 @@
 
 .main-text-content {
-    display: block;
-    margin-top: 2rem;
+  display: block;
+  margin-top: 3em;
+  background-color: #00000020;
+  padding: 25px;
+  border-radius: 30px;
+  box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(100px);
+  color: whitesmoke;
   }
 
 /* .full-width-element {
@@ -96,6 +102,7 @@ li > a {
   color: whitesmoke;
 }
 
+/* 
 .sub-container-code {
   width: 50%;
   padding: 25px;
@@ -103,7 +110,8 @@ li > a {
   backdrop-filter: blur(100px);
   margin: 1em 0em 2em 0em;
   background-color: #00000020;
-}
+} 
+*/
 .full-width-image {
   display: flex;
   justify-content: center; 

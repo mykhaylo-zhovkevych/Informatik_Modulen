@@ -148,7 +148,7 @@
   #sidebar {
  
     grid-area: sidebar;
-    height: 97vh;
+    height: auto;
     background-color: #00000010;
     backdrop-filter: blur(100px);
     overflow-y: auto;
@@ -281,15 +281,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    margin-top: 60px;
+    margin-top: 3em;
   }
   
   .charts-card {
     background-color: #00000020;
-    margin-bottom: 3em;
     padding: 25px;
-    height: fit-content;
-    box-sizing: border-box;
+    height: auto;
     -webkit-column-break-inside: avoid;
     border-radius: 30px;
     box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
@@ -361,7 +359,7 @@
   
     .charts {
       grid-template-columns: 1fr;
-      margin-top: 30px;
+      margin-top: 3em;
     }
 
     /* .full-width-image {

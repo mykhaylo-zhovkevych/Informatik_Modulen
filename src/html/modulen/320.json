@@ -50,7 +50,7 @@
                 },
                 {
                     "type": "image",
-                    "src": "/html/modulen/gettyimages-1146649674-1024x1024.webp",
+                    "src": "/src/imgs/gettyimages-1146649674-1024x1024.webp",
                     "alt": "Descriptive Alt Text",
                     "id": "section6"
                 }
@@ -120,7 +120,6 @@
                     
                 }
             ]
-            
         },
         {
             "type": "sub-layout",
@@ -234,6 +233,5 @@
                 }
             ]
         }
-
     ]
 }

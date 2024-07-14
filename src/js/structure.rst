@@ -21,3 +21,4 @@ togglerCloseOpen.js
 -------------------------
 1. Animating the disappearance and appearance of the scroll window based on user input.
 2. Using if-else statements to decide which scroll window should be opened and making the password visible on user input.
+
