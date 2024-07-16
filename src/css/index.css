@@ -69,6 +69,7 @@ body {
     background-color: #00000010;
     border-radius: 30px;
     height: 90%;
+    border: 5px solid rgba(0, 0, 0, 0.2);
 }
 
 .links-header a {
@@ -98,11 +99,12 @@ body {
     display: flex;
     flex-direction: column;
     padding: 5rem 0 0 0;
-    margin: 5rem 0 0 0;
+    margin: 2rem 0 0 0;
     backdrop-filter: blur(100px);
     background-color: #00000020;
     width: 100vw;
     border-radius: 30px;
+    border: 5px solid rgba(0, 0, 0, 0.2);
 }
 
 #header-content-h1 {
@@ -112,6 +114,7 @@ body {
     padding: 2rem;
     height: 10rem;
     margin: 0rem 2.5rem 2.5rem 2.5rem;
+    border: 5px solid rgba(0, 0, 0, 0.2);
 }
 
 #header-content {
@@ -124,6 +127,7 @@ body {
     min-height: 35vh;
     border-radius: 30px;
     font-size: 0.8em;
+    border: 5px solid rgba(0, 0, 0, 0.2);
 }
 
 .header-box02 {
@@ -137,6 +141,8 @@ body {
     backdrop-filter: blur(100px);
     background-color: #00000015;
     border-radius: 30px;
+
+    border: 5px solid rgba(0, 0, 0, 0.2);
 }
 
 .content-box02::before {
@@ -274,6 +280,7 @@ body {
     border-radius: 30px;
     font-size: 1.5em;
     color: whitesmoke;
+    border: 5px solid rgba(0, 0, 0, 0.2);
 }
 
 .content-box01 {
@@ -283,6 +290,7 @@ body {
     margin: 5.5rem 1.25rem 2.5rem 2.5rem;
     padding: 5.5rem 2.5rem  2.5rem  2.5rem;
     border-radius: 30px;
+    border: 5px solid rgba(0, 0, 0, 0.2);
 }
 .content-box01 p {
     padding-top: 1em;
@@ -296,6 +304,7 @@ body {
     backdrop-filter: blur(100px);
     
     border-radius: 30px;
+    border: 5px solid rgba(0, 0, 0, 0.2);
 }
 
 .content-box02 p {

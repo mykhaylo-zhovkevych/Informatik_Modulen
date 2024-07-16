@@ -13,7 +13,8 @@ module.exports = {
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
-        publicPath: '/'
+        publicPath: '/',
+        clean: true
     },
     module: {
         rules: [
@@ -38,12 +39,26 @@ module.exports = {
                         loader: 'file-loader',
                         options: {
                             name: '[name].[hash].[ext]',
-                            outputPath: 'images',
-                            publicPath: 'images'
+                            outputPath: 'imgs',
+                            publicPath: 'imgs'
                         }
                     }
                 ]
-            }
+            },
+            /* {
+                test: /\.(ttf|otf|woff|woff2|eot)$/,
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[hash].[ext]',
+                            outputPath: 'fonts',
+                            publicPath: 'fonts'
+                        }
+                    }
+                ]
+            } */
         ]
     },
     plugins: [
@@ -55,9 +70,16 @@ module.exports = {
             template: './src/html/content.html',
             filename: 'html/content.html'
         }),
+        new HtmlWebpackPlugin({
+            template: './src/html/dictionaries/german-dictonary.html',
+            filename: '/html/dictionaries/german-dictonary.html'
+        }),
+        
         new CopyWebpackPlugin({
             patterns: [
-                { from: 'src/html/modulen', to: 'html/modulen' }
+                { from: 'src/html/modulen', to: 'html/modulen' },
+                { from: 'src/imgs', to: 'imgs' },
+            
             ]
         })
     ],

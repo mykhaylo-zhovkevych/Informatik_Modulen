@@ -11,6 +11,7 @@
     border-radius: 30px;
     padding: 2.5rem;
     color: whitesmoke;
+    border: 5px solid rgba(0, 0, 0, 0.2);
 }
 
 .contact-announcement {
@@ -19,12 +20,14 @@
     padding: 2rem;
     height: 10rem;
     font-size: 2em;
+    border: 5px solid rgba(0, 0, 0, 0.2);
 }
 #copyright {
     padding: 10rem 1rem 1rem 2rem;
     backdrop-filter: blur(100px);
     border-radius: 30px;
     font-size: 1em;
+    border: 5px solid rgba(0, 0, 0, 0.2);
 }
 
 .contact-container {
@@ -35,7 +38,7 @@
     border-radius: 30px;
     width: 100%;
     padding: 5rem;
-    
+    border: 5px solid rgba(0, 0, 0, 0.2);
     
 }
 

@@ -22,7 +22,7 @@
     
 
 
-    <style>
+    <!-- <style>
         .sidebar-list-item {
             cursor: pointer;
             list-style: none;
@@ -38,7 +38,7 @@
         li .subclass-li {
           margin: 1rem 0 0rem 0rem;
           padding: 1rem 1rem 1rem 0rem;
-          border-radius: 30px;
+          border-radius: 30px; 
           background-color: #00000020;
             
         }
@@ -69,7 +69,7 @@
           border-radius: 30px;
         }
 
-    </style>
+    </style> -->
 
     <script>
       document.addEventListener('DOMContentLoaded', (event) => {
@@ -284,15 +284,16 @@
             <ul id="dic-subclasses" class="subclass-list">
 
               <li class="text-li">GERMAN</li>
-              <li class="subclass-li"><a href="#" onclick="loadPage('')">...</a></li>
+              <li class="subclass-li"><a href="/html/dictionaries/german-dictonary.html">Dictionary</a></li>
               <li class="text-li">ENGLISH</li>
-              <li class="subclass-li"><a href="#" onclick="loadPage('')">...</a></li>
+              <li class="subclass-li"><a href="#" >...</a></li>
               <li class="text-li">PHILO. TERMS</li>
-              <li class="subclass-li"><a href="#" onclick="loadPage('')">...</a></li>
+              <li class="subclass-li"><a href="#" >...</a></li>
               <li class="text-li">SMART. TERMS</li>
-              <li class="subclass-li"><a href="#" onclick="loadPage('')">...</a></li>
+              <li class="subclass-li"><a href="#" >...</a></li>
               <li class="text-li">ETC...</li>
-              <li class="subclass-li"><a href="#" onclick="loadPage('')">...</a></li>
+              <li class="subclass-li"><a href="#" >...</a></li>
+
 
             </ul>
         </li>
@@ -474,47 +475,5 @@
 </div>
 <!-- Ende user window -->
 </div>
-
-
-<script>
-    document.querySelectorAll('.sidebar-list-item').forEach(item => {
-        item.addEventListener('click', function(event) {
-            event.preventDefault();
-            const targetId = this.getAttribute('data-target');
-            const targetSubClasses = document.getElementById(targetId);
-
-            // Hide all sub-class lists
-            document.querySelectorAll('.subclass-list').forEach(subclass => {
-                if (subclass !== targetSubClasses) {
-                    subclass.style.display = 'none';
-                }
-            });
-
-            // Toggle the visibility of the clicked sub-class list
-            if (targetSubClasses.style.display === 'grid') {
-                targetSubClasses.style.display = 'none';
-            } else {
-                targetSubClasses.style.display = 'grid';
-            }
-        });
-    });
-
-    let sidebarOpen = false;
-    const sidebar = document.getElementById('sidebar');
-    
-    function openSidebar() {
-      if (!sidebarOpen) {
-        sidebar.classList.add('sidebar-responsive');
-        sidebarOpen = true;
-      }
-    }
-    
-    function closeSidebar() {
-      if (sidebarOpen) {
-        sidebar.classList.remove('sidebar-responsive');
-        sidebarOpen = false;
-      }
-    }
-</script>
 </body>
 </html>

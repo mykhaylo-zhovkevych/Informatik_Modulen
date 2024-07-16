@@ -75,3 +75,51 @@ $(document).on("click", ".links-header-active a", function() {
         });
     }
 });
+
+/* code that is used by the sidebar */
+
+document.querySelectorAll('.sidebar-list-item').forEach(item => {
+    item.addEventListener('click', function(event) {
+        // Only prevent default if the target is not a link
+        if (!event.target.matches('.subclass-li a')) {
+            event.preventDefault();
+        }
+
+        const targetId = this.getAttribute('data-target');
+        const targetSubClasses = document.getElementById(targetId);
+
+        // Hide all sub-class lists
+        document.querySelectorAll('.subclass-list').forEach(subclass => {
+            if (subclass !== targetSubClasses) {
+                subclass.style.display = 'none';
+            }
+        });
+
+        // Toggle the visibility of the clicked sub-class list
+        if (targetSubClasses.style.display === 'grid') {
+            targetSubClasses.style.display = 'none';
+        } else {
+            targetSubClasses.style.display = 'grid';
+        }
+    });
+});
+
+let sidebarOpen = false;
+const sidebar = document.getElementById('sidebar');
+
+function openSidebar() {
+  if (!sidebarOpen) {
+    sidebar.classList.add('sidebar-responsive');
+    sidebarOpen = true;
+  }
+}
+
+function closeSidebar() {
+  if (sidebarOpen) {
+    sidebar.classList.remove('sidebar-responsive');
+    sidebarOpen = false;
+  }
+}
+
+
+/* end of code that is used by the sidebar */

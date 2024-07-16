@@ -8,6 +8,7 @@ import '../css/search.css';
 import '../css/content.css'
 import '../css/user.css';
 import '../css/JSON.css';
+import '../css/minor-sidebar.css';
 
 
 document.addEventListener('DOMContentLoaded', () => {
