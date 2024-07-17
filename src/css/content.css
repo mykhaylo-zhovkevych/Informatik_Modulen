@@ -256,6 +256,9 @@ html {
 
     scrollbar-width: none; /* Hide scrollbar */
     -ms-overflow-style: none; /* Hide scrollbar */
+
+    font-size: 14px;
+
   }
   
   .main-title {

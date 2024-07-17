@@ -54,9 +54,7 @@
                     "alt": "Descriptive Alt Text",
                     "id": "section6"
                 }
-                 
             ]
-            
         },
         {
             "type": "text",
@@ -64,84 +62,283 @@
             "id": "section2",
             "subContent": [
                 {
+                    "_comment": "Start of OOP",
                     "type": "sub-text",
-                    "content": "eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus ."
+                    "content": "Definition => Objektorientiertes Denken: Beim objektorientierten Denken geht es darum, Probleme und Lösungen in Form von Objekten zu modellieren. Man stellt sich vor, wie die verschiedenen Objekte interagieren und zusammenarbeiten, um das gewünschte Verhalten des Systems zu erreichen. Dabei werden die Prinzipien der Kapselung, Vererbung und Polymorphismus genutzt, um ein flexibles, erweiterbares und wartbares System zu entwickeln."
                 },
                 {
+                    "_comment": "What is Object",
                     "type": "sub-text",
-                    "content": "eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus vvvveue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus ."
+                    "content": "Definition => Ein Objekt ist eine Instanz einer Klasse. Wenn eine Klasse wie eine Schablone ist, dann ist ein Objekt ein konkretes Exemplar, das nach dieser Schablone erstellt wurde. Jedes Objekt hat seinen eigenen Zustand, der durch die Attribute der Klasse definiert wird."
+                },
+                {
+                    "_comment": "What is Class",
+                    "type": "sub-text",
+                    "content": "Definition => Eine Klasse ist ein Bauplan oder eine Vorlage für Objekte. Sie definiert, welche Attribute und Methoden die Objekte dieser Klasse haben werden. Man kann sich eine Klasse wie eine Schablone vorstellen."
+                },
+                {
+                    "_comment": "What is Attribute",
+                    "type": "sub-text",
+                    "content": "Definition => Attribute sind Variablen, die den Zustand eines Objekts beschreiben. Zum Beispiel könnte ein Auto-Objekt Attribute wie Farbe, Marke und Geschwindigkeit haben."
+                },
+                {
+                    "_comment": "What is Methods",
+                    "type": "sub-text",
+                    "content": " Definition => Methoden in der OOP sind Funktionen, die innerhalb einer Klasse definiert sind und das Verhalten der Objekte dieser Klasse beschreiben. Zweck => Sie ermöglichen es Objekten, Aktionen auszuführen und auf ihre eigenen Daten zuzugreifen oder diese zu verändern."
+                },
+                {
+                    "type": "sub-layout",
+                    "subContent": [
+                        {
+                            "type": "sub-text",
+                            "content": "Definition => Instanzmethoden sind Methoden, die auf einer Instanz einer Klasse arbeiten. Diese Methoden können auf die Attribute (Instanzvariablen) des Objekts zugreifen und diese verändern. Sie werden über ein Objekt der Klasse aufgerufen. Zweck => Instanzmethoden werden verwendet, um Verhalten zu definieren, das spezifisch für einzelne Objekte ist. Sie ermöglichen es den Objekten, Aktionen auszuführen und auf ihren Zustand zu reagieren."
+                        },
+                        {
+                            "type": "sub-text",
+                            "content": "Definition => Klassenmethoden sind Methoden, die auf der Klasse selbst und nicht auf Instanzen der Klasse arbeiten. Sie werden in Java mit dem Schlüsselwort static deklariert. Zweck => Klassenmethoden werden verwendet, um Verhalten zu definieren, das sich auf die Klasse als Ganzes bezieht, anstatt auf einzelne Instanzen. Sie sind nützlich für: Utility- oder Hilfsfunktionen, die allgemeine Operationen durchführen, die nicht von einer bestimmten Instanz abhängen. Und Zugriff auf Klassenvariablen: Sie können auf statische Variablen der Klasse zugreifen und diese manipulieren, da diese ebenfalls zur Klasse und nicht zu einer Instanz gehören."
+                        },
+                        {
+                            "type": "sub-text",
+                            "content": "Definition => Statische Methoden sind eine spezielle Art von Klassenmethoden, die unabhängig von Instanzen der Klasse sind. Sie benötigen keine Referenz auf ein Objekt der Klasse und können direkt über die Klasse aufgerufen werden. Zweck => Statische Methoden sind besonders nützlich für: Allgemeine Utility-Funktionen: Funktionen, die keine Informationen über den Zustand einer bestimmten Instanz benötigen und somit unabhängig von Instanzvariablen sind. Und  Kapselung von Funktionen: Sie bieten eine Möglichkeit, allgemeine Funktionen innerhalb der Klasse zu kapseln, die weder Instanzvariablen noch Methoden benötigen."
+                        }
+                    ]
                 },
                 {
                     "type": "sub-container-code",
-                    "_comment": "This way of displaying code will be useful only for short programs",
+                    "_comment": "Instanzmethoden Code",
                     "content": [
-                        "int nums02[] = {1, 2, 3, 4, 3, 5};",
-                        "int size02 = nums02.length;",
-                        "int temp02 = 0;",
+                        "// Instanzmethoden",
+                        "class Auto {",
+                        "    private String farbe;",
+                        "    private String marke;",
                         "",
-                        "System.out.println(\"before sorting\");",
-                        "for(int num02 : nums02) {",
-                        "    System.out.print(num02 + \" \");",
-                        "}",
-                        "",
-                        "for (int a02 = 0; a02 < size02 - 1; a02++) {",
-                        "    boolean swapped = false;",
-                        "",
-                        "    for (int b02 = 0; b02 < size02 - 1 - a02; b02++) {",
-                        "        if (nums02[b02] > nums02[b02 + 1]) {",
-                        "            // Swap",
-                        "            temp02 = nums02[b02];",
-                        "            nums02[b02] = nums02[b02 + 1];",
-                        "            nums02[b02 + 1] = temp02;",
-                        "            swapped = true; // Set flag to true indicating a swap occurred",
-                        "        }",
+                        "    public Auto(String farbe, String marke) {",
+                        "        this.farbe = farbe;",
+                        "        this.marke = marke;",
                         "    }",
                         "",
-                        "    // If no elements were swapped, array is sorted",
-                        "    if (!swapped) break;",
+                        "    public void fahren(int geschwindigkeit) {",
+                        "        System.out.println(\"Das \" + this.marke + \" Auto fährt mit \" + geschwindigkeit + \" km/h.\");",
+                        "    }",
                         "}",
                         "",
+                        "public class Main {",
+                        "    public static void main(String[] args) {",
+                        "        Auto meinAuto = new Auto(\"Rot\", \"BMW\");",
+                        "        meinAuto.fahren(100);  // Ausgabe: Das BMW Auto fährt mit 100 km/h.",
+                        "    }",
+                        "}"
+                    ]
+                },
+                {
+                    "type": "sub-container-code",
+                    "_comment": "Klassenmethoden Code",
+                    "content": [
+                        "// Klassenmethoden",
+                        "class Auto {",
+                        "    private String farbe;",
+                        "    private String marke;",
+                        "    private static int anzahlAutos = 0;",
                         "",
+                        "    public Auto(String farbe, String marke) {",
+                        "        this.farbe = farbe;",
+                        "        this.marke = marke;",
+                        "        anzahlAutos++;",
+                        "    }",
                         "",
+                        "    public static void zeigeAnzahlAutos() {",
+                        "        System.out.println(\"Es gibt \" + anzahlAutos + \" Autos.\");",
+                        "    }",
+                        "}",
                         "",
+                        "public class Main {",
+                        "    public static void main(String[] args) {",
+                        "        Auto auto1 = new Auto(\"Rot\", \"BMW\");",
+                        "        Auto auto2 = new Auto(\"Blau\", \"Audi\");",
+                        "        Auto.zeigeAnzahlAutos();  // Ausgabe: Es gibt 2 Autos.",
+                        "    }",
+                        "}"
+                    ]
+                },
+                {
+                    "type": "sub-container-code",
+                    "_comment": "Statische Methoden Code",
+                    "content": [
+                        "// Statische Methoden",
+                        "class MathUtils {",
+                        "    public static int addiere(int a, int b) {",
+                        "        return a + b;",
+                        "    }",
+                        "}",
                         "",
-                        
-                        "",
-                        "System.out.println();",
-                        "System.out.println(\"after sorting\");",
-                        "for(int num02 : nums02) {",
-                        "    System.out.print(num02 + \" \");",
+                        "public class Main {",
+                        "    public static void main(String[] args) {",
+                        "        int summe = MathUtils.addiere(5, 3);",
+                        "        System.out.println(\"Die Summe ist: \" + summe);  // Ausgabe: Die Summe ist: 8",
+                        "    }",
                         "}"
                     ]
                 },
                 {
                     "type": "sub-text",
-                    "content": "eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus ."
+                    "content": "Unterschiede zwischen Klassenmethoden und statischen Methodenm => In Java gibt es keinen funktionalen Unterschied zwischen Klassenmethoden und statischen Methoden, da beide mit dem Schlüsselwort static deklariert werden und auf dieselbe Weise verwendet werden. Der Begriff 'statische Methode' wird oft synonym mit 'Klassenmethode' verwendet. Der Unterschied liegt mehr in der Perspektive und dem Kontext der Nutzung: Klassenmethoden: Der Fokus liegt darauf, dass diese Methoden zur Klasse gehören und Klassenvariablen verwenden können. Sie sind Teil des Verhaltens der Klasse als Ganzes. Statische Methoden: Der Fokus liegt darauf, dass diese Methoden unabhängig von Instanzen sind. Sie kapseln allgemeine Funktionen, die keinen Zugriff auf Instanzvariablen oder Instanzmethoden benötigen."
                     
-                }
-            ]
-        },
-        {
-            "type": "sub-layout",
-            "subContent": [
-                {
-                    "type": "sub-text",
-                    "content": "Vertiefung."
                 },
                 {
-                    "type": "sub-text",
-                    "content": "Vertiefung."
+                    "type": "sub-layout",
+                    "subContent": [
+                        {
+                            "_comment": "Method Overloading",
+                            "type": "sub-text",
+                            "content": "Definition => Method Overloading bedeutet, dass mehrere Methoden in einer Klasse denselben Namen haben, sich aber in der Anzahl oder den Typen der Parameter unterscheiden. Es ermöglicht es, ähnliche Methoden mit unterschiedlichen Signaturen zu definieren. Zweck => Method Overloading wird verwendet, um Methoden zu definieren, die ähnliche Operationen ausführen, aber unterschiedliche Parameter akzeptieren. Es verbessert die Lesbarkeit und Wartbarkeit des Codes, indem es die Methode für verschiedene Eingabetypen anpasst."
+                        },
+                        {
+                            "_comment": "Method Overriding",
+                            "type": "sub-text",
+                            "content": "Definition => Method Overriding bedeutet, dass eine Methode in einer Subklasse die gleiche Signatur wie eine Methode in der Superklasse hat und deren Verhalten überschreibt. Es ermöglicht es, die spezifische Implementierung einer Methode in einer abgeleiteten Klasse anzupassen. Zweck => Method Overriding wird verwendet, um das Verhalten einer geerbten Methode in einer Subklasse zu ändern oder zu erweitern. Es ermöglicht die Nutzung von Polymorphismus und stellt sicher, dass eine Methode in der Subklasse eine spezifische Implementierung hat."
+                        }
+                    ]
+                },
+                {
+                    "type": "sub-container-code",
+                    "_comment": "Method Overloading ",
+                    "content": [
+                        "// Method Overloading",
+                        "class Rechner {",
+                        "    public int addiere(int a, int b) {",
+                        "        return a + b;",
+                        "    }",
+                        "",
+                        "    public int addiere(int a, int b, int c) {",
+                        "        return a + b + c;",
+                        "    }",
+                        "}",
+                        "",
+                        "public class Main {",
+                        "    public static void main(String[] args) {",
+                        "        Rechner rechner = new Rechner();",
+                        "        System.out.println(rechner.addiere(5, 3));  // Ausgabe: 8",
+                        "        System.out.println(rechner.addiere(5, 3, 2));  // Ausgabe: 10",
+                        "    }",
+                        "}"
+                    ]
+                },
+                {
+                    "type": "sub-container-code",
+                    "_comment": "Method Overriding ",
+                    "content": [
+                        "// Method Overriding",
+                        "class Tier {",
+                        "    public void macheGeraeusch() {",
+                        "        System.out.println(\"Ein Geräusch\");",
+                        "    }",
+                        "}",
+                        "",
+                        "class Hund extends Tier {",
+                        "    @Override",
+                        "    public void macheGeraeusch() {",
+                        "        System.out.println(\"Wau Wau\");",
+                        "    }",
+                        "}",
+                        "",
+                        "public class Main {",
+                        "    public static void main(String[] args) {",
+                        "        Tier meinTier = new Hund();",
+                        "        meinTier.macheGeraeusch();  // Ausgabe: Wau Wau",
+                        "    }",
+                        "}"
+                    ]
+                },
+                {
+                    "type": "sub-layout",
+                    "subContent": [
+                        {
+                            "type": "sub-text",
+                            "content": "Endgültigen Code Beispiel"
+                        }
+                    ]
+                },
+                {
+                    "type": "sub-container-code",
+                    "_comment": "Ende Code for Grundlagen",
+                    "content": [
+                        "// Beispiel für eine vollständige Klasse mit verschiedenen Methodenarten",
+                        "class BankKonto {",
+                        "    private String inhaber;",
+                        "    private String kontonummer;",
+                        "    private double kontostand;",
+                        "    private static double zinssatz = 0.05;  // Klassenattribut",
+                        "",
+                        "    public BankKonto(String inhaber, String kontonummer, double kontostand) {",
+                        "        this.inhaber = inhaber;",
+                        "        this.kontonummer = kontonummer;",
+                        "        this.kontostand = kontostand;",
+                        "    }",
+                        "",
+                        "    // Instanzmethode",
+                        "    public void einzahlen(double betrag) {",
+                        "        if (betrag > 0) {",
+                        "            this.kontostand += betrag;",
+                        "            System.out.println(betrag + \" eingezahlt. Neuer Kontostand: \" + this.kontostand);",
+                        "        } else {",
+                        "            System.out.println(\"Der Betrag muss positiv sein.\");",
+                        "        }",
+                        "    }",
+                        "",
+                        "    // Instanzmethode",
+                        "    public void abheben(double betrag) {",
+                        "        if (betrag > 0 && betrag <= this.kontostand) {",
+                        "            this.kontostand -= betrag;",
+                        "            System.out.println(betrag + \" abgehoben. Neuer Kontostand: \" + this.kontostand);",
+                        "        } else {",
+                        "            System.out.println(\"Nicht genügend Guthaben oder ungültiger Betrag.\");",
+                        "        }",
+                        "    }",
+                        "",
+                        "    // Klassenmethode",
+                        "    public static void setzeZinssatz(double neuerZinssatz) {",
+                        "        if (neuerZinssatz > 0) {",
+                        "            zinssatz = neuerZinssatz;",
+                        "            System.out.println(\"Neuer Zinssatz: \" + zinssatz);",
+                        "        } else {",
+                        "            System.out.println(\"Der Zinssatz muss positiv sein.\");",
+                        "        }",
+                        "    }",
+                        "",
+                        "    // Statische Methode",
+                        "    public static double berechneZinsen(double kontostand) {",
+                        "        return kontostand * zinssatz;",
+                        "    }",
+                        "}",
+                        "",
+                        "public class Main {",
+                        "    public static void main(String[] args) {",
+                        "        BankKonto konto = new BankKonto(\"Max Mustermann\", \"12345678\", 1000);",
+                        "        konto.einzahlen(200);  // Ausgabe: 200 eingezahlt. Neuer Kontostand: 1200.0",
+                        "        konto.abheben(150);  // Ausgabe: 150 abgehoben. Neuer Kontostand: 1050.0",
+                        "",
+                        "        // Nutzung der Klassenmethode",
+                        "        BankKonto.setzeZinssatz(0.03);",
+                        "",
+                        "        // Nutzung der statischen Methode",
+                        "        double zinsen = BankKonto.berechneZinsen(1050.0);",
+                        "        System.out.println(\"Berechnete Zinsen: \" + zinsen);  // Ausgabe: Berechnete Zinsen: 31.5",
+                        "    }",
+                        "}"
+                    ]
                 }
             ]
         },
+        
+
         {
             "type": "text",
-            "content": "Module01.",
+            "content": "Block 01",
             "id": "section3",
             "subContent": [
                 {
                     "type": "sub-container",
-                    "content": "Themen: "
+                    "content": "Themen: In diesem Einführungsblock haben wir eine Wiederholung für Modul 319 gemacht und die Interfaces in Java näher kennengelernt. Ausserdem gab es eine kurze Einführung in den Bubble-Sort-Algorithmus, welchen wir am Ende noch benötigen werden, sowie eine Besprechung anderer Algorithmen."
                 },
                 {
                     "type": "sub-text",
@@ -150,7 +347,6 @@
                 
             ]
         },
-        
 
         {
             "type": "sub-layout",
@@ -170,7 +366,7 @@
 
         {
             "type": "text",
-            "content": "Module02.",
+            "content": "Block 02",
             "id": "section4",
             "subContent": [
                 {
@@ -187,7 +383,7 @@
 
         {
             "type": "text",
-            "content": "Module03.",
+            "content": "Block 03",
             "id": "section5",
             "subContent": [
                 {
@@ -204,7 +400,7 @@
 
         {
             "type": "text",
-            "content": "Module04.",
+            "content": "Block 04",
             "id": "section6",
             "subContent": [
                 {
