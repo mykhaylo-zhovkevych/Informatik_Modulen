@@ -104,22 +104,5 @@ document.querySelectorAll('.sidebar-list-item').forEach(item => {
     });
 });
 
-let sidebarOpen = false;
-const sidebar = document.getElementById('sidebar');
-
-function openSidebar() {
-  if (!sidebarOpen) {
-    sidebar.classList.add('sidebar-responsive');
-    sidebarOpen = true;
-  }
-}
-
-function closeSidebar() {
-  if (sidebarOpen) {
-    sidebar.classList.remove('sidebar-responsive');
-    sidebarOpen = false;
-  }
-}
-
 
 /* end of code that is used by the sidebar */

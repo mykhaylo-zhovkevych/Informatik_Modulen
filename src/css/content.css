@@ -5,6 +5,22 @@
     box-sizing: border-box;
 }
 
+/* WebKit Browsers (Chrome, Safari, Opera) */
+html::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+/* Firefox */
+html {
+  scrollbar-width: none; /* Hide scrollbar */
+}
+
+/* Internet Explorer and Edge */
+html {
+  -ms-overflow-style: none; /* Hide scrollbar */
+}
+
+
 /* ---------- Part01 ---------- */
 
 .loading-page {
@@ -160,12 +176,18 @@
     border-radius: 30px;
     margin: 1rem;
     border: 5px solid rgba(0, 0, 0, 0.2);
-    
+    width: auto;
+
+    scrollbar-width: none; /* Hide scrollbar */
+    -ms-overflow-style: none; /* Hide scrollbar */
+
+
   }
   .sidebar-responsive {
     display: inline !important;
     position: absolute;
     z-index: 12 !important;
+   
   }
   
   .close-sidebar {
@@ -230,6 +252,10 @@
     margin: 1rem;
     background-color: #00000005;
     border: 5px solid rgba(0, 0, 0, 0.2);
+
+
+    scrollbar-width: none; /* Hide scrollbar */
+    -ms-overflow-style: none; /* Hide scrollbar */
   }
   
   .main-title {
@@ -338,6 +364,7 @@
   
     #sidebar {
       display: none;
+      
     }
     .close-sidebar {
       display: block;

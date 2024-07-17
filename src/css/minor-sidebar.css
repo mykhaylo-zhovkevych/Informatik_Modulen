@@ -6,13 +6,12 @@
 }
 .subclass-list {
     display: none;
-    padding-left: 20px;
     list-style: none;
-    padding: 1rem;
+    padding: 0rem;
 }
 li .subclass-li {
   margin: 1rem 0 0rem 0rem;
-  padding: 1rem 1rem 1rem 0rem;
+  padding: 1rem 0rem 1rem 0rem;
   border-radius: 30px; 
   background-color: #00000020;
     
