@@ -108,11 +108,14 @@ document.querySelectorAll('.sidebar-list-item').forEach(item => {
 
 
 /* start of code that controls the back-button */
-document.addEventListener('DOMContentLoaded', (event) => {
+// Diese Zeile fügt einen Event-Listener zum document hinzu, der sicherstellt, dass die folgende Funktion erst ausgeführt wird, wenn das gesamte HTML-Dokument geladen und geparst wurde
+document.addEventListener('DOMContentLoaded', () => {
+    //
     const backToTopButton = document.getElementById('back-to-top');
+    // In dieser Zeile wird das erste Element im Dokument mit der Klasse main-container ausgewählt und der Konstante mainContainer zugewiesen
     const mainContainer = document.querySelector('.main-container');
 
-    
+    // Diese Zeile weist der onscroll-Eigenschaft des mainContainer-Elements eine Funktion zu, die jedes Mal ausgeführt wird, wenn das mainContainer-Element gescrollt wird
     mainContainer.onscroll = function() {
         if (mainContainer.scrollTop > 2000) {
             backToTopButton.style.display = "block";
@@ -120,7 +123,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
             backToTopButton.style.display = "none";
         }
     };
-
     
     backToTopButton.addEventListener('click', function() {
         mainContainer.scrollTo({ top: 0, behavior: 'smooth' });
