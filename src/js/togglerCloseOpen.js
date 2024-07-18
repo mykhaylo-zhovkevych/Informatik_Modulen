@@ -104,5 +104,29 @@ document.querySelectorAll('.sidebar-list-item').forEach(item => {
     });
 });
 
-
 /* end of code that is used by the sidebar */
+
+
+/* start of code that controls the back-button */
+document.addEventListener('DOMContentLoaded', (event) => {
+    const backToTopButton = document.getElementById('back-to-top');
+    const mainContainer = document.querySelector('.main-container');
+
+    
+    mainContainer.onscroll = function() {
+        if (mainContainer.scrollTop > 2000) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    };
+
+    
+    backToTopButton.addEventListener('click', function() {
+        mainContainer.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+});
+/* end of code that controls the back-button  */
+
+
+
