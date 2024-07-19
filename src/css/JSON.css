@@ -53,6 +53,20 @@
   font-size: 20px;
 
 }
+.sub-text-important {
+  width: auto;
+  padding: 25px;
+  border-radius: 30px;
+  backdrop-filter: blur(100px);
+  margin: 1em 0em 2em 0em;
+  background-color: #00000020;
+  color: whitesmoke;
+  border: 5px solid rgba(255, 0, 0, 0.5);
+
+  font-size: 20px;
+
+}
+
 .sub-layout {
   
   display: grid;
@@ -132,7 +146,7 @@ li > a {
   backdrop-filter: blur(100px);
   margin: 1em 0em 2em 0em;
   background-color: #00000020;
-  max-width: 500px;
+  max-width: fit-content;
   width: 100%;
   height: auto;
   object-fit: cover; /* Ensures the image scales correctly */
@@ -155,6 +169,7 @@ li > a {
 .handlungsziel-title {
   font-size: 1.5em;
   margin-bottom: 2em;
+  padding: 0.3em;
 }
 
 .knowledge-list {

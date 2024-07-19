@@ -11,9 +11,9 @@ import '../css/JSON.css';
 import '../css/minor-sidebar.css';
 
 
-document.addEventListener('DOMContentLoaded', () => {
+/* document.addEventListener('DOMContentLoaded', () => {
     console.log('JavaScript is working!');
-});
+}); */
 
 function random(min,max) {
     return Math.random() * (max - min) + min

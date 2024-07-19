@@ -1,5 +1,7 @@
 export function loadPage(page) {
+    // fetch ist eine Methode zum Abrufen von Ressourcen über das Netzwerk. Sie gibt ein Promise zurück, das eine Response enthält
     fetch(`../html/modulen/${page}.json`)
+        // 
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -84,18 +86,28 @@ export function loadPage(page) {
                     });
                 }
 
+
+                // Element sub-text => div
                 } else if (content.type === 'sub-text') {
                     element = document.createElement('div');
                     element.className = 'sub-text';
                     element.textContent = content.content;
-                } 
+                }
                 
+                else if (content.type === 'sub-text-important') {
+                    element = document.createElement('div');
+                    element.className = 'sub-text-important';
+                    element.textContent = content.content;
+                }
+
+                // Element sub-container => div
                 else if (content.type === 'sub-container') {
                     element = document.createElement('div');
                     element.className = 'sub-container';
                     element.textContent = content.content;
                 } 
 
+                // Element sub-container-code => pre + code
                 else if (content.type === 'sub-container-code') {
                     element = document.createElement('pre');
                     const codeElement = document.createElement('code');
@@ -103,25 +115,26 @@ export function loadPage(page) {
                     codeElement.textContent = content.content.join('\n');
                     element.appendChild(codeElement);
                 } 
-
+                // Element image => img 
                 else if (content.type === 'image') {
                     element = document.createElement('img');
                     element.src = content.src;
                     element.alt = content.alt;
                     element.className = 'full-width-image';
                 }
+
+                // Element sub-layout => div 
                 else if (content.type === 'sub-layout') {
                     element = document.createElement('div');
                     element.className = 'sub-layout';
                     element.textContent = content.content;
         
-
                     // Append sub-content
                     content.subContent.forEach(subContent => {
                         element.appendChild(createElement(subContent));
                     });
 
-
+                // 
                 } else if (content.type === 'HandlungsZiele') {
                         element = handleHandlungsZiele(content); 
 

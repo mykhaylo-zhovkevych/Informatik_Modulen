@@ -55,12 +55,6 @@
                         "Kennt das Konzept der dynamischen Bindung. Kennt das Konzept der Inversion of Control (DependencyInjection)",
                         "Kennt Verfahren zum Erstellen von Testfällen. Kennt Testmethoden zur Überprüfung der Komponenten einer Anwendung (automatisches Unit-Testing)."
                     ]
-                },
-                {
-                    "type": "image",
-                    "src": "/imgs/gettyimages-1146649674-1024x1024.webp",
-                    "alt": "Descriptive Alt Text",
-                    "id": "section6"
                 }
             ]
         },
@@ -89,6 +83,252 @@
                     "type": "sub-text",
                     "content": "Definition => Attribute sind Variablen, die den Zustand eines Objekts beschreiben. Zum Beispiel könnte ein Auto-Objekt Attribute wie Farbe, Marke und Geschwindigkeit haben."
                 },
+                {
+                    "_comment": "Datatypen und Variablen",
+                    "type": "sub-text",
+                    "content": "Unterschied zwischen Generische Typen und Konkrete Typen. => Generische Typen ermöglichen es, wiederverwendbare und flexible Code-Strukturen zu definieren, die mit verschiedenen Typen arbeiten können. Konkrete Typen hingegen sind spezifische Instanzen dieser Strukturen oder anderer Typen, die in einem bestimmten Kontext verwendet werden. Generics tragen zur Verbesserung der Typsicherheit und Lesbarkeit bei, während konkrete Typen die tatsächlichen Datenstrukturen und Objekte darstellen, mit denen Ihr Programm arbeitet."
+                },
+                {
+                    "type": "image",
+                    "src": "/imgs/Datentyp-Diagramm.png",
+                    "alt": "404 img",
+                    "id": "section2"
+                },
+                {
+                    "type": "sub-layout",
+                    "subContent": [
+                        {
+                            "type": "sub-text",
+                            "content": "Ein konkreter Typ ist ein Datentyp, der vollständig definiert und instanziierbar ist. Diese Typen haben eine spezifische Implementierung und können direkt zur Erstellung von Objekten verwendet werden. Konkrete Typen können sowohl primitive als auch Referenztypen sein."
+                        },
+                        {
+                            "type": "sub-text",
+                            "content": "Referenztypen sind Verweise auf Objekte und keine primitiven Werte. Sie umfassen Klassen, Arrays, Schnittstellen und Enumerationen.     Klassen-Typ => definiert eine Klasse, die Daten und Methoden enthält.   Schnittstellen-Typ => definiert Methoden, die von Klassen implementiert werden können.  Array-Typ => ein Containerobjekt, das eine feste Anzahl von Werten desselben Typs speichert.    Aufzählungstyp (enum) => ein spezieller Datentyp, der eine feste Menge an Konstanten definiert."
+                        },
+                        
+                        
+                        {
+                            "type": "sub-text",
+                            "content": "Einfacher (elementarer, primitiver) Typ =>     Logischer Typ: boolean: Repräsentiert zwei Werte: true (wahr) und false (falsch).    Numerischer Typ:    Integer-Typen: byte: 8-Bit vorzeichenbehafteter ganzzahliger Typ. short: 16-Bit vorzeichenbehafteter ganzzahliger Typ. int: 32-Bit vorzeichenbehafteter ganzzahliger Typ. long: 64-Bit vorzeichenbehafteter ganzzahliger Typ. char: 16-Bit Unicode-Zeichen.     Gleitpunkt-Typen: float: 32-Bit Gleitkommazahl im IEEE 754 Standard. double: 64-Bit Gleitkommazahl im IEEE 754 Standard."
+                        },
+
+                        {
+                            "type": "sub-text",
+                            "content": "Generische Typen ermöglichen es, Klassen, Schnittstellen und Methoden zu definieren, die mit verschiedenen Datentypen arbeiten können, ohne den Code für jeden spezifischen Datentyp neu schreiben zu müssen. Sie bieten eine Möglichkeit, Typenparameter zu verwenden, die zur Kompilierzeit festgelegt werden."
+                        }
+                    ]
+                },
+                {
+                    "type": "sub-container-code",
+                    "_comment": "",
+                    "content": [
+                        "// Beispiel eines konkreten Typs",
+                        "String text = \"Hallo Welt\";",
+                        "int zahl = 42;",
+                        "",
+                        "// Eine generische Klasse",
+                        "public class Box<T> {",
+                        "    private T content;",
+                        "",
+                        "    public void setContent(T content) {",
+                        "        this.content = content;",
+                        "    }",
+                        "",
+                        "    public T getContent() {",
+                        "        return content;",
+                        "    }",
+                        "}",
+                        "",
+                        "// Verwendung der generischen Klasse mit einem konkreten Typ",
+                        "Box<String> stringBox = new Box<>();",
+                        "stringBox.setContent(\"Hallo Welt\");",
+                        "",
+                        "Box<Integer> integerBox = new Box<>();",
+                        "integerBox.setContent(42);"
+                      ]
+                },
+                {
+                    "_comment": "Datatypen und Variablen",
+                    "type": "sub-text",
+                    "content": "Zusammenfassend => Konkreter Typ: Ein fest definierter und instanziierbarer Datentyp wie int, String, ArrayList, etc. Generischer Typ: Ein Typ, der mit verschiedenen Datentypen arbeiten kann, ohne dass der Code für jeden spezifischen Typ neu geschrieben werden muss, wie ArrayList<T>, Box<T>, etc."
+                },
+                {
+                    "_comment": "Weitere Datatypen",
+                    "type": "sub-text-important",
+                    "content": "In Java wird eine Variable mit ihrer Deklaration gleichzeitig definiert, was bedeutet, dass Speicherplatz für die Variable reserviert wird. Es bedeutet, dass Definition = Deklaration + Reservierung des Speicherplatzes. Bei der Deklaration versteht man der Typ und der Name der Variablen und Die Definition einer Variablen umfasst sowohl die Deklaration als auch die Reservierung von Speicherplatz. In Java wird die Deklaration einer Variablen gleichzeitig als Definition angesehen. Unterschied zu anderen Programmiersprachen => C: In der Programmiersprache C ist es möglich, eine Variable an einer Stelle zu deklarieren und sie an einer anderen Stelle zu definieren. Java: Deklaration und Definition erfolgen gleichzeitig."
+                },
+                {
+                    "_comment": "Weitere Datatypen",
+                    "type": "sub-text",
+                    "content": "Unterscheidung zwischen zwei breiteren Kategorien von Variablen - dynamische und statische. In diesem Zusammenhang beziehen sich 'dynamisch' und 'statisch' auf die Bindung oder das Verhalten von Variablen. Lassen Sie uns diese Konzepte detaillierter betrachten. "
+                },
+                {
+                    "type": "sub-layout",
+                    "subContent": [
+                        {
+                            "type": "sub-text",
+                            "content": "Definition => Dynamische Variablen sind Variablen, deren Speicherbindung und/oder Wert zur Laufzeit (dynamisch) erfolgen. In Java bezieht sich dies in der Regel auf Instanzvariablen, die zu Objekten gehören. "
+                        },
+                        {
+                            "type": "sub-text",
+                            "content": "Merkmale => Lebensdauer: Dynamische Variablen existieren nur so lange, wie die Instanz, zu der sie gehören, existiert. Speicherort: Dynamische Variablen werden im Heap-Speicher gespeichert. Bindung: Die Bindung erfolgt zur Laufzeit, wenn eine Instanz der Klasse erstellt wird."
+                        }
+                        
+                    ]
+                },
+                {
+                    "type": "sub-container-code",
+                    "_comment": "",
+                    "content": [
+                        "class MyClass {",
+                        "    int instanceVariable; // Dynamische Variable",
+                        "",
+                        "    MyClass(int value) {",
+                        "        this.instanceVariable = value;",
+                        "    }",
+                        "",
+                        "    void display() {",
+                        "        System.out.println(\"Instance Variable: \" + instanceVariable);",
+                        "    }",
+                        "",
+                        "    public static void main(String[] args) {",
+                        "        MyClass obj1 = new MyClass(10);",
+                        "        MyClass obj2 = new MyClass(20);",
+                        "",
+                        "        obj1.display(); // Ausgabe: Instance Variable: 10",
+                        "        obj2.display(); // Ausgabe: Instance Variable: 20",
+                        "    }",
+                        "}"
+                    ]
+                },
+                {
+                    "type": "sub-layout",
+                    "subContent": [
+                        {
+                            "type": "sub-text",
+                            "content": "Definition => Statische Variablen sind Variablen, die während der Kompilierung (statisch) gebunden werden und deren Speicherbindung während der gesamten Programmausführung konstant bleibt. Dies kann sowohl auf Variablen innerhalb von Klassen (Klassenvariablen) als auch auf lokale Variablen zutreffen."
+                        },
+                        {
+                            "type": "sub-text",
+                            "content": "Merkmale   =>   Lebensdauer: Die Lebensdauer kann variieren, abhängig von der Art der statischen Variable:         Klassenvariablen: Existieren für die gesamte Laufzeit des Programms.         Lokale Variablen: Existieren nur innerhalb des Bereichs, in dem sie deklariert wurden.     Speicherort: Speicherort variiert:         Klassenvariablen: Im statischen Speicherbereich.         Lokale Variablen: Im Stack-Speicher.     Bindung: Die Bindung erfolgt zur Kompilierzeit (statisch)."
+                        }
+                        
+                    ]
+                },
+                {
+                    "type": "sub-container-code",
+                    "_comment": "",
+                    "content": [
+                        "// Beispiel für Klassenvariablen",
+                        "class MyClass {",
+                        "    static int staticVariable = 0; // Statische Klassenvariable",
+                        "",
+                        "    void increment() {",
+                        "        staticVariable++;",
+                        "    }",
+                        "",
+                        "    public static void main(String[] args) {",
+                        "        MyClass obj1 = new MyClass();",
+                        "        MyClass obj2 = new MyClass();",
+                        "",
+                        "        obj1.increment();",
+                        "        System.out.println(MyClass.staticVariable); // Ausgabe: 1",
+                        "",
+                        "        obj2.increment();",
+                        "        System.out.println(MyClass.staticVariable); // Ausgabe: 2",
+                        "    }",
+                        "}",
+                        "",
+                        "// Beispiel für lokale Variablen",
+                        "public class Main {",
+                        "    public static void main(String[] args) {",
+                        "        int localVar = 10; // Statische lokale Variable (in Bezug auf ihre Lebensdauer innerhalb der Methode)",
+                        "        System.out.println(localVar); // Ausgabe: 10",
+                        "    }",
+                        "}"
+                    ]
+                },
+                {
+                    "_comment": "",
+                    "type": "sub-text-important",
+                    "content": "Instanzvariablen:      Werden automatisch mit einem Standardwert initialisiert, wenn ein Objekt der Klasse erstellt wird.     Beispiel: int wird zu 0, boolean wird zu false, Objektreferenzen werden zu null.  Klassenvariablen (statische Variablen):      Werden ebenfalls automatisch mit einem Standardwert initialisiert, wenn die Klasse geladen wird.     Beispiel: int wird zu 0, boolean wird zu false, Objektreferenzen werden zu null.  Lokale Variablen:      Werden nicht automatisch initialisiert. Der Compiler überprüft, ob eine lokale Variable initialisiert wurde, bevor sie verwendet wird."
+                },
+                {
+                    "type": "sub-container-code",
+                    "_comment": "",
+                    "content": [
+                        "/ / Beispiele: Instanzvariablen und Klassenvariablen",
+                        "class MyClass {",
+                        "    int instanceVariable;       // Instanzvariable, wird automatisch auf 0 gesetzt",
+                        "    static int classVariable;   // Klassenvariable, wird automatisch auf 0 gesetzt",
+                        "",
+                        "    void displayValues() {",
+                        "        System.out.println(\"Instance Variable: \" + instanceVariable);  // Ausgabe: 0",
+                        "        System.out.println(\"Class Variable: \" + classVariable);        // Ausgabe: 0",
+                        "    }",
+                        "}",
+                        "",
+                        "public class Main {",
+                        "    public static void main(String[] args) {",
+                        "        MyClass obj = new MyClass();",
+                        "        obj.displayValues();",
+                        "    }",
+                        "}",
+                        "",
+                        "/ / Beispiele: Lokale Variablen",
+                        "public class Main {",
+                        "    public static void main(String[] args) {",
+                        "        int localVar; // Lokale Variable, nicht initialisiert",
+                        "",
+                        "        // Versuch, die lokale Variable zu verwenden, führt zu einem Compiler-Fehler:",
+                        "        // System.out.println(localVar); // Fehler: Variable localVar might not have been initialized",
+                        "",
+                        "        // Initialisierung der lokalen Variable",
+                        "        localVar = 10;",
+                        "        System.out.println(\"Local Variable: \" + localVar); // Ausgabe: 10",
+                        "    }",
+                        "}"
+                    ]
+                },
+                {
+                    "_comment": "",
+                    "type": "sub-text",
+                    "content": " Definition => Eine konstante Variable ist eine Variable, deren Wert nach der Initialisierung nicht mehr verändert werden kann. In Java wird eine konstante Variable mit dem Schlüsselwort final deklariert. Konstante Variablen werden oft verwendet, um feste Werte zu definieren, die während der Programmausführung unverändert bleiben sollen."
+                },
+                {
+                    "type": "sub-container-code",
+                    "_comment": "",
+                    "content": [
+                        "import java.util.*;",
+                        "",
+                        "public class MyClass {",
+                        "    // Deklaration und Initialisierung einer konstanten Klassenvariable",
+                        "    public static final int MAX_USERS = 100;",
+                        "",
+                        "    // Deklaration und Initialisierung einer konstanten Instanzvariable",
+                        "    public final String MY_CONSTANT;",
+                        "",
+                        "    // Initialisierung der konstanten Instanzvariable im Konstruktor",
+                        "    public MyClass(String value) {",
+                        "        MY_CONSTANT = value;",
+                        "    }",
+                        "",
+                        "    public void displayConstants() {",
+                        "        System.out.println(\"Max Users: \" + MAX_USERS);",
+                        "        System.out.println(\"My Constant: \" + MY_CONSTANT);",
+                        "    }",
+                        "",
+                        "    public static void main(String[] args) {",
+                        "        MyClass obj = new MyClass(\"Hellfo\");",
+                        "        obj.displayConstants();",
+                        "",
+                        "        // Versuch, eine konstante Variable zu ändern, führt zu einem Compiler-Fehler:",
+                        "        // MAX_USERS = 200; // Fehler: cannot assign a value to final variable MAX_USERS",
+                        "        // obj.MY_CONSTANT = \"World\"; // Fehler: cannot assign a value to final variable MY_CONSTANT",
+                        "    }",
+                        "}"
+                    ]
+                },  
                 {
                     "_comment": "What is Methods",
                     "type": "sub-text",
@@ -346,15 +586,229 @@
             "subContent": [
                 {
                     "type": "sub-container",
-                    "content": "Themen: In diesem Einführungsblock haben wir eine Wiederholung für Modul 319 gemacht und die Interfaces in Java näher kennengelernt. Ausserdem gab es eine kurze Einführung in den Bubble-Sort-Algorithmus, welchen wir am Ende noch benötigen werden, sowie eine Besprechung anderer Algorithmen."
+                    "content": "Themen: In diesem Einführungsblock haben wir eine Wiederholung für Modul 319 gemacht und die Interfaces, Modifikatoren in Java näher kennengelernt. Ausserdem gab es eine kurze Einführung in den Bubble-Sort-Algorithmus, welchen wir am Ende noch benötigen werden, sowie eine Besprechung anderer Algorithmen."
                 },
                 {
                     "type": "sub-text",
-                    "content": "eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus eue Klasse als eine Art der ursprünglichen Klasse verwendet werden kann. Diese Kombination aus ."
-                }
+                    "content": "abstract => Definiert eine Klasse oder Methode als abstrakt. final => Verhindert, dass eine Klasse erweitert, eine Methode überschrieben oder eine Variable verändert wird. private => Macht das Element nur innerhalb der Klasse sichtbar. protected => Macht das Element innerhalb der Klasse und in Unterklassen sichtbar, auch in anderen Paketen. public => Macht das Element überall sichtbar. static => Markiert ein Element als zugehörig zur Klasse anstatt zu Instanzen der Klasse. synchronized => Stellt sicher, dass nur ein Thread gleichzeitig auf die Methode zugreifen kann. transient => Verhindert, dass ein Datenfeld beim Serialisieren gespeichert wird. volatile => Macht ein Datenfeld direkt im Hauptspeicher sichtbar, wodurch alle Threads sofort die Änderungen sehen."
+                },
+                {
+                    "type": "image",
+                    "src": "/imgs/photo_2024-07-19_17-01-10.jpg",
+                    "alt": "404 img",
+                    "id": "section3"
+                },
                 
+                {
+                    "type": "HandlungsZiele",
+                    "ziel": "Was ist ein Interface?",
+                    "HandlungsnotwendigeKenntnisse": [
+                        "Ein Interface ist eine Schnittstelle, in der festgelegt wird, über welche Methoden die Klassen, die das Interface implementieren, verfügen müssen. Die Interfaces selber enthalten daher nur Funktionsköpfe und Konstanten. Alle Klassen, die das Interface implementieren, müssen sämtliche Methoden, die das Interface vorgibt, enthalten.",
+                        "Interfaces werden verwendet, um Gemeinsamkeiten (z.B. gleiche Funktionalitäten), die mehreren Klassen zugrunde liegen, in einer separaten Klasse zu definieren.(Implementierung durch Klassen: Jede Klasse, die das Interface benutzt, muss den Code für diese Aufgaben bereitstellen.) Die Objekte der implementierenden Klasse sind wie bei der Vererbung dann gleichzeitig auch Objekte des Interfaces. In Java werden Interfaces daher oft genutzt, um die fehlende Mehrfachvererbung gewissermassen zu simulieren, da eine Klasse zwar nur von einer Superklasse abgeleitet werden kann, jedoch beliebig viele Interfaces implementieren kann. ",    
+                        "In der Praxis werden Interfaces häufig für Kommunikationszwecke verwendet. Zwei miteinander kommunizierende Seiten besitzen beispielsweise ein festgelegtes Interface, damit eine reibungslose Kommunikation durchgeführt werden kann. So wird gewährleistet, dass beide Seiten die vom Interface vorgegebenen Methoden implementieren.",
+                        "Das Interface dient auch dazu, den eigenen Quellcode vor fremden Entwicklern zu schützen, da diese nur auf die Methoden des Interfaces zugreifen können. kannst du mir jeder Absatz besser erklären"
+                    ]    
+                },
+                {
+                    "_comment": "",
+                    "type": "sub-text-important",
+                    "content": "Ein Funktionskopf oder eine Methodensignatur ist die Definition einer Methode ohne ihren eigentlichen Implementierungscode. Sie gibt den Namen der Methode, ihren Rückgabewert und die Parameter, die sie erwartet, an, enthält aber keinen Code, der ausgeführt wird."
+                },
+                {
+                    "_comment": "",
+                    "type": "sub-text-important",
+                    "content": "Konstanten sind Variablen, deren Wert nach der Initialisierung nicht mehr geändert werden kann. In einem Interface sind alle Variablen automatisch public, static und final. Das bedeutet, dass sie für alle Implementierungen des Interfaces zugänglich sind, zur Klasse gehören (nicht zur Instanz) und unveränderlich sind."
+                },
+                {
+                    "type": "sub-container-code",
+                    "_comment": "",
+                    "content": [
+                        "public interface Animal {",
+                        "    // Konstante (public, static, final)",
+                        "    int MAX_AGE = 20;",
+                        "    ",
+                        "    // Methodensignaturen (Funktionsköpfe)",
+                        "    void eat();",
+                        "    void sleep();",
+                        "}",
+                        "",
+                        "// Implementierende Klasse",
+                        "class Dog implements Animal {",
+                        "    public void eat() {",
+                        "        System.out.println(\"Dog eats\");",
+                        "    }",
+                        "",
+                        "    public void sleep() {",
+                        "        System.out.println(\"Dog sleeps\");",
+                        "    }",
+                        "    ",
+                        "    void showMaxAge() {",
+                        "        System.out.println(\"Max age is \" + MAX_AGE);",
+                        "    }",
+                        "}",
+                        "",
+                        "public class Main {",
+                        "    public static void main(String[] args) {",
+                        "        Dog dog = new Dog();",
+                        "        dog.eat();",
+                        "        dog.sleep();",
+                        "        dog.showMaxAge(); // Ausgabe: Max age is 20",
+                        "    }",
+                        "}"
+                    ]
+                },
+                {
+                    "type": "HandlungsZiele",
+                    "ziel": "Vererbung und Interfaces in Java",
+                    "HandlungsnotwendigeKenntnisse": [
+                        "Vererbung => In Java kann eine Klasse nur von einer anderen Klasse erben. Das bedeutet, eine Klasse kann nur eine direkte Elternklasse haben. ",    
+                        "Interfaces => Eine Klasse kann mehrere Interfaces implementieren. Wenn eine Klasse ein Interface implementiert, ist sie verpflichtet, alle Methoden dieses Interfaces zu definieren. Objekte der Klasse, die ein Interface implementiert, können auch als Objekte des Interfaces betrachtet werden."
+                    ]    
+                },
+                {
+                    "type": "sub-layout",
+                    "subContent": [
+                        {
+                            "_comment": "",
+                            "type": "sub-text",
+                            "content": "Simulation der Mehrfachvererbung"
+                        }
+                    ]
+                },
+                {
+                    "type": "sub-container-code",
+                    "_comment": "",
+                    "content": [
+                        "// Beweglich.java",
+                        "public interface Beweglich {",
+                        "    void fahren();",
+                        "}",
+                        "",
+                        "// Schwimmfähig.java",
+                        "public interface Schwimmfähig {",
+                        "    void schwimmen();",
+                        "}",
+                        "",
+                        "// AmphibienFahrzeug.java",
+                        "public class AmphibienFahrzeug implements Beweglich, Schwimmfähig {",
+                        "    @Override",
+                        "    public void fahren() {",
+                        "        System.out.println(\"Das Amphibienfahrzeug fährt auf der Straße.\");",
+                        "    }",
+                        "",
+                        "    @Override",
+                        "    public void schwimmen() {",
+                        "        System.out.println(\"Das Amphibienfahrzeug schwimmt im Wasser.\");",
+                        "    }",
+                        "}",
+                        "",
+                        "// Main.java",
+                        "public class Main {",
+                        "    public static void main(String[] args) {",
+                        "        AmphibienFahrzeug amphibienFahrzeug = new AmphibienFahrzeug();",
+                        "",
+                        "        // Das Amphibienfahrzeug kann sowohl fahren als auch schwimmen",
+                        "        amphibienFahrzeug.fahren();",
+                        "        amphibienFahrzeug.schwimmen();",
+                        "",
+                        "        // Demonstrieren der Mehrfachvererbungssimulation",
+                        "        Beweglich beweglichesObjekt = amphibienFahrzeug;",
+                        "        Schwimmfähig schwimmfähigesObjekt = amphibienFahrzeug;",
+                        "",
+                        "        // Aufruf der Methoden über die Interface-Referenzen",
+                        "        beweglichesObjekt.fahren();",
+                        "        schwimmfähigesObjekt.schwimmen();",
+                        "    }",
+                        "}"
+                    ]
+                },
+                
+                {
+                    "type": "sub-layout",
+                    "subContent": [
+                        {
+                            "_comment": "",
+                            "type": "sub-text",
+                            "content": "Erweiterte Simulation der Mehrfachvererbung mit Abstrakt"
+                        }
+                    ]
+                },
+                {
+                    "type": "sub-container-code",
+                    "_comment": "",
+                    "content": [
+                        "// Schritt 1: Definiere das Interface und die abstrakte Klasse",
+                        "// Beweglich.java",
+                        "public interface Beweglich {",
+                        "    void fahren();",
+                        "}",
+                        "",
+                        "// Schwimmfähig.java",
+                        "public interface Schwimmfähig {",
+                        "    void schwimmen();",
+                        "}",
+                        "",
+                        "// Fahrzeug.java",
+                        "public abstract class Fahrzeug {",
+                        "    private String name;",
+                        "",
+                        "    public Fahrzeug(String name) {",
+                        "        this.name = name;",
+                        "    }",
+                        "",
+                        "    public String getName() {",
+                        "        return name;",
+                        "    }",
+                        "",
+                        "    public void starten() {",
+                        "        System.out.println(name + \" startet.\");",
+                        "    }",
+                        "",
+                        "    public abstract void stoppen();",
+                        "}",
+                        "// Schritt 2: Implementiere die Klasse, die das Interface und die abstrakte Klasse kombiniert",
+                        "// AmphibienFahrzeug.java",
+                        "public class AmphibienFahrzeug extends Fahrzeug implements Beweglich, Schwimmfähig {",
+                        "    public AmphibienFahrzeug(String name) {",
+                        "        super(name);",
+                        "    }",
+                        "",
+                        "    @Override",
+                        "    public void fahren() {",
+                        "        System.out.println(getName() + \" fährt auf der Straße.\");",
+                        "    }",
+                        "",
+                        "    @Override",
+                        "    public void schwimmen() {",
+                        "        System.out.println(getName() + \" schwimmt im Wasser.\");",
+                        "    }",
+                        "",
+                        "    @Override",
+                        "    public void stoppen() {",
+                        "        System.out.println(getName() + \" stoppt.\");",
+                        "    }",
+                        "}",
+                        "// Schritt 3: Verwende die Klasse im Hauptprogramm",
+                        "// Main.java",
+                        "public class Main {",
+                        "    public static void main(String[] args) {",
+                        "        AmphibienFahrzeug amphibienFahrzeug = new AmphibienFahrzeug(\"Amphi\");",
+                        "",
+                        "        amphibienFahrzeug.starten();  // Von der abstrakten Klasse",
+                        "        amphibienFahrzeug.fahren();   // Vom Interface Beweglich",
+                        "        amphibienFahrzeug.schwimmen(); // Vom Interface Schwimmfähig",
+                        "        amphibienFahrzeug.stoppen();  // Von der abstrakten Klasse",
+                        "    }",
+                        "}"
+                      ]
+                }
+
             ]
         },
+        
+                
+            
+        
 
         {
             "type": "sub-layout",

@@ -64,47 +64,32 @@
             "id": "section2",
             "subContent": [
                 {
+                    "type": "sub-container",
+                    "content": "Themen: Lexikalische Konventionen"
+                },
+                {
                     "_comment": "Start of OOP",
                     "type": "sub-text",
-                    "content": "Definition => Objektorientiertes Denken: Beim objektorientierten Denken geht es darum, Probleme und Lösungen in Form von Objekten zu modellieren. Man stellt sich vor, wie die verschiedenen Objekte interagieren und zusammenarbeiten, um das gewünschte Verhalten des Systems zu erreichen. Dabei werden die Prinzipien der Kapselung, Vererbung und Polymorphismus genutzt, um ein flexibles, erweiterbares und wartbares System zu entwickeln."
-                },
-                {
-                    "_comment": "What is Object",
-                    "type": "sub-text",
-                    "content": "Definition => Ein Objekt ist eine Instanz einer Klasse. Wenn eine Klasse wie eine Schablone ist, dann ist ein Objekt ein konkretes Exemplar, das nach dieser Schablone erstellt wurde. Jedes Objekt hat seinen eigenen Zustand, der durch die Attribute der Klasse definiert wird."
-                },
-                {
-                    "_comment": "What is Class",
-                    "type": "sub-text",
-                    "content": "Definition => Eine Klasse ist ein Bauplan oder eine Vorlage für Objekte. Sie definiert, welche Attribute und Methoden die Objekte dieser Klasse haben werden. Man kann sich eine Klasse wie eine Schablone vorstellen."
-                },
-                {
-                    "_comment": "What is Attribute",
-                    "type": "sub-text",
-                    "content": "Definition => Attribute sind Variablen, die den Zustand eines Objekts beschreiben. Zum Beispiel könnte ein Auto-Objekt Attribute wie Farbe, Marke und Geschwindigkeit haben."
-                },
-                {
-                    "_comment": "What is Methods",
-                    "type": "sub-text",
-                    "content": " Definition => Methoden in der OOP sind Funktionen, die innerhalb einer Klasse definiert sind und das Verhalten der Objekte dieser Klasse beschreiben. Zweck => Sie ermöglichen es Objekten, Aktionen auszuführen und auf ihre eigenen Daten zuzugreifen oder diese zu verändern."
+                    "content": "."
                 },
                 {
                     "type": "sub-layout",
                     "subContent": [
-                        {
-                            "type": "sub-text",
-                            "content": "Definition => Instanzmethoden sind Methoden, die auf einer Instanz einer Klasse arbeiten. Diese Methoden können auf die Attribute (Instanzvariablen) des Objekts zugreifen und diese verändern. Sie werden über ein Objekt der Klasse aufgerufen. Zweck => Instanzmethoden werden verwendet, um Verhalten zu definieren, das spezifisch für einzelne Objekte ist. Sie ermöglichen es den Objekten, Aktionen auszuführen und auf ihren Zustand zu reagieren."
-                        },
-                        {
-                            "type": "sub-text",
-                            "content": "Definition => Klassenmethoden sind Methoden, die auf der Klasse selbst und nicht auf Instanzen der Klasse arbeiten. Sie werden in Java mit dem Schlüsselwort static deklariert. Zweck => Klassenmethoden werden verwendet, um Verhalten zu definieren, das sich auf die Klasse als Ganzes bezieht, anstatt auf einzelne Instanzen. Sie sind nützlich für: Utility- oder Hilfsfunktionen, die allgemeine Operationen durchführen, die nicht von einer bestimmten Instanz abhängen. Und Zugriff auf Klassenvariablen: Sie können auf statische Variablen der Klasse zugreifen und diese manipulieren, da diese ebenfalls zur Klasse und nicht zu einer Instanz gehören."
-                        },
-                        {
-                            "type": "sub-text",
-                            "content": "Definition => Statische Methoden sind eine spezielle Art von Klassenmethoden, die unabhängig von Instanzen der Klasse sind. Sie benötigen keine Referenz auf ein Objekt der Klasse und können direkt über die Klasse aufgerufen werden. Zweck => Statische Methoden sind besonders nützlich für: Allgemeine Utility-Funktionen: Funktionen, die keine Informationen über den Zustand einer bestimmten Instanz benötigen und somit unabhängig von Instanzvariablen sind. Und  Kapselung von Funktionen: Sie bieten eine Möglichkeit, allgemeine Funktionen innerhalb der Klasse zu kapseln, die weder Instanzvariablen noch Methoden benötigen."
-                        }
+                        
                     ]
                 }
+            ]
+        },
+        {
+            "type": "text",
+            "content": "",
+            "id": "section3",
+            "subContent": [
+                {
+                    "type": "sub-container",
+                    "content": "Themen: "
+                }
+               
                 
             ]
         }
