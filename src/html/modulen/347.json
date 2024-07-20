@@ -207,7 +207,7 @@
         },
         {
             "type": "text",
-            "content": "Block03",
+            "content": "Block02",
             "id": "section3",
             "subContent": [
                 {
@@ -287,20 +287,110 @@
         },
         {
             "type": "text",
-            "content": "Block04",
+            "content": "Block03",
             "id": "section4",
             "subContent": [
                 {
                     "type": "sub-container",
                     "content": "Themen: Containerisierung: Images, Persistenz, Kommunikation und Umbegungsvariablen"
+                },
+                {
+                    "type": "HandlungsZiele",
+                    "ziel": "Docker Image",
+                    "HandlungsnotwendigeKenntnisse": [
+                        "Aufbau von Docker Images:",
+                        "Docker Images basieren auf mehreren Schlüsseltechnologien, die zusammenarbeiten, um eine konsistente und reproduzierbare Umgebung für Anwendungen bereitzustellen.",
+                        "1. Schicht-basierte Architektur:",
+                        "○ Beschreibung: Docker Images bestehen aus mehreren schreibgeschützten Schichten. Jede Schicht repräsentiert eine Änderung im Dateisystem, z.B. das Hinzufügen oder Ändern von Dateien.",
+                        "○ Funktionalität: Durch die Schichtstruktur können Images effizient erstellt und gemeinsam genutzt werden. Änderungen werden als neue Schichten hinzugefügt, wodurch der Speicherbedarf minimiert wird.",
+                        "2. Basis-Image:",
+                        "○ Beschreibung: Das Basis-Image ist die unterste Schicht eines Docker Images und dient als Ausgangspunkt für die Erstellung weiterer Schichten. Es enthält ein minimales Betriebssystem oder eine Runtime-Umgebung.",
+                        "○ Beispiel: Ein typisches Basis-Image könnte ubuntu, alpine, oder node sein.",
+                        "3. Union File Systems:",
+                        "○ Beschreibung: Docker verwendet Union-Dateisysteme wie OverlayFS, um die Schichten eines Images effizient zu verwalten.",
+                        "○ Funktionalität: Änderungen in jeder Schicht werden über die vorherige Schicht gelegt, wodurch nur die Differenzen gespeichert werden. Dies reduziert den Speicherbedarf und beschleunigt die Image-Bereitstellung.",
+                        "4. Metadaten:",
+                        "○ Beschreibung: Docker Images enthalten Metadaten, die Informationen über das Image und seine Schichten speichern, z.B. Erstellungszeitpunkt, Autor und Konfigurationsdetails.",
+                        "○ Funktionalität: Metadaten helfen bei der Verwaltung und Identifikation von Images und unterstützen die Wiederherstellung und Reproduzierbarkeit.",
+                        "Zusammenfassung von Docker Images:",
+                        "• Docker Images bestehen aus mehreren schreibgeschützten Schichten.",
+                        "• Jede Schicht repräsentiert Änderungen im Dateisystem.",
+                        "• Union-Dateisysteme wie OverlayFS verwalten die Schichten effizient.",
+                        "• Metadaten enthalten wichtige Informationen über das Image."
+                    ]
+                },
+                {
+                    "type": "HandlungsZiele",
+                    "ziel": "Docker Container",
+                    "HandlungsnotwendigeKenntnisse": [
+                        "Aufbau und Funktionsweise von Docker Containern:",
+                        "Docker Container basieren auf Docker Images und bieten eine isolierte Umgebung für Anwendungen.",
+                        "1. Isolierung:",
+                        "○ Beschreibung: Container laufen in isolierten Umgebungen, die sie vom Host-System und anderen Containern trennen.",
+                        "○ Funktionalität: Diese Isolierung sorgt dafür, dass Anwendungen unabhängig voneinander laufen können, ohne sich gegenseitig zu beeinflussen.",
+                        "2. Leichtgewichtige Virtualisierung:",
+                        "○ Beschreibung: Container nutzen die Virtualisierung auf Betriebssystemebene, um eine effizientere Nutzung der Ressourcen zu ermöglichen.",
+                        "○ Funktionalität: Im Gegensatz zu herkömmlichen VMs, die ein komplettes Betriebssystem enthalten, teilen sich Container den Kernel des Host-Betriebssystems, was sie ressourcenschonender macht.",
+                        "3. Portabilität:",
+                        "○ Beschreibung: Container können auf verschiedenen Systemen mit Docker-Installation ausgeführt werden, unabhängig von den darunterliegenden Betriebssystemen.",
+                        "○ Funktionalität: Diese Portabilität ermöglicht eine einfache Verschiebung von Anwendungen zwischen Entwicklungs-, Test- und Produktionsumgebungen.",
+                        "4. Skalierbarkeit:",
+                        "○ Beschreibung: Container können leicht skaliert werden, indem mehrere Instanzen eines Containers erstellt werden.",
+                        "○ Funktionalität: Dies erleichtert die Anpassung der Anwendungsressourcen an den Bedarf, indem Container hinzugefügt oder entfernt werden.",
+                        "Zusammenfassung von Docker Containern:",
+                        "• Docker Container bieten isolierte Umgebungen für Anwendungen.",
+                        "• Container sind leichtgewichtig und ressourcenschonend.",
+                        "• Container sind portabel und können auf verschiedenen Systemen ausgeführt werden.",
+                        "• Container ermöglichen eine einfache Skalierbarkeit von Anwendungen."
+                    ]
+                },
+                {
+                    "type": "image",
+                    "src": "/imgs/347-img-block03.png",
+                    "alt": "404 img",
+                    "id": "section3"
+                },
+                {
+                    "type": "image",
+                    "src": "/imgs/347-img-block03-storage.png",
+                    "alt": "404 img",
+                    "id": "section3"
+                },
+                {
+                    "type": "image",
+                    "src": "/imgs/347-img-block03-storage-ex.png",
+                    "alt": "404 img",
+                    "id": "section3"
+                },
+                {
+                    "type": "image",
+                    "src": "/imgs/347-img-block03-networking.png",
+                    "alt": "404 img",
+                    "id": "section3"
+                },
+                {
+                    "type": "image",
+                    "src": "/imgs/347-img-block03-networking-ex.png",
+                    "alt": "404 img",
+                    "id": "section3"
+                },
+                {
+                    "type": "image",
+                    "src": "/imgs/347-img-block03-variables.png",
+                    "alt": "404 img",
+                    "id": "section3"
+                },
+                {
+                    "type": "image",
+                    "src": "/imgs/347-img-block03-variables-ex.png",
+                    "alt": "404 img",
+                    "id": "section3"
                 }
-               
-                
             ]
         },
         {
             "type": "text",
-            "content": "Block05",
+            "content": "Block04",
             "id": "section5",
             "subContent": [
                 {
@@ -313,7 +403,7 @@
         },
         {
             "type": "text",
-            "content": "Block06",
+            "content": "Block05",
             "id": "section6",
             "subContent": [
                 {
@@ -326,7 +416,7 @@
         },
         {
             "type": "text",
-            "content": "Block07",
+            "content": "Block06",
             "id": "section7",
             "subContent": [
                 {
@@ -339,7 +429,7 @@
         },
         {
             "type": "text",
-            "content": "Block08",
+            "content": "Block07",
             "id": "section8",
             "subContent": [
                 {
@@ -350,7 +440,7 @@
         },
         {
             "type": "text",
-            "content": "Block09",
+            "content": "Block08",
             "id": "section9",
             "subContent": [
                 {
@@ -361,7 +451,7 @@
         },
         {
             "type": "text",
-            "content": "Block10",
+            "content": "Block09",
             "id": "section10",
             "subContent": [
                 {
@@ -372,7 +462,7 @@
         },
         {
             "type": "text",
-            "content": "Block11",
+            "content": "Block10",
             "id": "section11",
             "subContent": [
                 {
@@ -383,7 +473,7 @@
         },
         {
             "type": "text",
-            "content": "Block12",
+            "content": "Block11",
             "id": "section12",
             "subContent": [
                 {
@@ -394,7 +484,7 @@
         },
         {
             "type": "text",
-            "content": "Block13",
+            "content": "Block12",
             "id": "section13",
             "subContent": [
                 {
