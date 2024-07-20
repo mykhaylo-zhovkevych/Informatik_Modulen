@@ -13,25 +13,22 @@
             "items": [
                 { "label": "1. Vermerk", "id": "section1" },
                 { "label": "2. ", "id": "section2" },
-                { "label": "3. Block01", "id": "section3" },
-                { "label": "4. Block02", "id": "section4" },
-                { "label": "5. Block03", "id": "section5" },
-                { "label": "6. Block04", "id": "section6" },
-                { "label": "7. Block05", "id": "section7" },
-                { "label": "8. Block06", "id": "section8" },
-                { "label": "9. Block07", "id": "section9" },
-                { "label": "10. Block08", "id": "section10" },
-                { "label": "11. Block09", "id": "section11" },
+                { "label": "3. Kapitel 1 die detalierte Beschreibung", "id": "section3" },
+                { "label": "4. Kapitel 2 die detalierte Beschreibung", "id": "section4" },
+                { "label": "5. Kapitel 3 die detalierte Beschreibung", "id": "section5" },
+                { "label": "6. Kapitel 4 die detalierte Beschreibung", "id": "section6" },
+                { "label": "7. Kapitel 5 die detalierte Beschreibung", "id": "section7" },
+                { "label": "8. Kapitel 6 die detalierte Beschreibung", "id": "section8" },
+                { "label": "9. Kapitel 7 die detalierte Beschreibung", "id": "section9" },
+                { "label": "10. Kapitel 9 die detalierte Beschreibung", "id": "section10" },
+                { "label": "11. Kapitel 10 die detalierte Beschreibung", "id": "section11" },
 
                 { "label": "16. Aufgabe01", "id": "section16" },
                 { "label": "17. Aufgabe02", "id": "section17" },
                 { "label": "18. Aufgabe03", "id": "section18" },
                 { "label": "19. Aufgabe04", "id": "section19" },
 
-                { "label": "12. Projekt Teil01", "id": "section12" },
-                { "label": "13. Projekt Teil02", "id": "section13" },
-                { "label": "14. Projekt Teil03", "id": "section14" },
-                { "label": "15. Projekt Teil04", "id": "section15" },
+                
                 
                 { "label": "20. Abschlussauswertung", "id": "section20" }
             ]
@@ -47,15 +44,10 @@
                     "type": "HandlungsZiele",
                     "ziel": "Kompetenz: Applikationen und Schnittstellen objektorientiert modellieren, implementieren, testen und dokumentieren. Objekt: Anwendung mit 3 bis 5 fachlichen Klassen.",
                     "HandlungsnotwendigeKenntnisse": [
-                        "Kennt den objektorientierten Ansatz mit den Grundkonzepten Kapselung, Vererbung und Polymorphie."
+                        ""
                     ]
-                },
-                {
-                    "type": "image",
-                    "src": "/imgs/gettyimages-1146649674-1024x1024.webp",
-                    "alt": "Descriptive Alt Text",
-                    "id": "section6"
                 }
+               
             ]
         },
         {

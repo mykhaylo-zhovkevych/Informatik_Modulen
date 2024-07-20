@@ -1,0 +1,418 @@
+{
+    "title": "M347",
+    "mainTitle": "M347 => Dienst mit Container anwenden",
+    "cards": [
+        { "title": "Themen", "value": 5 },
+        { "title": "Abschnitte", "value": 11 },
+        { "title": "Skripts", "value": 20 }
+    ],
+    "charts": [
+        {
+            "type": "verzeichnis",
+            "title": "Verzeichnis",
+            "items": [
+                { "label": "1. Einleitung", "id": "section1" },
+                { "label": "2. Block01", "id": "section2" },
+                { "label": "3. Block02", "id": "section3" },
+                { "label": "4. Block03", "id": "section4" },
+                { "label": "5. Block04", "id": "section5" },
+                { "label": "6. Block05", "id": "section6" },
+                { "label": "7. Block06", "id": "section7" },
+                { "label": "8. Block07", "id": "section8" },
+                { "label": "9. Block08", "id": "section9" },
+                { "label": "11. Block09", "id": "section10" },
+                { "label": "12. Block10", "id": "section11" },
+                { "label": "13. Block11", "id": "section12" },
+                { "label": "14. Block12", "id": "section13" },
+                { "label": "15. Cheat-Sheet", "id": "section14" }
+            
+            ]
+        }
+    ],
+    "mainTextContent": [
+        {
+            "type": "text",
+            "content": "Einleitung",
+            "id": "section1",
+            "subContent": [
+                {
+                    "type": "HandlungsZiele",
+                    "ziel": "Kompetenz: Erkennt Unterschiede der Containeranwendungsmöglichkeiten im eigenen beruflichen Alltag. Entwickelt mittels einer geeigneten Containerkomposition eine ICT-Lösung für den eigenen Betrieb oder für das betriebliche Umfeld.",
+                    "HandlungsnotwendigeKenntnisse": [
+                        "Kennt die wichtigsten Grundlagen, Eigenschaften und Methoden von Container-Technologien (z.B. Verfügbarkeit/Redundanz, Idempotenz, Sicherheit, Ressourcen, Wartbarkeit) sowie deren Auswirkungen auf den beruflichen Alltag.",
+                        "Kennt die Anforderungen des Betriebes auf Bandbreite, Hardware (CPU, RAM, etc.), Instanzen, Skalierbarkeit in Bezug auf Containerisierung)",
+                        "Kennt Architekturformen (z.B. Aufteilung der Dienste auf Container) und deren Aufbau, Konzept und Unterschiede für den Einsatz von Containerlösungen.",
+                        "Kennt die Chancen und Risiken im Umgang mit Containerisierung bezüglich Entwicklung und Betrieb von Diensten und Applikationen.",
+                        "Kennt die unterschiedlichen Orchestration Frameworks und Tools (z.B. Docker, Kubernetes) zum Betrieb von Containerplattformen. ",
+                        "Kennt globale Anbieter von Containerrepositories und -Plattformen, die Preisunterschiede und die Providerspezifischen Vor- und Nachteile (z.B. Docker-Hub, Azure, AWS etc.).",
+                        "Kennt die Einsatzmöglichkeiten und Vorteile einer containerbasierten Architektur oder Dienstes bezüglich der Bedürfnisse der eigenen Unternehmung.",
+                        "Kennt die Entwicklungsschritte zur Virtualisierung einer Applikation oder Dienstes mit Containern.",
+                        "Kennt Methoden zur Umsetzung, Qualitätssicherung und Qualitätskontrolle von containerisierten Architekturen.",
+                        "Kennt Methoden zur Beweisführung der Testabdeckung, Qualitätssicherheit, Dokumentation und Anwendung."
+                        
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "content": "Block01",
+            "id": "section2",
+            "subContent": [
+                {
+                    "type": "sub-container",
+                    "content": "Themen: Virtualisierung: Intro und Virtualisierungslösung mit Virtualbox erstellen"
+                },
+                {
+                    "type": "image",
+                    "src": "/imgs/347-img-block01.png",
+                    "alt": "404 img",
+                    "id": "section2"
+                },
+                {
+                    "type": "HandlungsZiele",
+                    "ziel": "Virtual Desktop Infarstructure",
+                    "HandlungsnotwendigeKenntnisse": [
+                        " 1. Hardware: Die Basis der VDI-Infrastruktur ist die physische Hardware. Diese besteht aus Servern, auf denen die Virtualisierungssoftware installiert wird.",
+                        " 2. Hypervisor: Auf der Hardware läuft ein Hypervisor. Ein Hypervisor ist eine Software, die es ermöglicht, mehrere virtuelle Maschinen (VMs) auf einer physischen Maschine auszuführen. Beispiele für Hypervisoren sind VMware ESXi, Microsoft Hyper-V und Citrix XenServer.",
+                        " 3. Management Layer (Optional): Über dem Hypervisor befindet sich eine optionale Verwaltungsschicht. Diese kann verschiedene Management-Tools und Software zur Verwaltung der VMs und der gesamten Infrastruktur umfassen. Sie erleichtert die Aufgaben wie das Provisionieren von VMs, das Monitoring und die Verwaltung der Ressourcen.",
+                        " 4. Virtuelle Maschinen (VMs): Auf dem Hypervisor laufen mehrere virtuelle Maschinen, die jeweils ein eigenes Betriebssystem (OS), Anwendungen (Apps) und Daten (Data) enthalten. In der Abbildung sind drei VMs dargestellt: ○ VM 1: Markiert mit grüner Farbe. ○ VM 2: Markiert mit blauer Farbe. ○ VM 3: Markiert mit orangener Farbe.",
+                        " 5. Connection Broker: Der Connection Broker ist eine zentrale Komponente in einer VDI-Umgebung. Er verwaltet die Verbindungen zwischen den Endbenutzern und den VMs. Der Connection Broker leitet Anfragen der Endbenutzer an die entsprechenden virtuellen Maschinen weiter, basierend auf den verfügbaren Ressourcen und den Benutzeranforderungen. ",
+                        " 6. End User: Die Endbenutzer greifen von verschiedenen Gerätetypen auf die VDI zu. In der Abbildung sind drei Gerätetypen dargestellt: ○ Traditional PC (VM 1): Ein traditioneller PC, der auf die VDI zugreift. ○ Thin Client (VM 2): Ein Thin Client, ein leichtgewichtiges Gerät, das hauptsächlich für den Zugriff auf virtuelle Desktops verwendet wird. ○ Mobile Device (VM 3): Ein mobiles Gerät wie ein Tablet oder Smartphone, das auf die VDI zugreift."
+                    ]    
+                },
+                {
+                    "_comment": "",
+                    "type": "sub-text",
+                    "content": "Die Abbildung zeigt den Fluss der Daten von der physischen Hardware über den Hypervisor zu den virtuellen Maschinen und schliesslich zu den Endbenutzern. Der Connection Broker spielt dabei eine zentrale Rolle, indem er die Verbindungen zwischen den VMs und den verschiedenen Endgeräten verwaltet. Dies ermöglicht eine flexible, zentrale Verwaltung und Nutzung der IT-Ressourcen, was die Effizienz und Produktivität im Geschäftsleben steigert."
+                },
+                {
+                    "type": "HandlungsZiele",
+                    "ziel": "Einen Webserver installiert ohne Docker",
+                    "HandlungsnotwendigeKenntnisse": [
+                        " 1. System aktualisieren",
+                        " 2. Apache und PHP installieren",
+                        " 3. MariaDB installieren",
+                        " 4. MariaDB-Dienst starten und aktivieren",
+                        " 6. phpMyAdmin installieren ",
+                        " 7. Apache neu starten",
+                        " 8. PHP überprüfen",
+                        " 9. phpMyAdmin testen",
+                        "10. Anmelden"
+                    ]    
+                },
+                {
+                    "type": "sub-container-code",
+                    "_comment": "",
+                    "content": [
+                        "### System aktualisieren",
+                        "sudo apt update",
+                        "sudo apt upgrade -y",
+                        "",
+                        "### Apache und PHP installieren",
+                        "sudo apt install apache2 libapache2-mod-php8.2 php8.2 php8.2-mysql -y",
+                        "",
+                        "### MariaDB installieren",
+                        "sudo apt install mariadb-server mariadb-client -y",
+                        "",
+                        "### MariaDB sichern",
+                        "sudo mysql_secure_installation",
+                        "",
+                        "### MariaDB-Dienst starten und aktivieren",
+                        "sudo systemctl start mariadb",
+                        "sudo systemctl enable mariadb",
+                        "",
+                        "### phpMyAdmin installieren",
+                        "sudo apt install phpmyadmin -y",
+                        "",
+                        "### phpMyAdmin re-konfigurieren (falls erforderlich)",
+                        "sudo dpkg-reconfigure phpmyadmin",
+                        "",
+                        "### Apache neu starten",
+                        "sudo systemctl restart apache2",
+                        "",
+                        "### PHP überprüfen",
+                        "echo \"<?php phpinfo(); ?>\" | sudo tee /var/www/html/info.php",
+                        "",
+                        "### PHP-Installation testen",
+                        "sudo rm /var/www/html/info.php"
+                    ]
+                }, 
+                {
+                    "_comment": "",
+                    "type": "sub-text",
+                    "content": "Die manuelle Installation von phpMyAdmin, MariaDB, Apache und PHP auf Debian ist zeitaufwendig und ineffizient. Mit Docker kann dieser Prozess erheblich vereinfacht und beschleunigt werden."
+                },
+                {
+                    "type": "HandlungsZiele",
+                    "ziel": "Einen Webserver installiert mit Docker",
+                    "HandlungsnotwendigeKenntnisse": [
+                        " 1. Dockerfile und Konfigurationsdateien erstellen: Erstellen Sie die oben genannten Dateien.",
+                        " 2. Docker-Image bauen:",
+                        " 3. Container starten:",
+                        " 4. phpMyAdmin öffnen: Im Browser http://localhost/phpmyadmin aufrufen."
+                    ]    
+                },
+                {
+                    "type": "sub-container-code",
+                    "_comment": "",
+                    "content": [
+                        "# Verwenden Sie das offizielle PHP-Image als Basis",
+                        "FROM php:8.2-apache",
+                        "",
+                        "# Installieren Sie benötigte Pakete und Erweiterungen",
+                        "RUN apt-get update && apt-get install -y \\",
+                        "    mariadb-server \\",
+                        "    mariadb-client \\",
+                        "    libapache2-mod-php8.2 \\",
+                        "    php8.2-mysql \\",
+                        "    && docker-php-ext-install mysqli",
+                        "",
+                        "# Installieren Sie phpMyAdmin",
+                        "RUN mkdir /usr/share/phpmyadmin && cd /usr/share/phpmyadmin \\",
+                        "    && curl -LO https://www.phpmyadmin.net/downloads/phpMyAdmin-latest-all-languages.tar.gz \\",
+                        "    && tar xzf phpMyAdmin-latest-all-languages.tar.gz --strip-components=1 \\",
+                        "    && rm phpMyAdmin-latest-all-languages.tar.gz",
+                        "",
+                        "# Konfigurieren Sie Apache",
+                        "COPY ./apache-config.conf /etc/apache2/sites-available/000-default.conf",
+                        "",
+                        "# Kopieren Sie phpMyAdmin-Konfiguration",
+                        "COPY ./config.inc.php /usr/share/phpmyadmin/",
+                        "",
+                        "# Starten Sie MariaDB und Apache",
+                        "CMD service mysql start && apache2-foreground"
+                    ]
+                },
+                {
+                    "type": "HandlungsZiele",
+                    "ziel": "Virtual Desktop Infarstructure",
+                    "HandlungsnotwendigeKenntnisse": [
+                        " 1. Wofür wird Virtualisierung im Geschäftsleben eingesetzt?",
+                        " Virtualisierung wird im Geschäftsleben hauptsächlich eingesetzt, um die Effizienz und Flexibilität der IT-Infrastruktur zu verbessern. Hier sind einige spezifische Einsatzbereiche: 1. Serverkonsolidierung: Mehrere physische Server werden auf einer einzigen Hardware-Plattform virtualisiert, um Platz, Energie und Verwaltungskosten zu sparen. 2. Disaster Recovery: Durch die Virtualisierung können Sicherungskopien und Wiederherstellungspunkte einfacher erstellt und verwaltet werden, was die Wiederherstellung im Katastrophenfall erleichtert. 3. Test- und Entwicklungsumgebungen: Virtuelle Maschinen ermöglichen es Entwicklern, verschiedene Betriebssysteme und Anwendungen in isolierten Umgebungen zu testen, ohne physische Hardware zu benötigen. 4. Bessere Ressourcennutzung: Ressourcen wie CPU, Speicher und Speicherplatz können effizienter genutzt und dynamisch zugewiesen werden, je nach Bedarf der Anwendungen. Einfache Verwaltung und Wartung: Virtuelle Umgebungen können zentral verwaltet werden, was die Bereitstellung und Wartung von IT-Services vereinfacht.",
+                        " Welche Vor- und Nachteile ergeben sich durch Virtualisierung?",
+                        " Vorteile: ",
+                        " 1. Kostenreduktion: Durch die Konsolidierung von Servern und effizientere Ressourcennutzung können Hardware- und Betriebskosten gesenkt werden",
+                        " 2. Flexibilität und Skalierbarkeit: Virtuelle Umgebungen können schnell erstellt, angepasst und skaliert werden, um den sich ändernden Geschäftsanforderungen gerecht zu werden.",
+                        " 3. Erhöhte Verfügbarkeit und Zuverlässigkeit: Durch Funktionen wie Live-Migration und automatisiertes Failover kann die Verfügbarkeit von Anwendungen und Daten verbessert werden.",
+                        " 4 Bessere Nutzung der Hardware: Ressourcen wie CPU und Speicher können besser ausgelastet und dynamisch zugewiesen werden.",
+                        " Nachteile: ",
+                        " 1. Komplexität: Die Verwaltung von virtualisierten Umgebungen kann komplexer sein und erfordert spezialisierte Kenntnisse.",
+                        " 2. Kosten für Software-Lizenzen: Virtualisierungslösungen können hohe Lizenzkosten verursachen, insbesondere bei umfangreichen Implementierungen.",
+                        " 3. Leistungseinbussen: Obwohl moderne Hypervisoren sehr effizient sind, kann es dennoch zu geringfügigen Leistungseinbussen im Vergleich zu nativen Umgebungen kommen.",
+                        " 4. Sicherheitsrisiken: Virtualisierte Umgebungen können anfälliger für Sicherheitsrisiken sein, wenn sie nicht ordnungsgemäss konfiguriert und überwacht werden."
+                    ]    
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "content": "Block03",
+            "id": "section3",
+            "subContent": [
+                {
+                    "type": "sub-container",
+                    "content": "Themen: Containerisierung: Grundlagen und erste Container erstellen"
+                },
+                {
+                    "type": "image",
+                    "src": "/imgs/347-img-block02.png",
+                    "alt": "404 img",
+                    "id": "section3"
+                },
+                {
+                    "type": "HandlungsZiele",
+                    "ziel": "Virtualisierung vs Container",
+                    "HandlungsnotwendigeKenntnisse": [
+                        "Was ist Virtualisierung?",
+                        "Virtualisierung ist eine Technologie, die es ermöglicht, mehrere virtuelle Maschinen (VMs) auf einer einzigen Hardware-Plattform auszuführen. Jede VM enthält ein eigenes Betriebssystem und Anwendungen, die vollständig von anderen VMs isoliert sind. Virtualisierung wird verwendet, um die Effizienz und Flexibilität der IT-Infrastruktur zu verbessern.",
+                        "Was ist Containerisierung?",
+                        "Containerisierung ist eine Technologie, die Anwendungen und ihre Abhängigkeiten in Containern isoliert. Im Gegensatz zu VMs teilen sich Container das Host-Betriebssystem, was sie leichter und schneller macht. Container werden häufig verwendet, um die Portabilität und Skalierbarkeit von Anwendungen zu verbessern.",
+                        "Virtualisierung Architektur:",
+                        "1. Infrastruktur: Physische oder virtuelle Hardware.",
+                        "2. Hypervisor: Software-Schicht, die mehrere VMs verwaltet (z.B. VMware, Hyper-V).",
+                        "3. Gastsystem: Betriebssystem innerhalb einer VM.",
+                        "4. Binaries/Libraries: Notwendige Bibliotheken und Abhängigkeiten.",
+                        "5. Anwendung: Die eigentliche Software, die in der VM läuft.",
+                        "Container Architektur:",
+                        "1. Infrastruktur: Physische oder virtuelle Hardware.",
+                        "2. Betriebssystem: Host-Betriebssystem, auf dem die Container-Engine läuft.",
+                        "3. Container-Engine: Software-Schicht (z.B. Docker, Kubernetes), die Container verwaltet.",
+                        "4. Binaries/Libraries: Geteilte Bibliotheken und Abhängigkeiten.",
+                        "5. Anwendung: Die eigentliche Software, die im Container läuft.",
+                        "Vorteile der Container:",
+                        "1. Ressourcensparend: Weniger Verbrauch von RAM, CPU und Speicher.",
+                        "2. Leichtgewichtig: Schnellere Startzeiten und geringerer Overhead.",
+                        "3. Leicht reproduzierbar: Einfachere Verwaltung und Skalierung von Anwendungen.",
+                        "4. Schnellere Startzeiten: Container starten in Sekunden im Gegensatz zu VMs, die Minuten benötigen können.",
+                        "Nachteile der Virtualisierung:",
+                        "1. Komplexität: Verwaltung virtualisierter Umgebungen kann komplexer sein und spezialisierte Kenntnisse erfordern.",
+                        "2. Kosten für Software-Lizenzen: Virtualisierungslösungen können hohe Lizenzkosten verursachen, insbesondere bei umfangreichen Implementierungen.",
+                        "3. Leistungseinbußen: Geringfügige Leistungseinbußen im Vergleich zu nativen Umgebungen.",
+                        "4. Sicherheitsrisiken: Virtualisierte Umgebungen können anfälliger für Sicherheitsrisiken sein, wenn sie nicht ordnungsgemäß konfiguriert und überwacht werden."
+                    ]
+                },
+                {
+                    "type": "image",
+                    "src": "/imgs/347-img-block02-arch.png",
+                    "alt": "404 img",
+                    "id": "section3"
+                },
+                {
+                    "type": "HandlungsZiele",
+                    "ziel": "Docker Architektur",
+                    "HandlungsnotwendigeKenntnisse": [
+                        "Was ist Docker?",
+                        "Docker ist eine Containerisierungsplattform, die es ermöglicht, Anwendungen und ihre Abhängigkeiten in isolierten Containern zu verpacken und auszuführen. Dies sorgt für Konsistenz über verschiedene Entwicklungs-, Test- und Produktionsumgebungen hinweg.",
+                        "Docker Architektur:",
+                        "1. Client: Der Docker-Client ist das primäre Interface, mit dem Benutzer Docker befehlen. Häufige Befehle sind docker build, docker pull und docker run.",
+                        "2. Docker Host: Das Docker-Host-System ist die physische oder virtuelle Maschine, auf der der Docker-Daemon läuft. Der Daemon ist für das Erstellen, Ausführen und Verwalten von Containern verantwortlich.",
+                        "3. Docker Daemon: Der Docker-Daemon (dockerd) empfängt Befehle vom Docker-Client und verwaltet Docker-Objekte wie Images, Container, Netzwerke und Volumes.",
+                        "4. Images: Docker-Images sind schreibgeschützte Vorlagen, die die Anweisungen zum Erstellen eines Containers enthalten. Sie enthalten alle notwendigen Dateien, Konfigurationen und Abhängigkeiten.",
+                        "5. Container: Docker-Container sind lauffähige Instanzen von Docker-Images. Sie enthalten die Anwendung und alle ihre Abhängigkeiten in einer isolierten Umgebung.",
+                        "6. Registry: Eine Docker-Registry ist ein Speicherort für Docker-Images. Die öffentliche Docker Hub ist die bekannteste Registry, aber es gibt auch private Registries.",
+                        "Vorteile von Docker:",
+                        "1. Konsistenz: Docker sorgt dafür, dass Anwendungen in jeder Umgebung gleich laufen, was die Entwicklung und Bereitstellung vereinfacht.",
+                        "2. Isolierung: Container isolieren Anwendungen und ihre Abhängigkeiten, was Konflikte vermeidet.",
+                        "3. Effizienz: Container sind leichtgewichtig und teilen sich das Host-Betriebssystem, was Ressourcen spart.",
+                        "4. Skalierbarkeit: Anwendungen können schnell und einfach skaliert werden, indem Container hinzugefügt oder entfernt werden.",
+                        "Nachteile von Docker:",
+                        "1. Sicherheit: Container teilen sich den Kernel des Host-Betriebssystems, was potenziell Sicherheitsrisiken birgt.",
+                        "2. Netzwerkkomplexität: Die Konfiguration und Verwaltung von Netzwerken zwischen Containern kann komplex sein.",
+                        "3. Persistenz: Datenmanagement in Containern kann herausfordernd sein, insbesondere bei Zustandsänderungen und Datenpersistenz.",
+                        "4. Lernkurve: Docker und seine Konzepte erfordern eine Lernkurve, besonders für Entwickler und Administratoren, die mit herkömmlichen virtuellen Maschinen vertraut sind."
+                    ]
+                }                
+            ]
+        },
+        {
+            "type": "text",
+            "content": "Block04",
+            "id": "section4",
+            "subContent": [
+                {
+                    "type": "sub-container",
+                    "content": "Themen: Containerisierung: Images, Persistenz, Kommunikation und Umbegungsvariablen"
+                }
+               
+                
+            ]
+        },
+        {
+            "type": "text",
+            "content": "Block05",
+            "id": "section5",
+            "subContent": [
+                {
+                    "type": "sub-container",
+                    "content": "Themen: Containerlösungen: Testplanung- & durchführung, Fehlersuche, Monitoring"
+                }
+               
+                
+            ]
+        },
+        {
+            "type": "text",
+            "content": "Block06",
+            "id": "section6",
+            "subContent": [
+                {
+                    "type": "sub-container",
+                    "content": "Themen: docker-compose"
+                }
+               
+                
+            ]
+        },
+        {
+            "type": "text",
+            "content": "Block07",
+            "id": "section7",
+            "subContent": [
+                {
+                    "type": "sub-container",
+                    "content": "Themen: Einführung Software-Versionierung mit GIT und Github"
+                }
+               
+                
+            ]
+        },
+        {
+            "type": "text",
+            "content": "Block08",
+            "id": "section8",
+            "subContent": [
+                {
+                    "type": "sub-container",
+                    "content": "Themen: Resourcenverwaltung, ZP-Projekt"
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "content": "Block09",
+            "id": "section9",
+            "subContent": [
+                {
+                    "type": "sub-container",
+                    "content": "Themen: Container-Sicherheit, ZP-Projekt"
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "content": "Block10",
+            "id": "section10",
+            "subContent": [
+                {
+                    "type": "sub-container",
+                    "content": "Themen: Kubernetes: Einführung, Installation"
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "content": "Block11",
+            "id": "section11",
+            "subContent": [
+                {
+                    "type": "sub-container",
+                    "content": "Themen: Kubernetes: YAML-basierte Konfiguration (IaC), Updates und Rollbacks"
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "content": "Block12",
+            "id": "section12",
+            "subContent": [
+                {
+                    "type": "sub-container",
+                    "content": "Themen: Kubernetes: Kubernetes: Servicetypen, Persistenz"
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "content": "Block13",
+            "id": "section13",
+            "subContent": [
+                {
+                    "type": "sub-container",
+                    "content": "Themen: Kubernetes: Kubernetes: Servicetypen, Persistenz"
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "content": "Cheat-Sheet",
+            "id": "section14",
+            "subContent": [
+                {
+                    "type": "sub-container",
+                    "content": "Themen: "
+                }
+            ]
+        }
+    ]
+}

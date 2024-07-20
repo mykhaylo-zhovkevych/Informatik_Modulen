@@ -69,14 +69,24 @@
 }
 .img-user {
   display: flex;
- 
   justify-content: center;
-
   height: 16vh;
   border: 5px solid rgba(0, 0, 0, 0.2);
   border-radius: 30px;
-  padding: 20px;
+  padding: 10px;
 }
+
+#img-user-default {
+  padding: 10px;
+  border-radius: 30px;
+  backdrop-filter: blur(100px);
+  background-color: #00000020;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  border: 5px solid rgba(0, 0, 0, 0.2);
+}
+
 .data-user {
   display: flex;
   flex-direction: column;

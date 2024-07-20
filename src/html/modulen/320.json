@@ -2,8 +2,8 @@
     "title": "M320",
     "mainTitle": "M320 => Objektorientiert Programmieren",
     "cards": [
-        { "title": "Thems", "value": 5 },
-        { "title": "Sections", "value": 11 },
+        { "title": "Themen", "value": 5 },
+        { "title": "Abschnitte", "value": 11 },
         { "title": "Codes", "value": 20 }
     ],
     "charts": [
@@ -90,7 +90,7 @@
                 },
                 {
                     "type": "image",
-                    "src": "/imgs/Datentyp-Diagramm.png",
+                    "src": "/imgs/320-Datentyp-Diagramm.png",
                     "alt": "404 img",
                     "id": "section2"
                 },
@@ -329,6 +329,11 @@
                         "}"
                     ]
                 },  
+                {
+                    "_comment": "What is Methods",
+                    "type": "sub-text-important",
+                    "content": " Definition => Block ist eine folge von ANweisungen, die sequenziell hintereinander ausgeführt wird. Eine Methode ist eine Folge von Anweisungne, die unter einem Namen aufgerufen werden kann."
+                },
                 {
                     "_comment": "What is Methods",
                     "type": "sub-text",
@@ -594,7 +599,7 @@
                 },
                 {
                     "type": "image",
-                    "src": "/imgs/photo_2024-07-19_17-01-10.jpg",
+                    "src": "/imgs/320-modifikatoren.jpg",
                     "alt": "404 img",
                     "id": "section3"
                 },
