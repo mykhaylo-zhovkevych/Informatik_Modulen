@@ -248,8 +248,8 @@
                         "Nachteile der Virtualisierung:",
                         "1. Komplexität: Verwaltung virtualisierter Umgebungen kann komplexer sein und spezialisierte Kenntnisse erfordern.",
                         "2. Kosten für Software-Lizenzen: Virtualisierungslösungen können hohe Lizenzkosten verursachen, insbesondere bei umfangreichen Implementierungen.",
-                        "3. Leistungseinbußen: Geringfügige Leistungseinbußen im Vergleich zu nativen Umgebungen.",
-                        "4. Sicherheitsrisiken: Virtualisierte Umgebungen können anfälliger für Sicherheitsrisiken sein, wenn sie nicht ordnungsgemäß konfiguriert und überwacht werden."
+                        "3. Leistungseinbussen: Geringfügige Leistungseinbussen im Vergleich zu nativen Umgebungen.",
+                        "4. Sicherheitsrisiken: Virtualisierte Umgebungen können anfälliger für Sicherheitsrisiken sein, wenn sie nicht ordnungsgemäss konfiguriert und überwacht werden."
                     ]
                 },
                 {
