@@ -611,7 +611,7 @@
                         "Ein Interface ist eine Schnittstelle, in der festgelegt wird, über welche Methoden die Klassen, die das Interface implementieren, verfügen müssen. Die Interfaces selber enthalten daher nur Funktionsköpfe und Konstanten. Alle Klassen, die das Interface implementieren, müssen sämtliche Methoden, die das Interface vorgibt, enthalten.",
                         "Interfaces werden verwendet, um Gemeinsamkeiten (z.B. gleiche Funktionalitäten), die mehreren Klassen zugrunde liegen, in einer separaten Klasse zu definieren.(Implementierung durch Klassen: Jede Klasse, die das Interface benutzt, muss den Code für diese Aufgaben bereitstellen.) Die Objekte der implementierenden Klasse sind wie bei der Vererbung dann gleichzeitig auch Objekte des Interfaces. In Java werden Interfaces daher oft genutzt, um die fehlende Mehrfachvererbung gewissermassen zu simulieren, da eine Klasse zwar nur von einer Superklasse abgeleitet werden kann, jedoch beliebig viele Interfaces implementieren kann. ",    
                         "In der Praxis werden Interfaces häufig für Kommunikationszwecke verwendet. Zwei miteinander kommunizierende Seiten besitzen beispielsweise ein festgelegtes Interface, damit eine reibungslose Kommunikation durchgeführt werden kann. So wird gewährleistet, dass beide Seiten die vom Interface vorgegebenen Methoden implementieren.",
-                        "Das Interface dient auch dazu, den eigenen Quellcode vor fremden Entwicklern zu schützen, da diese nur auf die Methoden des Interfaces zugreifen können. kannst du mir jeder Absatz besser erklären"
+                        "Das Interface dient auch dazu, den eigenen Quellcode vor fremden Entwicklern zu schützen, da diese nur auf die Methoden des Interfaces zugreifen können. Entwickler, die das Interface nutzen, können nur auf die Methoden zugreifen, die im Interface definiert sind, und nicht auf die internen Implementierungsdetails der Klasse. Dies fördert die Kapselung und verhindert unerwünschte Änderungen oder Zugriffe auf den internen Zustand der Klasse."
                     ]    
                 },
                 {
@@ -805,16 +805,10 @@
                         "        amphibienFahrzeug.stoppen();  // Von der abstrakten Klasse",
                         "    }",
                         "}"
-                      ]
+                    ]
                 }
-
             ]
         },
-        
-                
-            
-        
-
         {
             "type": "sub-layout",
             
@@ -867,9 +861,301 @@
                 {
                     "type": "sub-container",
                     "content": "Themen: Im vierten Block werden wir uns mit den abstrakten Klassen und this. beschäftigen."
-                }
-                
-                
+                },
+                {
+                    "_comment": "",
+                    "type": "sub-text",
+                    "content": "Was macht this? Das Schlüsselwort this ist eine Referenz auf das aktuelle Objekt, in dem der Code ausgeführt wird. In diesem Kontext bedeutet das, dass this eine Referenz auf die aktuelle Instanz der Klasse Kraftfahrzeug ist."
+                },
+                {
+                    "type": "sub-container-code",
+                    "_comment": "",
+                    "content": [
+                        "// Klasse erstellen und Objekte instanziieren",
+                        "// Zunächst erstellen wir eine Klasse namens Kraftfahrzeug",
+                        "",
+                        "public class Kraftfahrzeug {",
+                        "    public int ps = 0;",
+                        "    private int verbrauch = 0;",
+                        "    private int geschwindigkeit = 0;",
+                        "}",
+                        "",
+                        "Kraftfahrzeug fahrzeug1 = new Kraftfahrzeug();",
+                        "Kraftfahrzeug fahrzeug2 = new Kraftfahrzeug();",
+                        "// Der new-Operator reserviert Speicherplatz für die Objekte fahrzeug1 und fahrzeug2. Wenn wir diese Variablen ausgeben:",
+                        "",
+                        "System.out.println(fahrzeug1);",
+                        "System.out.println(fahrzeug2);",
+                        "// Ausgabe",
+                        "Kraftfahrzeug@2a139a55",
+                        "Kraftfahrzeug@15db9742",
+                        "",
+                        "Kraftfahrzeug fahrzeug3 = fahrzeug1;",
+                        "fahrzeug3.ps = 120;",
+                        "fahrzeug1.ps = 160;",
+                        "",
+                        "System.out.println(fahrzeug3.ps);",
+                        "System.out.println(fahrzeug1.ps);",
+                        "// Die Ausgabe wird in beiden Fällen 160 sein,  ",
+                        "// weil beide Variablen auf dasselbe Objekt verweisen.",
+                        "",
+                        "// Verwendung des this-Schlüsselwortes",
+                        "// Das this-Schlüsselwort liefert eine Referenz auf das aktuelle Objekt. ",
+                        "// Es wird häufig in Methoden verwendet, um Namenskonflikte zu lösen oder auf das aktuelle Objekt zuzugreifen.",
+                        "",
+                        "public class Kraftfahrzeug {",
+                        "    private int ps = 0;",
+                        "    private int verbrauch = 0;",
+                        "    private int geschwindigkeit = 0;",
+                        "",
+                        "    public Kraftfahrzeug getMe() {",
+                        "        return this;",
+                        "    }",
+                        "}",
+                        "System.out.println(fahrzeug1);",
+                        "System.out.println(fahrzeug1.getMe());",
+                        "// wird dieselbe Speicheradresse ausgegeben."
+                    ]
+                },
+                {
+                    "_comment": "",
+                    "type": "sub-text",
+                    "content": " 1. Auflösen von Namenskonflikten: Dies ist besonders nützlich in Konstruktoren und Setter-Methoden, wenn Parameter und Felder denselben Namen haben."
+                },
+                {
+                    "type": "sub-container-code",
+                    "_comment": "",
+                    "content": [
+                        "public class Kraftfahrzeug {",
+                        "    private int geschwindigkeit;",
+                        "",
+                        "    public void setGeschwindigkeit(int geschwindigkeit) {",
+                        "        this.geschwindigkeit = geschwindigkeit;",
+                        "    }",
+                        "}"
+                      ]
+                    },
+                    {
+                        "_comment": "",
+                        "type": "sub-text",
+                        "content": "2. Java this zum Aufruf von Methoden und Konstruktoren: Das this-Schlüsselwort kann in einem Konstruktor verwendet werden, um einen anderen Konstruktor derselben Klasse aufzurufen. Dies ist nützlich, um Code-Duplikation zu vermeiden und eine zentralisierte Initialisierung zu gewährleisten. Schauen wir uns dies anhand des Beispiels Kraftfahrzeug an."
+                    },
+                    {
+                        "type": "sub-container-code",
+                        "_comment": "",
+                        "content": [
+                            "public class Kraftfahrzeug {",
+                            "    private int ps;",
+                            "    private int verbrauch;",
+                            "    private int geschwindigkeit;",
+                            "",
+                            "    // Standard-Konstruktor",
+                            "    public Kraftfahrzeug() {}",
+                            "",
+                            "    // Benutzerdefinierter Konstruktor",
+                            "    public Kraftfahrzeug(int ps, int verbrauch, int geschwindigkeit) {",
+                            "        this.ps = ps;",
+                            "        this.verbrauch = verbrauch;",
+                            "        this.geschwindigkeit = geschwindigkeit;",
+                            "    }",
+                            "}"
+                        ]
+                    },
+                    {
+                        "_comment": "",
+                        "type": "sub-text",
+                        "content": "2.1 Aufruf eines Konstruktors von einem anderen Konstruktor aus: Nun erweitern wir den Standard-Konstruktor, um den benutzerdefinierten Konstruktor mit vordefinierten Werten aufzurufen:"
+                    },
+                    {
+                        "type": "sub-container-code",
+                        "_comment": "",
+                        "content": [
+                            "public class Kraftfahrzeug {",
+                            "    private int ps;",
+                            "    private int verbrauch;",
+                            "    private int geschwindigkeit;",
+                            "",
+                            "    // Standard-Konstruktor",
+                            "    public Kraftfahrzeug() {",
+                            "        this(80, 6, 240); // Aufruf des benutzerdefinierten Konstruktors",
+                            "    }",
+                            "",
+                            "    // Benutzerdefinierter Konstruktor",
+                            "    public Kraftfahrzeug(int ps, int verbrauch, int geschwindigkeit) {",
+                            "        this.ps = ps;",
+                            "        this.verbrauch = verbrauch;",
+                            "        this.geschwindigkeit = geschwindigkeit;",
+                            "    }",
+                            "}",
+                            "// Die Ausgabe dieses Programms wird sein:",
+                            "// Fahrzeug 1 - PS: 80, Verbrauch: 6, Geschwindigkeit: 240",
+                            "// Fahrzeug 2 - PS: 100, Verbrauch: 8, Geschwindigkeit: 200"
+                        ]
+                    },
+                    {
+                        "_comment": "",
+                        "type": "sub-text",
+                        "content": "Hier ruft der Standard-Konstruktor den benutzerdefinierten Konstruktor mit den Werten 80, 6 und 240 auf. Dies ermöglicht die Initialisierung eines Kraftfahrzeug-Objekts mit diesen Standardwerten, wenn kein Parameter beim Erstellen des Objekts übergeben wird. (Die Anweisung this(80,6,240) sucht in der Klasse nach einem Konsruktor mit drei Parametern und ruft diesen mit den entsprechenden Argumenten auf.)"
+                    },          
+                    {
+                        "_comment": "",
+                        "type": "sub-text",
+                        "content": "3. Java this als Argument einer Methode:  Dies ist ein häufiger und nützlicher Anwendungsfall, bei dem das aktuelle Objekt an eine Methode übergeben wird, die einen Parameter dieses Objekttyps erwartet."
+                    },
+                    {
+                        "type": "sub-container-code",
+                        "_comment": "",
+                        "content": [
+                            "// Zunächst definieren wir eine Klasse Waschanlage mit einer Methode fahrzeugWaschen, die ein Kraftfahrzeug-Objekt als Parameter erwartet:",
+                            "class Waschanlage {",
+                            "    public void fahrzeugWaschen(Kraftfahrzeug fahrzeug) {",
+                            "        // Implementierungs-Details",
+                            "        System.out.println(\"Fahrzeug wird gewaschen: \" + fahrzeug);",
+                            "    }",
+                            "}"
+                          ]
+                    },
+                    {
+                        "type": "sub-container-code",
+                        "_comment": "",
+                        "content": [
+                            "// Nun erweitern wir die Klasse Kraftfahrzeug um eine Methode waschen,",
+                            "// die die Methode fahrzeugWaschen aus der Klasse Waschanlage aufruft.",
+                            "// Dabei verwenden wir das Schlüsselwort this, um das aktuelle Objekt zu übergeben.",
+                            "public class Kraftfahrzeug {",
+                            "    private int ps;",
+                            "    private int verbrauch;",
+                            "    private int geschwindigkeit;",
+                            "",
+                            "    // Konstruktor",
+                            "    public Kraftfahrzeug(int ps, int verbrauch, int geschwindigkeit) {",
+                            "        this.ps = ps;",
+                            "        this.verbrauch = verbrauch;",
+                            "        this.geschwindigkeit = geschwindigkeit;",
+                            "    }",
+                            "",
+                            "    // Methode waschen",
+                            "    public void waschen() {",
+                            "        Waschanlage waschanlage = new Waschanlage();",
+                            "        waschanlage.fahrzeugWaschen(this); // Übergabe des aktuellen Objekts",
+                            "    }",
+                            "",
+                            "    @Override",
+                            "    public String toString() {",
+                            "        return \"PS: \" + ps + \", Verbrauch: \" + verbrauch + \", Geschwindigkeit: \" + geschwindigkeit;",
+                            "    }",
+                            "",
+                            "    public static void main(String[] args) {",
+                            "        Kraftfahrzeug fahrzeug = new Kraftfahrzeug(100, 8, 220);",
+                            "        fahrzeug.waschen();",
+                            "    }",
+                            "}"
+                          ]
+                    },
+                    {
+                        "type": "HandlungsZiele",
+                        "ziel": "Erklärung",
+                        "HandlungsnotwendigeKenntnisse": [
+                            "Waschanlage Klasse:",
+                            "Die Klasse Waschanlage hat eine Methode fahrzeugWaschen, die ein Kraftfahrzeug-Objekt als Parameter akzeptiert. Diese Methode simuliert das Waschen des Fahrzeugs.",
+                            
+                            "Kraftfahrzeug Klasse:",
+                            "Die Klasse Kraftfahrzeug hat eine Methode waschen, die ein neues Waschanlage-Objekt erstellt und die Methode fahrzeugWaschen aufruft, wobei this als Argument übergeben wird.",
+                            
+                            "this Schlüsselwort:",
+                            "Das Schlüsselwort this verweist auf das aktuelle Objekt der Klasse Kraftfahrzeug, aus dem die Methode waschen aufgerufen wird. Somit wird das aktuelle Kraftfahrzeug-Objekt an die Methode fahrzeugWaschen übergeben.",
+                            
+                            "main Methode:",
+                            "In der main-Methode erstellen wir ein Kraftfahrzeug-Objekt und rufen die Methode waschen auf. Dies führt dazu, dass das aktuelle Kraftfahrzeug-Objekt an die Methode fahrzeugWaschen übergeben wird."
+                        ]
+                    },
+                    {
+                        "type": "image",
+                        "src": "/imgs/320-img-blokc04-this.png",
+                        "alt": "404 img",
+                        "id": "section2"
+                    },
+                    {
+                        "_comment": "",
+                        "type": "sub-text",
+                        "content": "Zusammenfassung      Verwendung von this als Argument:         this wird verwendet, um das aktuelle Objekt als Argument an eine Methode zu übergeben, die einen Parameter dieses Objekttyps erwartet.         Dies ist besonders nützlich, wenn eine Methode einer anderen Klasse aufgerufen wird, die eine Referenz auf das aktuelle Objekt benötigt.     Vorteil:         Die Verwendung von this macht den Code klarer und vermeidet die Notwendigkeit, zusätzliche Referenzen zu erstellen und zu verwalten."
+                    },
+                    {
+                        "type": "image",
+                        "src": "/imgs/320-img-block04-oop.jpg",
+                        "alt": "404 img",
+                        "id": "section2"
+                    },
+                    {
+                        "type": "HandlungsZiele",
+                        "ziel": "Abstraktion eine von vier OOP-Säulen",
+                        "HandlungsnotwendigeKenntnisse": [
+                            "1. Grundprinzip der Abstraktion",
+                            "Abstraktion hilft dabei, die reale Welt in der Programmierung zu modellieren, indem es komplexe Systeme vereinfacht und auf ihre grundlegenden Eigenschaften reduziert. Dies geschieht durch: Definieren von abstrakten Klassen und Interfaces, die die allgemeinen Merkmale und Fähigkeiten einer Gruppe von Objekten beschreiben. Verbergen von Implementierungsdetails, die für den Benutzer des Objekts nicht relevant sind.",
+                            "2. Abstrakte Klassen",
+                            "Eine abstrakte Klasse in Java ist eine Klasse, die nicht instanziiert werden kann. Das bedeutet, dass man kein direktes Objekt einer abstrakten Klasse erstellen kann. Abstrakte Klassen werden verwendet, um eine gemeinsame Basis für andere Klassen zu schaffen, die von ihr erben. Sie können sowohl abstrakte Methoden (Methoden ohne Implementierung) als auch konkrete Methoden (Methoden mit Implementierung) enthalten.",
+                            "Eigenschaften einer abstrakten Klasse:",
+                            "1. Kann abstrakte und konkrete Methoden enthalten. 2. Kann Konstruktoren, Felder und statische Methoden haben. 3. Kann nicht instanziiert werden. 4. Eine Klasse, die von einer abstrakten Klasse erbt, muss alle abstrakten Methoden implementieren, es sei denn, sie ist selbst abstrakt.",
+                            "Abstrakte Methoden: Methoden, die nur deklariert, aber nicht implementiert sind. Diese müssen von den Unterklassen implementiert werden.",
+                            "Konkrete Methoden: Methoden, die eine vollständige Implementierung haben.",
+                            "Konstruktoren: Eine abstrakte Klasse kann Konstruktoren haben, die von den Unterklassen aufgerufen werden können.",
+                            "Felder: Eine abstrakte Klasse kann Felder (Instanzvariablen) definieren, die von Unterklassen geerbt werden können.",
+                            "Nicht instanziierbar: Man kann kein Objekt direkt von einer abstrakten Klasse erstellen.",
+                            ""
+                        ]    
+                    },
+                    {
+                        "type": "sub-container-code",
+                        "_comment": "",
+                        "content": [
+                            "public abstract class Fahrzeug {",
+                            "    private int geschwindigkeit;",
+                            "    private String name;",
+                            "",
+                            "    public Fahrzeug(String name) {",
+                            "        this.name = name;",
+                            "    }",
+                            "",
+                            "    public void setGeschwindigkeit(int geschwindigkeit) {",
+                            "        this.geschwindigkeit = geschwindigkeit;",
+                            "    }",
+                            "",
+                            "    public int getGeschwindigkeit() {",
+                            "        return geschwindigkeit;",
+                            "    }",
+                            "",
+                            "    public String getName() {",
+                            "        return name;",
+                            "    }",
+                            "",
+                            "    // Abstrakte Methode",
+                            "    public abstract void starten();",
+                            "",
+                            "    // Konkrete Methode",
+                            "    public void stoppen() {",
+                            "        this.geschwindigkeit = 0;",
+                            "        System.out.println(name + \" hat gestoppt.\");",
+                            "    }",
+                            "}"
+                        ]
+                    },
+                    {
+                        "type": "HandlungsZiele",
+                        "ziel": "Vorteile und Nachteile abstrakter Klassen",
+                        "HandlungsnotwendigeKenntnisse": [
+                            "Vorteile:",
+                            "Code-Wiederverwendung: Gemeinsamer Code kann in der abstrakten Klasse definiert und von allen Unterklassen wiederverwendet werden.",
+                            "Teilweise Implementierung: Man kann einige Methoden in der abstrakten Klasse implementieren und andere abstrakt lassen, um die Unterklassen zu zwingen, spezifische Implementierungen bereitzustellen.",
+                            "Vererbung: Abstrakte Klassen unterstützen Vererbung und können Methoden und Felder an Unterklassen vererben.",
+                            "Nachteile ",
+                            "Keine Mehrfachvererbung: In Java kann eine Klasse nur von einer einzigen abstrakten (oder konkreten) Klasse erben.",
+                            "Instanzierung: Man kann keine Objekte von abstrakten Klassen direkt erstellen.",
+                            "Fazit",
+                            "Verwenden Sie abstrakte Klassen, wenn Sie eine gemeinsame Basis mit einigen standardmässigen Implementierungen schaffen möchten und wenn Klassen, die von dieser Basis erben, eine enge Beziehung haben(ähnliche Eigenschaften oder Verhaltensweisen teilen).",
+                            "Verwenden Sie Interfaces, wenn Sie eine Schnittstelle definieren möchten, die von verschiedenen, nicht unbedingt verwandten Klassen implementiert werden soll, und wenn Sie die Flexibilität der Mehrfachvererbung benötigen."
+                        ]    
+                    }
+
             ]
         },
 
