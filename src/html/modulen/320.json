@@ -332,7 +332,7 @@
                 {
                     "_comment": "What is Methods",
                     "type": "sub-text-important",
-                    "content": " Definition => Block ist eine folge von ANweisungen, die sequenziell hintereinander ausgeführt wird. Eine Methode ist eine Folge von Anweisungne, die unter einem Namen aufgerufen werden kann."
+                    "content": " Definition => Block ist eine folge von Anweisungen, die sequenziell hintereinander ausgeführt wird. Eine Methode ist eine Folge von Anweisungne, die unter einem Namen aufgerufen werden kann."
                 },
                 {
                     "_comment": "What is Methods",
@@ -603,7 +603,12 @@
                     "alt": "404 img",
                     "id": "section3"
                 },
-                
+                {
+                    "type": "image",
+                    "src": "/imgs/320-img-block02-modi.png",
+                    "alt": "404 img",
+                    "id": "section3"
+                },
                 {
                     "type": "HandlungsZiele",
                     "ziel": "Was ist ein Interface?",
@@ -846,10 +851,209 @@
             "subContent": [
                 {
                     "type": "sub-container",
-                    "content": "Themen: Im dritten Block haben wir uns mit Java-Generics beschäftigt sowie mit Sub- und Superklassen und den Hierarchien von Klassen und Interfaces. Und der Polymorphismus"
+                    "content": "Themen: Im dritten Block haben wir uns mit Java-Generics beschäftigt sowie mit Sub- und Superklassen und den Hierarchien von Klassen. Und der Polymorphismus, Vererbung, Verkapselung"
+                },
+                {
+                    "type": "HandlungsZiele",
+                    "ziel": "Was ist eine Vererbung",
+                    "HandlungsnotwendigeKenntnisse": [
+                        "Vererbung ist ein grundlegendes Konzept in der objektorientierten Programmierung, bei dem eine Klasse (Unterklasse oder Subklasse) die Eigenschaften und Methoden einer anderen Klasse (Oberklasse oder Superklasse) erbt. Dieses Konzept fördert die Wiederverwendbarkeit und Erweiterbarkeit von Code.",
+                        "Hauptmerkmale der Vererbung:",
+                        "1. Wiederverwendbarkeit: Durch Vererbung kann eine Unterklasse die bereits vorhandenen Eigenschaften und Methoden der Oberklasse wiederverwenden, wodurch Redundanz vermieden wird.",
+                        "2. Hierarchie: Vererbung ermöglicht die Erstellung einer Klassenhierarchie, in der Unterklassen von Oberklassen erben und diese erweitern oder spezialisieren.",
+                        "Erweitern: ",
+                        "Die Unterklasse fügt neue Eigenschaften oder Methoden hinzu, die in der Oberklasse nicht vorhanden sind. Auf diese Weise kann die Unterklasse zusätzliche Funktionalitäten bieten, die spezifisch für sie sind.",
+                        "Spezialisieren:",
+                        "Die Unterklasse passt die vorhandenen Eigenschaften oder Methoden der Oberklasse an, um spezifisches Verhalten zu implementieren. Dies geschieht oft durch Überschreiben (Overriding) der Methoden der Oberklasse.",
+                        "3. Erweiterbarkeit: Unterklassen können neue Eigenschaften und Methoden hinzufügen oder bestehende Methoden der Oberklasse überschreiben, um spezifisches Verhalten zu implementieren.",
+                        "'is-a'-Beziehung: Vererbung beschreibt eine 'is-a'-Beziehung. Zum Beispiel ist ein Auto ein Fahrzeug, daher kann Auto von Fahrzeug erben.",
+                        ""
+                      
+                    ]
+                },
+                {
+                    "_comment": "",
+                    "type": "sub-text-important",
+                    "content": "Bei der Vererbung wird in Java der Quellcode ener einzigen Superklassen in einer abgeleleiteten Klasse wiederverwendet. In Falle einer Aggregation werden vorhandene einzele Klassen von den aggregierenden Klassen benutzt und damit wiederverwendet."
+                },
+                {
+                    "type": "sub-container-code",
+                    "_comment": "",
+                    "content": [
+                        "// Vorhandene Klassen",
+                        "public class Motor {",
+                        "    public void starten() {",
+                        "        System.out.println(\"Der Motor startet.\");",
+                        "    }",
+                        "}",
+                        "",
+                        "public class Sitz {",
+                        "    public void einstellen() {",
+                        "        System.out.println(\"Der Sitz wird eingestellt.\");",
+                        "    }",
+                        "}",
+                        "// Aggregierende Klasse",
+                        "public class Auto {",
+                        "    private Motor motor;",
+                        "    private Sitz[] sitze;",
+                        "",
+                        "    public Auto(Motor motor, Sitz[] sitze) {",
+                        "        this.motor = motor;",
+                        "        this.sitze = sitze;",
+                        "    }",
+                        "",
+                        "    public void fahren() {",
+                        "        motor.starten();",
+                        "        System.out.println(\"Das Auto fährt.\");",
+                        "    }",
+                        "",
+                        "    public void sitzeEinstellen() {",
+                        "        for (Sitz sitz : sitze) {",
+                        "            sitz.einstellen();",
+                        "        }",
+                        "    }",
+                        "",
+                        "    public static void main(String[] args) {",
+                        "        // Erstellen von Motor- und Sitzobjekten",
+                        "        Motor motor = new Motor();",
+                        "        Sitz[] sitze = { new Sitz(), new Sitz(), new Sitz() };",
+                        "",
+                        "        // Erstellen eines Auto-Objekts, das Motor und Sitze enthält",
+                        "        Auto auto = new Auto(motor, sitze);",
+                        "",
+                        "        // Methoden des Auto-Objekts aufrufen",
+                        "        auto.fahren();  // Ausgabe: Der Motor startet. Das Auto fährt.",
+                        "        auto.sitzeEinstellen();  // Ausgabe: Der Sitz wird eingestellt. (dreimal)",
+                        "    }",
+                        "}"
+                    ]
+                },
+                {
+                    "type": "sub-container-code",
+                    "_comment": "",
+                    "content": [
+                        "// Oberklasse: Fahrzeug",
+                        "public class Fahrzeug {",
+                        "    public void fahren() {",
+                        "        System.out.println(\"Das Fahrzeug fährt.\");",
+                        "    }",
+                        "}",
+                        "",
+                        "// Unterklassen: MotorisiertesFahrzeug und Auto",
+                        "public class MotorisiertesFahrzeug extends Fahrzeug {",
+                        "    public void starten() {",
+                        "        System.out.println(\"Der Motor startet.\");",
+                        "    }",
+                        "}",
+                        "",
+                        "public class Auto extends MotorisiertesFahrzeug {",
+                        "    private int sitzAnzahl;",
+                        "",
+                        "    public Auto(int sitzAnzahl) {",
+                        "        this.sitzAnzahl = sitzAnzahl;",
+                        "    }",
+                        "",
+                        "    public void hupen() {",
+                        "        System.out.println(\"Das Auto hupt.\");",
+                        "    }",
+                        "",
+                        "    public void sitzeEinstellen() {",
+                        "        for (int i = 0; i < sitzAnzahl; i++) {",
+                        "            System.out.println(\"Der Sitz \" + (i + 1) + \" wird eingestellt.\");",
+                        "        }",
+                        "    }",
+                        "",
+                        "    public static void main(String[] args) {",
+                        "        Auto auto = new Auto(3);",
+                        "",
+                        "        auto.starten(); // Ausgabe: Der Motor startet.",
+                        "        auto.fahren();  // Ausgabe: Das Fahrzeug fährt.",
+                        "        auto.hupen();   // Ausgabe: Das Auto hupt.",
+                        "        auto.sitzeEinstellen(); // Ausgabe: Der Sitz 1 wird eingestellt.",
+                        "                                //          Der Sitz 2 wird eingestellt.",
+                        "                                //          Der Sitz 3 wird eingestellt.",
+                        "    }",
+                        "}"
+                    ]
+                },
+                {
+                    "type": "HandlungsZiele",
+                    "ziel": "Unterschiede",
+                    "HandlungsnotwendigeKenntnisse": [
+                        "Vererbung:",
+                        "Definition: Bei der Vererbung wird in Java der Quellcode einer einzigen Superklasse (Oberklasse) in einer abgeleiteten Klasse (Unterklasse) wiederverwendet. Dies ermöglicht es der Unterklasse, alle Eigenschaften und Methoden der Oberklasse zu erben und gegebenenfalls zu erweitern oder zu überschreiben.",
+                        "Beispiel: In unserem Beispiel erbt MotorisiertesFahrzeug von Fahrzeug und Auto erbt wiederum von MotorisiertesFahrzeug. Dies bedeutet, dass Auto sowohl die Methoden fahren als auch starten verwenden kann, ohne sie erneut definieren zu müssen.",
+                        "Aggregation:",
+                        "Definition: Im Falle einer Aggregation werden vorhandene einzelne Klassen von den aggregierenden Klassen benutzt und damit wiederverwendet. Dies bedeutet, dass eine Klasse Objekte anderer Klassen enthält, um komplexere Funktionalitäten zu ermöglichen.",
+                        "Beispiel: In unserem vorherigen Aggregationsbeispiel enthielt die Klasse Auto ein Objekt der Klasse Motor und ein Array von Objekten der Klasse Sitz. Die Klasse Auto nutzte diese Objekte, um ihre Methoden fahren und sitzeEinstellen zu implementieren."
+                    ]
+                },
+                {
+                    "type": "HandlungsZiele",
+                    "ziel": "Kapselung (Encapsulation) in der OOP",
+                    "HandlungsnotwendigeKenntnisse": [
+                       "Kapselung ist ein grundlegendes Prinzip der objektorientierten Programmierung, das die Bündelung von Daten (Eigenschaften) und Methoden (Funktionen), die auf diese Daten operieren, innerhalb einer Klasse umfasst. Das Hauptziel der Kapselung ist es, den direkten Zugriff auf die Daten zu beschränken und die Datenintegrität zu gewährleisten.",
+                       "Ziele:",
+                       "Datenverstecken: Schutz der Daten vor unerlaubtem Zugriff und Modifikation von aussen.",
+                       "Datenintegrität: Sicherstellen, dass die Daten nur über definierte Schnittstellen (Methoden) geändert werden können.",
+                       "Modularität: Förderung der Modularität des Codes, indem Implementierungsdetails verborgen werden und nur notwendige Schnittstellen offengelegt werden."
+                    ]
+                },
+                {
+                    "type": "sub-container-code",
+                    "_comment": "",
+                    "content": [
+                        "public class Bankkonto {",
+                        "    private double saldo;",
+                        "",
+                        "    // Getter-Methode für 'saldo'",
+                        "    public double getSaldo() {",
+                        "        return saldo;",
+                        "    }",
+                        "",
+                        "    // Methode zum Einzahlen",
+                        "    public void einzahlen(double betrag) {",
+                        "        if (betrag > 0) {",
+                        "            saldo += betrag;",
+                        "        } else {",
+                        "            System.out.println(\"Betrag muss positiv sein.\");",
+                        "        }",
+                        "    }",
+                        "",
+                        "    // Methode zum Abheben",
+                        "    public void abheben(double betrag) {",
+                        "        if (betrag > 0 && betrag <= saldo) {",
+                        "            saldo -= betrag;",
+                        "        } else {",
+                        "            System.out.println(\"Ungültiger Betrag oder nicht genügend Mittel.\");",
+                        "        }",
+                        "    }",
+                        "",
+                        "    public static void main(String[] args) {",
+                        "        Bankkonto konto = new Bankkonto();",
+                        "        konto.einzahlen(100);",
+                        "        konto.abheben(50);",
+                        "        System.out.println(\"Aktueller Saldo: \" + konto.getSaldo()); // Ausgabe: Aktueller Saldo: 50.0",
+                        "    }",
+                        "}"
+                    ]
+                },
+                {
+                    "_comment": "",
+                    "type": "sub-text",
+                    "content": "1. Die Eigenschaft saldo ist als private deklariert. Das bedeutet, dass saldo nur innerhalb der Klasse Bankkonto direkt zugänglich ist. Diese Einschränkung ist der Kern der Kapselung, da sie verhindert, dass externe Klassen oder Funktionen direkten Zugriff auf diese Eigenschaft haben. 2. Die Methode getSaldo ist public, was bedeutet, dass externe Klassen und Methoden auf den Wert von saldo zugreifen können, aber nur über diese Methode. Dies ermöglicht die Kontrolle und Validierung des Zugriffs auf saldo."
+                },
+                {
+                    "type": "HandlungsZiele",
+                    "ziel": "Polymorphismus in der OOP",
+                    "HandlungsnotwendigeKenntnisse": [
+                       "Polymorphismus ist ein fundamentales Konzept in der objektorientierten Programmierung, das es ermöglicht, Objekte verschiedener Klassen auf die gleiche Weise zu behandeln, selbst wenn diese Klassen unterschiedliche Implementierungen aufweisen. Polymorphismus ermöglicht es, dass eine Methode unterschiedliche Bedeutungen hat, abhängig davon, welches Objekt sie aufruft.",
+                       "Es gibt zwei Hauptarten von Polymorphismus:",
+                       "1. Compile-Time Polymorphismus (Überladung)",
+                       "2. Run-Time Polymorphismus (Überschreibung)"
+                    ]
                 }
-               
-                
+
             ]
         },
 
@@ -1154,8 +1358,82 @@
                             "Verwenden Sie abstrakte Klassen, wenn Sie eine gemeinsame Basis mit einigen standardmässigen Implementierungen schaffen möchten und wenn Klassen, die von dieser Basis erben, eine enge Beziehung haben(ähnliche Eigenschaften oder Verhaltensweisen teilen).",
                             "Verwenden Sie Interfaces, wenn Sie eine Schnittstelle definieren möchten, die von verschiedenen, nicht unbedingt verwandten Klassen implementiert werden soll, und wenn Sie die Flexibilität der Mehrfachvererbung benötigen."
                         ]    
+                    },
+                    {
+                        "type": "sub-container-code",
+                        "_comment": "",
+                        "content": [
+                            "// Abstrakte Basisklasse Fahrzeug",
+                            "public abstract class Fahrzeug {",
+                            "    private int geschwindigkeit;",
+                            "    private String name;",
+                            "",
+                            "    public Fahrzeug(String name) {",
+                            "        this.name = name;",
+                            "    }",
+                            "",
+                            "    public void setGeschwindigkeit(int geschwindigkeit) {",
+                            "        this.geschwindigkeit = geschwindigkeit;",
+                            "    }",
+                            "",
+                            "    public int getGeschwindigkeit() {",
+                            "        return geschwindigkeit;",
+                            "    }",
+                            "",
+                            "    public String getName() {",
+                            "        return name;",
+                            "    }",
+                            "",
+                            "    // Abstrakte Methode",
+                            "    public abstract void starten();",
+                            "",
+                            "    // Konkrete Methode",
+                            "    public void stoppen() {",
+                            "        this.geschwindigkeit = 0;",
+                            "        System.out.println(name + \" hat gestoppt.\");",
+                            "    }",
+                            "}",
+                            "// Konkrete Klasse Auto",
+                            "public class Auto extends Fahrzeug {",
+                            "    public Auto(String name) {",
+                            "        super(name);",
+                            "    }",
+                            "",
+                            "    @Override",
+                            "    public void starten() {",
+                            "        System.out.println(getName() + \" startet den Motor.\");",
+                            "    }",
+                            "}",
+                            "// Konkrete Klasse Fahrrad",
+                            "public class Fahrrad extends Fahrzeug {",
+                            "    public Fahrrad(String name) {",
+                            "        super(name);",
+                            "    }",
+                            "",
+                            "    @Override",
+                            "    public void starten() {",
+                            "        System.out.println(getName() + \" beginnt zu treten.\");",
+                            "    }",
+                            "}",
+                            "// Hauptprogramm",
+                            "public class Hauptprogramm {",
+                            "    public static void main(String[] args) {",
+                            "        Fahrzeug auto = new Auto(\"BMW\");",
+                            "        Fahrzeug fahrrad = new Fahrrad(\"Mountainbike\");",
+                            "",
+                            "        auto.starten(); // Ausgabe: BMW startet den Motor.",
+                            "        auto.setGeschwindigkeit(100);",
+                            "        System.out.println(\"Geschwindigkeit von \" + auto.getName() + \": \" + auto.getGeschwindigkeit() + \" km/h\");",
+                            "        auto.stoppen(); // Ausgabe: BMW hat gestoppt.",
+                            "",
+                            "        fahrrad.starten(); // Ausgabe: Mountainbike beginnt zu treten.",
+                            "        fahrrad.setGeschwindigkeit(20);",
+                            "        System.out.println(\"Geschwindigkeit von \" + fahrrad.getName() + \": \" + fahrrad.getGeschwindigkeit() + \" km/h\");",
+                            "        fahrrad.stoppen(); // Ausgabe: Mountainbike hat gestoppt.",
+                            "    }",
+                            "}"
+                        ]
                     }
-
             ]
         },
 
