@@ -1,0 +1,54 @@
+{
+    "title": "M164",
+    "mainTitle": "Datenbanken erstellen und Daten einfügen",
+    "cards": [
+        { "title": "Thems", "value": 5 },
+        { "title": "Sections", "value": 11 },
+        { "title": "Codes", "value": 20 }
+    ],
+    "charts": [
+        {
+            "type": "verzeichnis",
+            "title": "Verzeichnis",
+            "items": [
+                { "label": "1. Befehlsübersicht", "id": "section1" },
+                { "label": "2. Kapitel02", "id": "section2" },
+                { "label": "3. Kapitel03", "id": "section3" },
+                { "label": "4. Kapitel03", "id": "section4" },
+                { "label": "5. Kapitel04", "id": "section5" },
+                { "label": "6. Kapitel05", "id": "section6" },
+                { "label": "7. Kapitel", "id": "section7" },
+                { "label": "8. Kapitel", "id": "section8" },
+                { "label": "9. Kapitel", "id": "section9" },
+                { "label": "10. Kapitel", "id": "section10" },
+                { "label": "11. Kapitel", "id": "section11" },
+                { "label": "12. Kapitel", "id": "section12" },
+                { "label": "13. Kapitel", "id": "section13" },
+                { "label": "14. Kapitel", "id": "section14" }
+            ]
+        }
+    ],
+    "mainTextContent": [
+        {
+            "type": "text",
+            "content": "Einleitung",
+            "id": "section1",
+            "subContent": [
+                {
+                    "type": "HandlungsZiele",
+                    "ziel": ".",
+                    "HandlungsnotwendigeKenntnisse": [
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ]
+                }
+            ]
+        }
+    ]
+}

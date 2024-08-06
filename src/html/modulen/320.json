@@ -1047,13 +1047,20 @@
                     "type": "HandlungsZiele",
                     "ziel": "Polymorphismus in der OOP",
                     "HandlungsnotwendigeKenntnisse": [
-                       "Polymorphismus ist ein fundamentales Konzept in der objektorientierten Programmierung, das es ermöglicht, Objekte verschiedener Klassen auf die gleiche Weise zu behandeln, selbst wenn diese Klassen unterschiedliche Implementierungen aufweisen. Polymorphismus ermöglicht es, dass eine Methode unterschiedliche Bedeutungen hat, abhängig davon, welches Objekt sie aufruft.",
+                       "Polymorphismus ist ein grundlegendes Konzept in der objektorientierten Programmierung (OOP), das es Objekten ermöglicht, als Instanzen ihrer Elternklasse und nicht ihrer tatsächlichen Klasse behandelt zu werden. Der Begriff Polymorphismus stammt aus dem Griechischen und setzt sich aus den Wörtern „poly“ (viele) und „morph“ (Form) zusammen, was bedeutet, dass Polymorphismus es Entitäten ermöglicht, verschiedene Formen anzunehmen. Dieses Konzept ist entscheidend für die Erstellung flexibler und wartbarer Software, da es Methoden erlaubt, sich je nach dem Objekt, das sie aufruft, unterschiedlich zu verhalten. Technisch gesehen ermöglicht Polymorphismus die Verwendung einer einzigen Schnittstelle für eine allgemeine Klasse von Aktionen, wobei die spezifische Aktion durch die genaue Art der Situation bestimmt wird. Dies erlaubt es einer Methode, unterschiedliche Aufgaben basierend auf dem Objekt, auf das sie angewendet wird, auszuführen, und bietet somit die Möglichkeit, eine Schnittstelle zu definieren und mehrere Implementierungen zu haben.",
                        "Es gibt zwei Hauptarten von Polymorphismus:",
-                       "1. Compile-Time Polymorphismus (Überladung)",
-                       "2. Run-Time Polymorphismus (Überschreibung)"
+                       "1. Compile-Time Polymorphismus (statischer Polymorphismus)",
+                       "Der Compile-Time Polymorphismus, auch als statischer Polymorphismus bekannt, tritt auf, wenn der Methodenaufruf zur Kompilierzeit aufgelöst wird. Diese Form des Polymorphismus wird durch Methodenüberladung und Operatorüberladung erreicht.",
+                       " ° Ad-hoc Polymorphismus",
+                       " ° Parametrischer Polymorphismus",
+                       "",
+                       "2. Run-Time Polymorphismus (dynamischer Polymorphismus)",
+                       "",
+                       "",
+                       "",
+                       ""
                     ]
                 }
-
             ]
         },
 

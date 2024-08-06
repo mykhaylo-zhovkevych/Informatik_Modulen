@@ -292,7 +292,7 @@
             "subContent": [
                 {
                     "type": "sub-container",
-                    "content": "Themen: Containerisierung: Images, Persistenz, Kommunikation und Umbegungsvariablen"
+                    "content": "Themen: Containerisierung: Images, Persistenz, Kommunikation(Netzwerk) und Umbegungsvariablen"
                 },
                 {
                     "type": "HandlungsZiele",
@@ -500,8 +500,23 @@
             "subContent": [
                 {
                     "type": "sub-container",
-                    "content": "Themen: "
+                    "content": "Themen: die Zusammenfassung von Docker + Kubernets + etc"
                 }
+            ]
+        },
+
+        {
+            "type": "HandlungsZiele",
+            "ziel": "Docker Image",
+            "HandlungsnotwendigeKenntnisse": [
+                "Zusammenfassung von Docker Befehlen:",
+                "• docker run -d -p 80:80 nginx => This command creates and starts a new container from the specified image. You can also specify a command to run within the container. Options: -d: Run the container in the background (detached mode). -p: Publish a container's port(s) to the host. --name: Assign a name to the container. -e: Set environment variables.",
+                "• docker start my_container => Start one or more stopped containers. Options: -a: Attach STDOUT/STDERR and forward signals. -i: Keep STDIN open even if not attached.",
+                "• docker stop my_container => Stop one or more running containers. It sends a SIGTERM signal followed by a SIGKILL after a grace period.",
+                "• docker restart my_container => Restart one or more containers. This is useful for applying new configuration changes.",
+                "• docker pause my_container => Pause all processes within one or more containers. This can be useful to temporarily freeze container activity without stopping it."
+                
+
             ]
         }
     ]
