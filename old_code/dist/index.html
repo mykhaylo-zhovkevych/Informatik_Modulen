@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="de" style="overflow-x: hidden !important;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulenjournalen</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <!-- <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script> -->
+  
+<script defer src="/main.bundle.js"></script><script defer src="/togglerCloseOpen.bundle.js"></script><script defer src="/preloader.bundle.js"></script><script defer src="/jsonManager.bundle.js"></script></head>
+<body style="overflow-x: hidden !important;">
+
+<div class="blobs">
+    <div class="blobs-glass"></div>
+    <div class="blobs-items">
+        <div class="blob blob--blue"></div>
+        <div class="blob blob--yellow"></div>
+        <div class="blob blob--green"></div>
+        <div class="blob blob--purple"></div>
+        <div class="blob blob--white"></div>
+    </div>
+</div>
+
+<header class="container-header">
+    <div class="header-box01">
+        <div id="header-content-h1">
+            <h1>Die Moduljournale für Informatiker EFZ Applikationsentwicklung</h1>
+        </div>
+        <div id="header-content">
+            <h2 style="padding-bottom: 3em;">Erstellt von Mykhaylo Zhovkevych</h2>
+
+            <p style="padding-bottom: 2em;">Verfügbare Module für Besucher: 104, 102, 345, 123, 125, 234
+                
+            <p style="padding-bottom: 2em;">Zusätzlich Module für Benutzer: 104, 102, 345, 123, 125, 234</p>
+                <img src="/imgs/gettyimages-1146649674-1024x1024.webp" alt="90" height="500px" width="400px">
+            <p style="padding-bottom: 1em;"><em>*Der Inhalt der Website wird während der Ausbildung mit neuen Modulen ergänzt, diese Version ist nicht endgültig.</em></p></p>
+        </div>
+    </div>
+    <div class="header-box02">
+        <nav class="links-header">
+
+                <div class="links-header-active">
+                    <a href="#">Einloggen </a>
+
+                    <a href="#">Konto anfragen</a>
+                </div>
+
+            <a href="html/content.html">Besucher</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <article>
+        <section>
+            <div class="container-main">
+                <div class="content-box01">
+                    <h2>Über diese Website</h2>
+                    <p>Dieses Projekt wollte ich umsetzen, als ich meine Berufsausbildung begonnen habe. Die Idee war, dass ich, anstatt alles in der Microsoft Cloud zu speichern, die wichtigsten Teile von jedem Moduljournal aus OneNote exportiere und auf einer eigenen Website zusammenführe. Wenn ich meine schulische Ausbildung abgeschlossen habe, werde ich eine vollständig ausgearbeitete Website mit allen Modulen haben. Diese kann nicht nur für mein zukünftiges Berufsleben nützlich sein, sondern auch als gute Wiederholung des Lernstoffs dienen. Während dieser Phase der Datenzufügung werde ich alle Daten in die Website konvertieren und implementieren, was für mich eine wertvolle Wiederholung ist, da ich durch das Erstellen dieser Website alle Daten erneut konvertiere und den Lernstoff wiederhole.</p>
+                </div>
+                <div class="content-box02">
+                    <h2>Regelen und Coding platforms</h2>
+                    <p>Das Inhalt der freigegen ist, kann bei eingesertz beuntze und ausgebaut werden ohne der Autor zu refenzieren, inhalt für regestrierrte user kann nur für lehrzwecken bunutzt werden und anderes ihnalt wird für alle gespert und verbotet ermittlet und benutzt werden.</p>
+                    <div class="contaienr-sides">
+                        <div class="left-side">
+                            <div class="button-coding-left">
+                                <button><a href="https://exercism.org/users/sign_in" class="button">exercism</a></button>
+                            </div>
+                            <div class="button-coding-left">
+                                <button><a href="https://learn.codesignal.com/auth/login" class="button">codesignal</a></button>
+                            </div>
+                            <div class="button-coding-left">
+                                <button><a href="https://www.hackerrank.com/dashboard" class="button">hackerrank</a></button>
+                            </div>
+                        </div>
+                        <div class="right-side">
+                            <div class="button-coding-right">
+                                <button><a href="https://edabit.com/" class="button">edabit</a></button>
+                            </div>
+                            <div class="button-coding-right">
+                                <button><a href="https://leetcode.com/" class="button">leetcode</a></button>
+                            </div>
+                            <div class="button-coding-right">
+                                <button><a href="https://www.fullstack.cafe/" class="button">fullstack.cafe</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+</main>
+
+<div class="hidden-window">
+    <div class="toggle-btn">
+        <span class="one"></span>  
+        <span class="two"></span>              
+    </div>
+    <div class="page-login hidden-content">
+       <div class="main-wrapper">
+            <div class="wrapper">
+                <form action="" class="form-login">
+                    <h1>Login</h1>
+                    <div class="input-box">
+                        <input type="text" placeholder="User Name" 
+                        required> 
+                    </div>
+                    <div class="input-box">
+                        <input type="password" id="password" placeholder="Password" 
+                            required>
+                            <span id="togglePassword" class="toggle-password">👁️</span>
+                    </div>
+                    <div class="remember-forgot">
+                        <label > <input type="checkbox">Remember me</label>
+                        <a href="#">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="bth">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="page-request-login hidden-content">
+        <div class="main-wrapper">
+            <div class="wrapper">
+                <form action="" class="form-login">
+                    <h1>Konto anfordern</h1>
+                    <div class="input-box">
+                        <input type="text" placeholder="Ihr Name" 
+                        required>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" placeholder="E-Mail" 
+                        required>
+                    </div>
+                    <textarea class="input-textarea" name=""  cols="30" rows="5" placeholder="Der Grund, warum Sie ein Konto benötigen" class="item" autocomplete="off"></textarea>
+                    <div class="input-box-two-in-one"> 
+                        <div class="input-box01">
+                            <input type="text" placeholder="Benutzer Name" 
+                            required>
+                        </div>
+                        <div class="input-box02">
+                            <input type="password" id="password" placeholder="Password" 
+                            required>
+                            <span id="togglePassword" class="toggle-password">👁️</span>
+                        </div>
+                    </div>    
+                    <button type="submit" class="bth">Konto anfordern</button>
+                </form>
+            </div>
+        </div>
+   </div>
+   <div class="page-settings hidden-content">
+    <div class="main-wrapper">
+        <div class="wrapper">
+            
+            <h1>haaaaaaaaaaaaaaaaaaaaaa</h1>
+        </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+    <section id="section-footer">
+        <div class="container-footer">
+            <form action="#">
+                <h2 class="contact-announcement">Wenn du irgendwelche Fehler gefunden hast, bitte <span>Gib mir Rückmeldung.</span></h2>
+                <div class="contact-container">
+                    <div class="contact-container-02">
+                        
+                    </div>
+                    <div class="contact-container-01">
+                    <div class="input-box">
+                        <div class="input-field field">
+                            <input type="text" placeholder="Name" id="name" class="item" autocomplete="off">
+                            <div class="error-txt">Name kann nicht leer sein</div>
+                        </div>
+                        <div class="input-field field">
+                            <input type="email" placeholder="E-Mail Adresse" id="email" class="item" autocomplete="off">
+                            <div class="error-txt email">E-Mail Adresse kann nicht leer sein</div>
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <div class="input-field field">
+                            <input type="text" placeholder="Telefonnummer" id="phone" class="item" autocomplete="off">
+                            <div class="error-txt">Telefonnummer kann nicht leer sein</div>
+                        </div>
+                        <div class="input-field field">
+                            <input type="text" placeholder="Thema" id="subject" class="item" autocomplete="off">
+                            <div class="error-txt">Thema kann nicht leer sein</div>
+                        </div>
+                    </div>
+                    <div class="textarea-field field">
+                        <textarea name="" id="message" cols="30" rows="5" placeholder="Ihre Nachricht" class="item" autocomplete="off"></textarea>
+                        <div class="error-txt">Nachricht kann nicht leer sein</div>
+                    </div>
+                    <button type="submit" class="button-with-sound" data-sound="info">Send Message</button>
+                    </div>
+                </div>
+                <p id="copyright">Copyright &copy; 2024 Mykhaylo Zhovkevych - All rights reserved</p>
+            </form>
+        </div>
+    </section>
+</footer>
+<script>
+    // Select all toggle-password elements
+    document.querySelectorAll('.toggle-password').forEach(item => {
+        item.addEventListener('click', function() {
+            const passwordInput = this.previousElementSibling;
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                this.textContent = '🙈'; 
+            } else {
+                passwordInput.type = 'password';
+                this.textContent = '👁️'; 
+            }
+        });
+    });
+</script>
+</body>
+</html>
